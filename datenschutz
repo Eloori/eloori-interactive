@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Datenschutz | Eloori Interactive</title>
+    <style>
+        body { font-family: sans-serif; background: #0d0f12; color: #e2e8f0; padding: 50px; line-height: 1.6; }
+        h1, h2 { color: #ffd700; }
+        a { color: #00e5ff; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>Datenschutzerklärung</h1>
+    <p>Verantwortliche Stelle im Sinne der Datenschutzgesetze ist:</p>
+    <p>Eloori Interactive<br>{Vorname Nachname}<br>{Adresse}<br>E-Mail: contact@eloori-interactive.com</p>
+
+    <h2>1. Erfassung von allgemeinen Informationen (Logfiles)</h2>
+    <p>Beim Zugriff auf unsere Website werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers und Ähnliches. Dies ist technisch notwendig, um die von Ihnen angeforderten Inhalte von Webseiten korrekt auszuliefern.</p>
+
+    <h2>2. Kontakt via E-Mail</h2>
+    <p>Traten Sie per E-Mail mit uns in Kontakt, werden die von Ihnen gemachten Angaben zum Zwecke der Bearbeitung der Anfrage sowie für mögliche Anschlussfragen gespeichert.</p>
+
+    <h2>3. Ihre Rechte</h2>
+    <p>Sie haben das Recht, jederzeit Auskunft über Ihre bei uns gespeicherten personenbezogenen Daten zu erhalten. Ebenso haben Sie das Recht auf Berichtigung, Sperrung oder Löschung Ihrer personenbezogenen Daten.</p>
+
+    <h2>4. Änderungen</h2>
+    <p>Wir passen diese Datenschutzerklärung an, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen umzusetzen.</p>
+
+    <p><a href="index.html">← Zurück zur Startseite</a></p>
+</body>
+</html>
