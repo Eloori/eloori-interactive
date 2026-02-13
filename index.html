@@ -6,35 +6,28 @@
     <title>Eloori Interactive | Indie Game Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <style>
-        /* Grund-Design & Farben */
+        /* 1. Variablen */
         :root {
             --bg-color: #0d0f12;
             --text-main: #e2e8f0;
             --accent-gold: #ffd700;
             --accent-cyan: #00e5ff;
             --card-bg: #1a1d24;
-            html {
+        }
+
+        /* 2. Globales Verhalten (Smooth Scroll) */
+        html {
             scroll-behavior: smooth;
         }
-            /* Die Definition der Puls-Animation */
+
+        /* 3. Animationen */
         @keyframes logo-pulse {
-        0% { transform: scale(1); filter: drop-shadow(0 0 25px rgba(0,229,255,0.3)); }
-        50% { transform: scale(1.05); filter: drop-shadow(0 0 40px rgba(0,229,255,0.5)); }
-        100% { transform: scale(1); filter: drop-shadow(0 0 25px rgba(0,229,255,0.3)); }
-}
-
-/* Die Klasse für das Logo */
-.hero-logo {
-    transition: transform 0.3s ease, filter 0.3s ease; /* Sanfter Übergang beim Start/Stop */
-    cursor: pointer;
-}
-
-/* Animation startet, wenn man mit der Maus darüberfährt */
-.hero-logo:hover {
-    animation: logo-pulse 2s infinite ease-in-out;
-}
+            0% { transform: scale(1); filter: drop-shadow(0 0 25px rgba(0,229,255,0.3)); }
+            50% { transform: scale(1.05); filter: drop-shadow(0 0 40px rgba(0,229,255,0.5)); }
+            100% { transform: scale(1); filter: drop-shadow(0 0 25px rgba(0,229,255,0.3)); }
         }
 
+        /* 4. Basis Styles */
         * {
             margin: 0;
             padding: 0;
@@ -42,29 +35,24 @@
         }
 
         body {
-    font-family: 'Rajdhani', sans-serif; /* Neue Schriftart */
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    line-height: 1.4;
-    letter-spacing: 0.5px; /* Macht den Text edler */
-}
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.4;
+            letter-spacing: 0.5px;
+        }
 
-.hero h1 {
-    font-size: 4.5rem; /* Etwas größer für mehr Wumms */
-    margin-bottom: 15px;
-    line-height: 1.1;
-    font-weight: 700;
-}
+        /* 5. Logo & Animation */
+        .hero-logo {
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
 
-.hero p {
-    font-size: 1.4rem;
-    color: #a0aec0;
-    max-width: 750px;
-    margin: 0 auto 50px auto;
-    font-weight: 500;
-}
+        .hero-logo:hover {
+            animation: logo-pulse 2s infinite ease-in-out;
+        }
 
-        /* Navigation */
+        /* 6. Navigation */
         nav {
             padding: 20px 50px;
             display: flex;
@@ -85,7 +73,7 @@
             color: var(--accent-cyan);
         }
 
-        /* Hero Sektion (Ganz oben) */
+        /* 7. Hero Sektion */
         .hero {
             text-align: center;
             padding: 100px 20px;
@@ -93,16 +81,18 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            letter-spacing: 3px;
+            font-size: 4.5rem;
+            margin-bottom: 15px;
+            line-height: 1.1;
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: #a0aec0;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
+            max-width: 750px;
+            margin: 0 auto 50px auto;
+            font-weight: 500;
         }
 
         .cta-btn {
@@ -122,12 +112,13 @@
             box-shadow: 0 0 15px var(--accent-gold);
         }
 
-        /* Spiel-Vorstellung & Trailer */
+        /* 8. Spiel Sektion */
         .game-section {
             padding: 80px 20px;
             max-width: 1000px;
             margin: 0 auto;
             text-align: center;
+            scroll-margin-top: 50px; /* Damit es nach dem Scrollen oben nicht klebt */
         }
 
         .game-section h2 {
@@ -150,7 +141,6 @@
             font-size: 1.2rem;
         }
 
-        /* Features (3 Spalten) */
         .features {
             display: flex;
             flex-wrap: wrap;
@@ -183,7 +173,6 @@
             font-size: 0.95rem;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 40px;
@@ -193,7 +182,6 @@
             color: #718096;
         }
 
-        /* Responsive Design für Handys */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .features { flex-direction: column; }
@@ -203,7 +191,7 @@
 </head>
 <body>
 
-<nav>
+    <nav>
         <div class="logo">ELOORI <span>INTERACTIVE</span></div>
     </nav>
 
@@ -244,7 +232,7 @@
 
     <footer>
         <p>&copy; 2026 Eloori Interactive. Made in Switzerland.</p>
-        </footer>
+    </footer>
 
 </body>
 </html>
