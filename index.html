@@ -6,7 +6,7 @@
     <title>Eloori Interactive | Indie Game Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <style>
-        /* 1. Variablen */
+        /* ... Deine bisherigen Styles bleiben gleich ... */
         :root {
             --bg-color: #0d0f12;
             --text-main: #e2e8f0;
@@ -15,24 +15,15 @@
             --card-bg: #1a1d24;
         }
 
-        /* 2. Globales Verhalten (Smooth Scroll) */
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
-        /* 3. Animationen */
         @keyframes logo-pulse {
             0% { transform: scale(1); filter: drop-shadow(0 0 25px rgba(0,229,255,0.3)); }
             50% { transform: scale(1.05); filter: drop-shadow(0 0 40px rgba(0,229,255,0.5)); }
             100% { transform: scale(1); filter: drop-shadow(0 0 25px rgba(0,229,255,0.3)); }
         }
 
-        /* 4. Basis Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Rajdhani', sans-serif;
@@ -42,17 +33,9 @@
             letter-spacing: 0.5px;
         }
 
-        /* 5. Logo & Animation */
-        .hero-logo {
-            transition: transform 0.3s ease, filter 0.3s ease;
-            cursor: pointer;
-        }
+        .hero-logo { transition: transform 0.3s ease, filter 0.3s ease; cursor: pointer; }
+        .hero-logo:hover { animation: logo-pulse 2s infinite ease-in-out; }
 
-        .hero-logo:hover {
-            animation: logo-pulse 2s infinite ease-in-out;
-        }
-
-        /* 6. Navigation */
         nav {
             padding: 20px 50px;
             display: flex;
@@ -60,40 +43,17 @@
             align-items: center;
             background-color: rgba(13, 15, 18, 0.9);
             border-bottom: 1px solid #2d3748;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            color: white;
-        }
+        .logo { font-size: 24px; font-weight: 800; letter-spacing: 2px; color: white; text-decoration: none;}
+        .logo span { color: var(--accent-cyan); }
 
-        .logo span {
-            color: var(--accent-cyan);
-        }
-
-        /* 7. Hero Sektion */
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: radial-gradient(circle at center, #1a1d24 0%, #0d0f12 100%);
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            margin-bottom: 15px;
-            line-height: 1.1;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.4rem;
-            color: #a0aec0;
-            max-width: 750px;
-            margin: 0 auto 50px auto;
-            font-weight: 500;
-        }
+        .hero { text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #1a1d24 0%, #0d0f12 100%); }
+        .hero h1 { font-size: 4.5rem; margin-bottom: 15px; line-height: 1.1; font-weight: 700; }
+        .hero p { font-size: 1.4rem; color: #a0aec0; max-width: 750px; margin: 0 auto 50px auto; font-weight: 500; }
 
         .cta-btn {
             background-color: var(--accent-gold);
@@ -107,92 +67,99 @@
             text-transform: uppercase;
         }
 
-        .cta-btn:hover {
-            background-color: #fff;
-            box-shadow: 0 0 15px var(--accent-gold);
-        }
+        .cta-btn:hover { background-color: #fff; box-shadow: 0 0 15px var(--accent-gold); }
 
-        /* 8. Spiel Sektion */
-        .game-section {
-            padding: 80px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-            scroll-margin-top: 50px; /* Damit es nach dem Scrollen oben nicht klebt */
-        }
-
-        .game-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: var(--accent-gold);
-        }
+        .game-section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; text-align: center; scroll-margin-top: 100px; }
+        .game-section h2 { font-size: 2.5rem; margin-bottom: 10px; color: var(--accent-gold); }
 
         .trailer-placeholder {
-            width: 100%;
-            height: 500px;
-            background-color: var(--card-bg);
-            border: 2px dashed #4a5568;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 40px 0;
-            color: #718096;
-            font-size: 1.2rem;
+            width: 100%; height: 500px; background-color: var(--card-bg);
+            border: 2px dashed #4a5568; border-radius: 10px;
+            display: flex; justify-content: center; align-items: center;
+            margin: 40px 0; color: #718096; font-size: 1.2rem;
         }
 
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: space-between;
-        }
-
+        .features { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; }
         .feature-box {
-            background-color: var(--card-bg);
-            padding: 30px;
-            border-radius: 10px;
-            flex: 1;
-            min-width: 250px;
-            border-top: 3px solid var(--accent-cyan);
+            background-color: var(--card-bg); padding: 30px; border-radius: 10px;
+            flex: 1; min-width: 250px; border-top: 3px solid var(--accent-cyan);
             transition: transform 0.3s ease;
         }
+        .feature-box:hover { transform: translateY(-5px); }
+        .feature-box h3 { font-size: 1.2rem; margin-bottom: 15px; color: white; }
+        .feature-box p { color: #a0aec0; font-size: 0.95rem; }
 
-        .feature-box:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-box h3 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: white;
-        }
-
-        .feature-box p {
-            color: #a0aec0;
-            font-size: 0.95rem;
-        }
-
+        /* NEUE STYLES FÜR FOOTER & LINKS */
         footer {
             text-align: center;
-            padding: 40px;
+            padding: 60px 20px;
             background-color: #0a0c0e;
             border-top: 1px solid #2d3748;
             margin-top: 50px;
             color: #718096;
         }
 
+        .social-links {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .contact-email {
+            display: block;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        .legal-links {
+            margin-top: 20px;
+            font-size: 0.8rem;
+        }
+
+        .legal-links a {
+            color: #4a5568;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .legal-links a:hover {
+            color: #a0aec0;
+        }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .features { flex-direction: column; }
             .trailer-placeholder { height: 300px; }
+            nav { padding: 15px 20px; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">ELOORI <span>INTERACTIVE</span></div>
+        <a href="#" class="logo">ELOORI <span>INTERACTIVE</span></a>
     </nav>
 
     <section class="hero">
@@ -231,7 +198,19 @@
     </section>
 
     <footer>
+        <div class="social-links">
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">LinkedIn</a>
+        </div>
+
+        <a href="mailto:contact@eloori-interactive.com" class="contact-email">contact@eloori-interactive.com</a>
+
         <p>&copy; 2026 Eloori Interactive. Made in Switzerland.</p>
+
+        <div class="legal-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </div>
     </footer>
 
 </body>
