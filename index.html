@@ -16,6 +16,23 @@
             html {
             scroll-behavior: smooth;
         }
+            /* Die Definition der Puls-Animation */
+        @keyframes logo-pulse {
+        0% { transform: scale(1); filter: drop-shadow(0 0 25px rgba(0,229,255,0.3)); }
+        50% { transform: scale(1.05); filter: drop-shadow(0 0 40px rgba(0,229,255,0.5)); }
+        100% { transform: scale(1); filter: drop-shadow(0 0 25px rgba(0,229,255,0.3)); }
+}
+
+/* Die Klasse für das Logo */
+.hero-logo {
+    transition: transform 0.3s ease, filter 0.3s ease; /* Sanfter Übergang beim Start/Stop */
+    cursor: pointer;
+}
+
+/* Animation startet, wenn man mit der Maus darüberfährt */
+.hero-logo:hover {
+    animation: logo-pulse 2s infinite ease-in-out;
+}
         }
 
         * {
@@ -191,7 +208,7 @@
     </nav>
 
     <section class="hero">
-        <img src="logo.png" alt="Eloori Interactive Logo" style="width: 320px; height: auto; margin-bottom: 40px; filter: drop-shadow(0 0 25px rgba(0,229,255,0.3));">
+        <img src="logo.png" alt="Eloori Interactive Logo" class="hero-logo" style="width: 320px; height: auto; margin-bottom: 40px; filter: drop-shadow(0 0 25px rgba(0,229,255,0.3));">
         
         <h1>Master the Pitch. <br>Defy the Odds.</h1>
         <p>Eloori Interactive ist ein Schweizer Indie-Studio auf einer Mission: Wir vereinen tiefgreifende Sport-Strategie mit der unerbittlichen Herausforderung moderner Roguelites.</p>
