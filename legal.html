@@ -4,33 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal | Eloori Interactive</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    
     <style>
-        body {
-            font-family: 'Rajdhani', sans-serif;
-            background-color: #0d0f12;
-            color: #e2e8f0;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 800px;
-            background-color: #1a1d24;
-            padding: 40px;
-            border-radius: 10px;
-            border-top: 3px solid #ffd700;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        h1 { color: #ffd700; text-transform: uppercase; letter-spacing: 2px; }
-        h2 { color: #00e5ff; margin-top: 40px; margin-bottom: 15px; }
-        p, li { color: #a0aec0; line-height: 1.6; margin-bottom: 15px; }
-        strong { color: #e2e8f0; }
-        a { color: #00e5ff; text-decoration: none; border-bottom: 1px transparent; transition: 0.3s; }
-        a:hover { border-bottom: 1px solid #00e5ff; }
-        .back-link { display: inline-block; margin-top: 40px; font-weight: bold; text-transform: uppercase; }
-        .highlight-box { background-color: rgba(0, 229, 255, 0.1); padding: 15px; border-left: 3px solid #00e5ff; margin-bottom: 20px; border-radius: 4px; }
-    </style>
+    /* Lokale Einbindung der Schriftart Rajdhani */
+    @font-face {
+        font-family: 'Rajdhani';
+        font-style: normal;
+        font-weight: 500;
+        src: local(''),
+             url('fonts/rajdhani-v15-latin-500.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Rajdhani';
+        font-style: normal;
+        font-weight: 700;
+        src: local(''),
+             url('fonts/rajdhani-v15-latin-700.woff2') format('woff2');
+    }
+
+    /* Dein restliches Design */
+    body {
+        font-family: 'Rajdhani', sans-serif;
+        background-color: #0d0f12;
+        color: #e2e8f0;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+    .container {
+        max-width: 800px;
+        background-color: #1a1d24;
+        padding: 40px;
+        border-radius: 10px;
+        border-top: 3px solid #ffd700;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    h1 { color: #ffd700; text-transform: uppercase; letter-spacing: 2px; }
+    h2 { color: #00e5ff; margin-top: 40px; margin-bottom: 15px; }
+    p, li { color: #a0aec0; line-height: 1.6; margin-bottom: 15px; }
+    strong { color: #e2e8f0; }
+    a { color: #00e5ff; text-decoration: none; border-bottom: 1px transparent; transition: 0.3s; }
+    a:hover { border-bottom: 1px solid #00e5ff; }
+    .back-link { display: inline-block; margin-top: 40px; font-weight: bold; text-transform: uppercase; }
+    .highlight-box { background-color: rgba(0, 229, 255, 0.1); padding: 15px; border-left: 3px solid #00e5ff; margin-bottom: 20px; border-radius: 4px; }
+</style>
 </head>
 <body>
     <div class="container">
