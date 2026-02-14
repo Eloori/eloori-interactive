@@ -179,6 +179,140 @@
         .features { flex-direction: column; }
         nav { padding: 15px 20px; }
     }
+        /* --- NEUE STYLES FÜR MECHANIKEN & ARCHETYPEN --- */
+    
+    /* Archetypen Grid (3 Spalten Desktop, 1 Spalte Mobile) */
+    .archetype-section {
+        margin-top: 80px;
+        text-align: left;
+    }
+    .archetype-section h3 {
+        font-size: 2rem;
+        color: var(--accent-cyan);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .archetype-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .archetype-card {
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #2d3748;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .archetype-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-gold);
+    }
+    .archetype-img {
+        width: 100%;
+        height: 180px;
+        background-color: #0d0f12; /* Fallback, falls Bild nicht lädt */
+        object-fit: cover;
+        border-bottom: 2px solid #2d3748;
+    }
+    .archetype-content {
+        padding: 20px;
+    }
+    .archetype-content h4 {
+        font-size: 1.3rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    .archetype-content p {
+        color: #a0aec0;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    /* Ascension Box */
+    .ascension-box {
+        background: linear-gradient(135deg, #1a1d24 0%, #3a0d0d 100%);
+        border: 2px solid #ff5555;
+        border-radius: 10px;
+        padding: 40px;
+        margin-top: 60px;
+        text-align: center;
+    }
+    .ascension-box h3 {
+        color: #ff5555;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    .ascension-box p {
+        color: #e2e8f0;
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto 20px auto;
+    }
+    .ascension-levels {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .ascension-badge {
+        background-color: rgba(0,0,0,0.5);
+        color: var(--accent-gold);
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        border: 1px solid var(--accent-gold);
+    }
+
+    /* Akkordeon für Deep-Dive Infos (Kein JS nötig!) */
+    .deep-dive-section {
+        margin-top: 60px;
+        text-align: left;
+    }
+    details {
+        background-color: var(--card-bg);
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #2d3748;
+        overflow: hidden;
+    }
+    summary {
+        padding: 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--accent-cyan);
+        cursor: pointer;
+        list-style: none; /* Versteckt den Standard-Pfeil im Safari/Chrome */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+    }
+    summary::-webkit-details-marker {
+        display: none; /* Versteckt den Pfeil in älteren Webkit Browsern */
+    }
+    summary:after {
+        content: '+'; /* Eigenes Aufklapp-Icon */
+        font-size: 1.5rem;
+        color: var(--text-main);
+    }
+    details[open] summary:after {
+        content: '-';
+    }
+    details[open] summary {
+        background-color: #2d3748;
+    }
+    .details-content {
+        padding: 20px;
+        color: #a0aec0;
+        line-height: 1.6;
+        border-top: 1px solid #2d3748;
+    }
+    .details-content strong {
+        color: white;
+    }
 </style>
 </head>
 <body>
@@ -227,6 +361,104 @@
                 <h3>⚔️ Live-Match Engine</h3>
                 <p>Dynamische Taktik-Anpassungen, Nervenkitzel im Elfmeterschießen und ein Würfel-Minispiel für schmutzige Transfer-Deals.</p>
             </div>
+        </div>
+        <div class="archetype-section">
+            <h3>Wähle deinen Manager-Archetyp</h3>
+            <p style="text-align: center; color: #a0aec0; margin-bottom: 30px;">Schalte neue Spielstile frei. Jeder Archetyp verändert die Regeln des Transfermarkts und der Team-Dynamik drastisch.</p>
+            
+            <div class="archetype-grid">
+                <div class="archetype-card">
+                    <img src="archetype-standard.jpg" alt="Standard Manager" class="archetype-img">
+                    <div class="archetype-content">
+                        <h4>Der Standard</h4>
+                        <p>Der klassische Weg. Keine verrückten Boni, keine extremen Nachteile. Perfekt, um die Liga kennenzulernen, bevor der Wahnsinn beginnt.</p>
+                    </div>
+                </div>
+                <div class="archetype-card">
+                    <img src="archetype-underdog.jpg" alt="Underdog Manager" class="archetype-img">
+                    <div class="archetype-content">
+                        <h4>Der Underdog</h4>
+                        <p>David gegen Goliath! Dein Team erhält +10 Stärke-Punkte gegen übermächtige Gegner. Bist du jedoch der Favorit, zerbrechen deine Spieler unter dem Druck (-5 Stärke).</p>
+                    </div>
+                </div>
+                <div class="archetype-card">
+                    <img src="archetype-tycoon.jpg" alt="Tycoon Manager" class="archetype-img">
+                    <div class="archetype-content">
+                        <h4>Der Tycoon</h4>
+                        <p>Geld spielt keine Rolle. Du startest reich, aber der Transfermarkt hasst dich: Alle Spieler kosten ein Vielfaches (bis zu 300%) ihres Marktwertes.</p>
+                    </div>
+                </div>
+                <div class="archetype-card">
+                    <img src="archetype-youth.jpg" alt="Youth Guru Manager" class="archetype-img">
+                    <div class="archetype-content">
+                        <h4>Jugend Visionär</h4>
+                        <p>U23-Spieler wachsen doppelt so schnell und haben ein massiv höheres Potenzial. Der Haken? Alte Stars (Ü25) weigern sich, für dich zu spielen.</p>
+                    </div>
+                </div>
+                <div class="archetype-card">
+                    <img src="archetype-grinder.jpg" alt="Grinder Manager" class="archetype-img">
+                    <div class="archetype-content">
+                        <h4>Der Schleifer</h4>
+                        <p>Deine Spieler sind Maschinen und verlieren während der Spiele keine Fitness. Allerdings ist das Verletzungsrisiko im Training dreimal so hoch!</p>
+                    </div>
+                </div>
+                <div class="archetype-card">
+                    <img src="archetype-hardcore.jpg" alt="Hardcore Manager" class="archetype-img">
+                    <div class="archetype-content">
+                        <h4>Hardcore</h4>
+                        <p>Nur für die absoluten Legenden, die bewiesen haben, dass sie 25 Pokale gewinnen können. Der ultimative Test deiner Fähigkeiten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ascension-box">
+            <h3>🔥 The Ascension: 10 Stufen zur Hölle</h3>
+            <p>Hast du die Liga und den Pokal gewonnen? Herzlichen Glückwunsch. Jetzt beginnt das echte Spiel. Mit jeder Ascension-Stufe wird die Welt erbarmungsloser.</p>
+            <div class="ascension-levels">
+                <span class="ascension-badge">Lvl 2: Gehälter +50%</span>
+                <span class="ascension-badge">Lvl 3: Doppelte Verletzungsdauer</span>
+                <span class="ascension-badge">Lvl 4-9: Gegner werden immer stärker</span>
+                <span class="ascension-badge" style="color: #ff5555; border-color: #ff5555;">Lvl 10: ALIEN MODUS (Gegner 90+ Stärke)</span>
+            </div>
+        </div>
+
+        <div class="deep-dive-section">
+            <h3 style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 20px; text-align: center;">Hinter den Kulissen: Wie das Spiel tickt</h3>
+            
+            <details>
+                <summary>Wie entsteht die Spielwelt? (Team Generierung)</summary>
+                <div class="details-content">
+                    <p>Deine Karriere beginnt ganz unten. Die Spielwelt besteht aus drei dynamischen Ligen:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+                        <li><strong>Liga 3 (Basis-Stärke ~40):</strong> Der Schweizer Amateur- und Profifußball. Hier beginnst du mit einem Startkapital von 500k € und einem jungen, aber unerfahrenen Kader.</li>
+                        <li><strong>Liga 2 (Basis-Stärke ~55):</strong> Der harte deutsche Profifußball. Hier weht bereits ein rauerer Wind.</li>
+                        <li><strong>Liga 1 (Basis-Stärke ~70):</strong> Die internationalen Metropolen. Die Elite des Weltfußballs.</li>
+                    </ul>
+                    <p><strong>Anti-Markenrecht-Generator:</strong> Die Engine generiert dynamische Namen aus echten Weltstädten (z.B. Mailand, London) und Vereins-Präfixen (FC, United, Sporting). Ein spezieller Filter verhindert, dass geschützte Namen wie "Real Madrid" oder "FC Bayern" per Zufall entstehen – du spielst in einem völlig eigenen, aber authentischen Universum!</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Wie gewinnt man Spiele? (Taktik & Engine)</summary>
+                <div class="details-content">
+                    <p>Matches werden nicht durch reines Glück entschieden. Die Live-Match Engine berechnet jeden Angriff basierend auf harten Fakten:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+                        <li><strong>Sektor-Duelle:</strong> Dein Sturm-Wert (STU) kämpft gegen die gegnerische Verteidigung (VER), dein Mittelfeld ringt um den Ballbesitz.</li>
+                        <li><strong>Taktik ist entscheidend:</strong> Ist die gegnerische Offensive 10 Punkte stärker als deine Abwehr? Dann spiel defensiv! Bist du der Favorit? Dann wähle die Offensive. Die richtige Taktik gibt den Ausschlag.</li>
+                        <li><strong>Fitness & Form:</strong> Ein Spieler mit Stärke 80 nützt dir nichts, wenn seine Fitness im Keller ist oder er eine rote Form-Krise hat. Nutze den Co-Trainer für die automatische Rotation, um Verletzungen vorzubeugen!</li>
+                        <li><strong>Manager Skills:</strong> Schalte permanente Skills wie den "Motivations-Künstler" (schnellere Erholung) oder das "Adlerauge" (besseres Scouting-Potenzial) frei, um die Engine zu deinen Gunsten zu manipulieren.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>Transfermarkt & Das Würfel-Minispiel</summary>
+                <div class="details-content">
+                    <p>Hast du einen Top-Spieler auf dem Markt entdeckt, der dein Team sofort verbessern würde? Einfach kaufen ist nicht immer möglich!</p>
+                    <p>Wenn es sich um einen begehrten <strong>"Tipp" (Top-Upgrade)</strong> handelt, wird ein Rivale aus deiner Liga mitbieten. Es startet ein <strong>Würfel-Minispiel</strong> um die Gunst des Spielers. Gewinnst du den Wurf, unterschreibt er bei dir. Verlierst du, geht er zum Gegner. Es sei denn, du hast den "Verhandlungs-Genie" Skill, der dir einen wertvollen Re-Roll ermöglicht!</p>
+                </div>
+            </details>
         </div>
     </section>
 
