@@ -152,9 +152,7 @@
         filter: blur(2px);
     }
 
-    /* --- NEUE STYLES FÜR MECHANIKEN & ARCHETYPEN --- */
-    
-    /* Archetypen Grid (3 Spalten Desktop, 1 Spalte Mobile) */
+    /* --- MECHANIKEN & ARCHETYPEN --- */
     .archetype-section {
         margin-top: 80px;
         text-align: left;
@@ -185,7 +183,7 @@
     .archetype-img {
         width: 100%;
         height: 180px;
-        background-color: #0d0f12; /* Fallback, falls Bild nicht lädt */
+        background-color: #0d0f12; 
         object-fit: cover;
         border-bottom: 2px solid #2d3748;
     }
@@ -203,7 +201,7 @@
         line-height: 1.4;
     }
 
-    /* --- NEU: STYLES FÜR DIE SPIELERTYPEN (TRAITS) --- */
+    /* --- TRAITS SECTION --- */
     .traits-section {
         margin-top: 80px;
         text-align: center;
@@ -221,7 +219,7 @@
         text-align: left;
     }
     .trait-card {
-        background-color: #121419; /* Etwas dunkler als die Archetypen-Karten */
+        background-color: #121419; 
         border-radius: 10px;
         padding: 25px;
         border: 1px solid #2d3748;
@@ -248,11 +246,10 @@
         justify-content: center;
         font-size: 1.5rem;
     }
-    /* Falls du eigene SVG Icons nutzt, werden diese so formatiert: */
     .trait-icon img {
         width: 25px;
         height: 25px;
-        filter: invert(1); /* Macht schwarze SVGs weiss */
+        filter: invert(1); 
     }
     .trait-card h4 {
         color: white;
@@ -263,7 +260,74 @@
         font-size: 0.95rem;
         line-height: 1.5;
     }
-    /* ------------------------------------------------ */
+
+    /* --- NEU: EVENTS SECTION --- */
+    .events-section {
+        margin-top: 80px;
+        text-align: center;
+    }
+    .events-section h3 {
+        font-size: 2rem;
+        color: var(--accent-cyan); 
+        margin-bottom: 15px;
+    }
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+        text-align: left;
+    }
+    .event-card {
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        padding: 25px;
+        border: 1px solid #2d3748;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    .event-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-cyan);
+    }
+    .event-card h4 {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .event-card p {
+        color: #a0aec0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        flex-grow: 1; /* Schiebt die Buttons nach unten */
+    }
+    .event-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .event-btn {
+        background-color: #2d3748;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 0.85rem;
+        text-align: left;
+        border-left: 4px solid var(--accent-cyan);
+        font-weight: bold;
+    }
+    .event-btn.risk {
+        border-left-color: #ff5555;
+    }
+    .event-btn.safe {
+        border-left-color: #a0aec0;
+        color: #a0aec0;
+    }
 
     /* Ascension Box */
     .ascension-box {
@@ -319,17 +383,17 @@
         font-weight: bold;
         color: var(--accent-cyan);
         cursor: pointer;
-        list-style: none; /* Versteckt den Standard-Pfeil im Safari/Chrome */
+        list-style: none; 
         display: flex;
         justify-content: space-between;
         align-items: center;
         transition: background-color 0.3s ease;
     }
     summary::-webkit-details-marker {
-        display: none; /* Versteckt den Pfeil in älteren Webkit Browsern */
+        display: none; 
     }
     summary:after {
-        content: '+'; /* Eigenes Aufklapp-Icon */
+        content: '+'; 
         font-size: 1.5rem;
         color: var(--text-main);
     }
@@ -533,6 +597,40 @@
                         <h4>Glasknochen</h4>
                     </div>
                     <p>Massiv erhöhtes Verletzungsrisiko und fehlt oft für mehrere Wochen. Dafür ist er auf dem Transfermarkt oft ein echtes Schnäppchen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="events-section">
+            <h3>Dynamische Events & Dilemmas</h3>
+            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto;">Keine Saison verläuft nach Plan. Über 50 dynamische Story-Events unterbrechen den Alltag und zwingen dich zu harten Entscheidungen. Die Events reagieren intelligent auf deinen gewählten Archetypen und die Traits deiner Spieler!</p>
+
+            <div class="events-grid">
+                <div class="event-card">
+                    <h4>⚠️ Fragwürdiger Sponsor</h4>
+                    <p>"Ein Briefumschlag mit 100.000 € liegt auf dem Tisch. Der Absender fordert im Gegenzug, dass du das nächste Spiel streng defensiv spielst."</p>
+                    <div class="event-options">
+                        <div class="event-btn risk">Option A: Geld einstecken (Gefahr erwischt zu werden)</div>
+                        <div class="event-btn safe">Option B: Brief zerreissen (Sicher)</div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <h4>👑 Diva in Rage</h4>
+                    <p>Dein Star-Stürmer (Trait: Diva) ist unzufrieden mit seinem Spind in der Kabine und macht miese Stimmung. Das ganze Team leidet darunter.</p>
+                    <div class="event-options">
+                        <div class="event-btn">Option A: Sonderwünsche erfüllen (-30.000 €)</div>
+                        <div class="event-btn risk">Option B: Zurechtweisen (Form sinkt massiv)</div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <h4>🏋️ Das Lazarett platzt (Nur als "Schleifer")</h4>
+                    <p>Dein brutales Training fordert Tribut. Die medizinische Abteilung fordert dringend teure Spezialgeräte zur Prävention von Verletzungen.</p>
+                    <div class="event-options">
+                        <div class="event-btn">Option A: Geräte kaufen (-120.000 €)</div>
+                        <div class="event-btn risk">Option B: "Wir sind keine Weicheier!" (Verletzungen)</div>
+                    </div>
                 </div>
             </div>
         </div>
