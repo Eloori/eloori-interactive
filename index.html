@@ -102,15 +102,15 @@
     .game-section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; text-align: center; scroll-margin-top: 100px; }
     .game-section h2 { font-size: 2.5rem; margin-bottom: 10px; color: var(--accent-gold); }
 
-    .features { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
     .feature-box {
         background-color: var(--card-bg); padding: 30px; border-radius: 10px;
-        flex: 1; min-width: 250px; border-top: 3px solid var(--accent-cyan);
+        border-top: 3px solid var(--accent-cyan);
         transition: transform 0.3s ease, opacity 0.5s ease, filter 0.5s ease;
     }
     .feature-box:hover { transform: translateY(-5px); }
     .feature-box h3 { font-size: 1.2rem; margin-bottom: 15px; color: white; }
-    .feature-box p { color: #a0aec0; font-size: 0.95rem; }
+    .feature-box p { color: #a0aec0; font-size: 0.95rem; line-height: 1.4; }
 
     /* VIDEO EFFEKTE */
     .video-focus-wrapper {
@@ -455,7 +455,7 @@
 
     @media (max-width: 768px) {
         .hero h1 { font-size: 2.5rem; }
-        .features { flex-direction: column; }
+        .features { grid-template-columns: 1fr; }
         nav { padding: 15px 20px; }
     }
 </style>
@@ -470,7 +470,7 @@
         <img src="logo.png" alt="Eloori Interactive Logo" class="hero-logo" style="width: 320px; height: auto; margin-bottom: 40px; filter: drop-shadow(0 0 25px rgba(0,229,255,0.3));">
         
         <h1>Master the Pitch. <br>Defy the Odds.</h1>
-        <p>Eloori Interactive ist ein Schweizer Indie-Studio auf einer Mission: Wir vereinen tiefgreifende Sport-Strategie mit der unerbittlichen Herausforderung moderner Roguelites.</p>
+        <p>Eloori Interactive ist ein Schweizer Indie-Studio auf einer Mission: Wir vereinen tiefgreifende Sport-Strategie mit Rollenspiel-Mechaniken und der unerbittlichen Herausforderung moderner Roguelites.</p>
         
         <div style="margin-top: 40px;">
             <a href="#game" class="cta-btn">Unsere Projekte</a>
@@ -479,7 +479,7 @@
 
     <section id="game" class="game-section" style="border-top: 1px solid #1a1d24;">
         <h2>Soccer Manager Roguelite</h2>
-        <p>Keine Excel-Tabellen, kein Erbarmen. Wähle deinen Archetypen, trotze der Ascension und werde zur Legende – oder zum nächsten Entlassungs-Opfer.</p>
+        <p>Keine starren Excel-Tabellen, kein Erbarmen. Wähle deinen Archetypen, trainiere dein Team mit RPG-Skillpunkten, trotze der Ascension und werde zur Legende – oder zum nächsten Entlassungs-Opfer.</p>
         
         <div class="video-focus-wrapper">
             <div class="video-container">
@@ -499,12 +499,16 @@
                 <p>Spiele als Underdog, Youth-Guru oder Tycoon. Jeder Run verändert die Regeln des Transfermarkts und der Team-Entwicklung komplett.</p>
             </div>
             <div class="feature-box">
+                <h3>⚔️ RPG-System & Synergien</h3>
+                <p>Spieler sammeln Erfahrung und Level-Ups. Verteile Skillpunkte auf Sub-Werte, schalte 12 einzigartige Spielerklassen frei und meistere taktische Synergien.</p>
+            </div>
+            <div class="feature-box">
                 <h3>📈 The Ascension</h3>
                 <p>10 Stufen des Wahnsinns. Besiege übermächtige 90+ Teams, kämpfe gegen explodierende Gehälter und überlebe die Liga.</p>
             </div>
             <div class="feature-box">
-                <h3>⚔️ Live-Match Engine</h3>
-                <p>Dynamische Taktik-Anpassungen, Nervenkitzel im Elfmeterschiessen und ein Würfel-Minispiel für schmutzige Transfer-Deals.</p>
+                <h3>⚽ Live-Match Engine</h3>
+                <p>Intelligente Sektor-Duelle, Last-Minute Drama-Tore und ein knallhartes Würfel-Minispiel für schmutzige Transfer-Deals direkt vor der Nase deiner Rivalen.</p>
             </div>
         </div>
 
@@ -560,7 +564,7 @@
 
         <div class="traits-section">
             <h3>Neue Spielertypen (Traits)</h3>
-            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto;">Nicht jeder Spieler ist gleich. Ein Bruchteil aller Talente wird mit einzigartigen Charakterzügen generiert, die den Transfermarkt und deine Taktik komplett auf den Kopf stellen.</p>
+            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto;">Nicht jeder Spieler ist gleich. Ein Bruchteil aller Talente wird mit einzigartigen Charakterzügen generiert, die den Transfermarkt und deine Finanzen komplett auf den Kopf stellen.</p>
 
             <div class="traits-grid">
                 <div class="trait-card">
@@ -582,7 +586,7 @@
                         <div class="trait-icon">💰</div>
                         <h4>Der Söldner</h4>
                     </div>
-                    <p>Ein absoluter Vollprofi, aber er spielt nur fürs Geld. Verlangt 50% mehr Gehalt und ist der Erste, der den Verein verlässt, wenn die Kasse leer ist.</p>
+                    <p>Ein absoluter Elite-Spieler für die Startelf, aber er spielt nur fürs Geld. Verlangt das <strong>Doppelte an Gehalt</strong>, kostet 50% mehr Ablöse und treibt dich schnell in den Ruin.</p>
                 </div>
                 <div class="trait-card">
                     <div class="trait-header">
@@ -649,36 +653,48 @@
             <h3 style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 20px; text-align: center;">Hinter den Kulissen: Wie das Spiel tickt</h3>
             
             <details>
-                <summary>Wie entsteht die Spielwelt? (Team Generierung)</summary>
+                <summary>Wie entsteht die Spielwelt? (Generierung)</summary>
                 <div class="details-content">
-                    <p>Deine Karriere beginnt ganz unten. Die Spielwelt besteht aus drei dynamischen Ligen:</p>
+                    <p>Deine Karriere beginnt ganz unten. Die Spielwelt besteht aus drei dynamischen Ligen mit einem hart ausbalancierten Schwierigkeitsgrad:</p>
                     <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                        <li><strong>Liga 3 (Basis-Stärke ~40):</strong> Der Schweizer Amateur- und Profifussball. Hier beginnst du mit einem Startkapital von 500k € und einem jungen, aber unerfahrenen Kader.</li>
-                        <li><strong>Liga 2 (Basis-Stärke ~55):</strong> Der harte deutsche Profifussball. Hier weht bereits ein rauerer Wind.</li>
-                        <li><strong>Liga 1 (Basis-Stärke ~70):</strong> Die internationalen Metropolen. Die Elite des Weltfussballs.</li>
+                        <li><strong>Liga 3 (Stärke ~40):</strong> Der Schweizer Amateur- und Profifussball. Du beginnst mit 500k € und einem Team voller Talente, die nach oben wollen.</li>
+                        <li><strong>Liga 2 (Stärke ~50):</strong> Der harte deutsche Profifussball. Der Übergang ist machbar, verlangt aber clevere Transfers.</li>
+                        <li><strong>Liga 1 (Stärke ~65):</strong> Die internationalen Metropolen. Hier spielen die wahren Meister und die KI wird dir nichts schenken.</li>
                     </ul>
-                    <p><strong>Anti-Markenrecht-Generator:</strong> Die Engine generiert dynamische Namen aus echten Weltstädten (z.B. Mailand, London) und Vereins-Präfixen (FC, United, Sporting). Ein spezieller Filter verhindert, dass geschützte Namen der echten Weltklasse-Clubs per Zufall entstehen – du spielst in einem völlig eigenen, aber absolut authentischen Universum!</p>
+                    <p><strong>Anti-Markenrecht-Generator:</strong> Die Engine generiert dynamische Namen aus echten Weltstädten (z.B. Mailand, London) und Vereins-Präfixen. Ein Filter verhindert, dass geschützte Namen echter Weltklasse-Clubs entstehen – du spielst in einem völlig eigenen, aber authentischen Universum!</p>
                 </div>
             </details>
 
             <details>
-                <summary>Wie gewinnt man Spiele? (Taktik & Engine)</summary>
+                <summary>Level-Ups, RPG-Werte & 12 Spieler-Klassen</summary>
                 <div class="details-content">
-                    <p>Matches werden nicht durch reines Glück entschieden. Die Live-Match Engine berechnet jeden Angriff basierend auf harten Fakten:</p>
+                    <p>Jeder Spieler ist mehr als nur eine bloße "Stärke-Zahl". Durch erfolgreiche Spiele sammeln sie <strong>Erfahrungspunkte (XP)</strong> und steigen im Level auf.</p>
                     <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                        <li><strong>Sektor-Duelle:</strong> Dein Sturm-Wert (STU) kämpft gegen die gegnerische Verteidigung (VER), dein Mittelfeld ringt um den Ballbesitz.</li>
-                        <li><strong>Taktik ist entscheidend:</strong> Ist die gegnerische Offensive 10 Punkte stärker als deine Abwehr? Dann spiel defensiv! Bist du der Favorit? Dann wähle die Offensive. Die richtige Taktik gibt den Ausschlag.</li>
-                        <li><strong>Fitness & Form:</strong> Ein Spieler mit Stärke 80 nützt dir nichts, wenn seine Fitness im Keller ist oder er eine rote Form-Krise hat. Nutze den Co-Trainer für die automatische Rotation, um Verletzungen vorzubeugen!</li>
-                        <li><strong>Manager Skills:</strong> Schalte permanente Skills wie den "Motivations-Künstler" (schnellere Erholung) oder das "Adlerauge" (besseres Scouting-Potenzial) frei, um die Engine zu deinen Gunsten zu manipulieren.</li>
+                        <li><strong>Skillpunkte verteilen:</strong> Bei jedem Level-Up erhältst du 5 Skillpunkte. Du entscheidest, ob dein Stürmer im Abschluss (Schuss), im Passen oder im Dribbling besser wird!</li>
+                        <li><strong>12 Dynamische Klassen:</strong> Basierend darauf, welcher RPG-Stat bei einem Spieler dominiert, ändert sich seine Klasse. Ein Verteidiger mit hohem Kopfball-Wert wird zum "Kopfballungeheuer". Ein Stürmer mit Fokus auf Passen wird zum "Unterstützer".</li>
+                        <li><strong>Das Potenzial-Limit:</strong> Du kannst einen Spieler nicht ewig leveln. Jeder Spieler hat eine feste Potenzial-Grenze, die beim Scouting aufgedeckt wird. Danach ist Schluss!</li>
                     </ul>
                 </div>
             </details>
 
             <details>
-                <summary>Transfermarkt & Das Würfel-Minispiel</summary>
+                <summary>Die Match-Engine, Synergien & Der Drama-Faktor</summary>
                 <div class="details-content">
-                    <p>Hast du einen Top-Spieler auf dem Markt entdeckt, der dein Team sofort verbessern würde? Einfach kaufen ist nicht immer möglich!</p>
-                    <p>Wenn es sich um einen begehrten <strong>"Tipp" (Top-Upgrade)</strong> handelt, wird ein Rivale aus deiner Liga mitbieten. Es startet ein <strong>Würfel-Minispiel</strong> um die Gunst des Spielers. Gewinnst du den Wurf, unterschreibt er bei dir. Verlierst du, geht er zum Gegner. Es sei denn, du hast den "Verhandlungs-Genie" Skill, der dir einen wertvollen Re-Roll ermöglicht!</p>
+                    <p>Matches werden in Echtzeit simuliert und erfordern strategisches Mitdenken bei der Aufstellung:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+                        <li><strong>Taktische Synergien (Pflicht!):</strong> Ein Sturm aus reinen 'Knipsern' schießt kaum Tore (-30% Strafe), wenn im Mittelfeld die 'Spielmacher' oder 'Unterstützer' für die Pässe fehlen. Du musst die richtigen RPG-Klassen kombinieren, um Boni von bis zu +15% auf Mannschaftsteile zu kassieren.</li>
+                        <li><strong>Sektor-Duelle:</strong> Dein Sturm kämpft gegen die gegnerische Verteidigung, dein Mittelfeld ringt um den Ballbesitz. Spielst du Defensiv, wird deine Abwehr zum Bollwerk, aber vorne geht kaum noch etwas.</li>
+                        <li><strong>Der Drama-Faktor (Anti-Draw):</strong> Nichts ist langweiliger als fünf 0:0 in Folge. Unsere Engine erkennt, wenn zwei defensive Top-Teams aufeinanderprallen. In 40% der drohenden Unentschieden gibt es in der 90. Minute noch einen "Lucky Punch", der das Spiel durch einen Konter entscheidet!</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>Transfermarkt, Relative Seltenheit & Abwerben (Poaching)</summary>
+                <div class="details-content">
+                    <p>Der Transfermarkt wächst mit dir. Spieler-Seltenheiten (wie <em>Weltklasse</em> oder <em>Legende</em>) werden nicht fest definiert, sondern skalieren <strong>relativ zum Durchschnitt deines Teams!</strong> Ein 65er Spieler ist in Liga 3 ein absoluter Legenden-Fund, in Liga 1 absoluter Standard.</p>
+                    <p><strong>Die Söldner-Gefahr:</strong> Die besten 5 Spieler auf dem Markt haben eine 30% Chance, "Söldner" zu sein. Sie heben dein Team auf das nächste Level, ruinieren aber dein Gehaltsbudget. Ein ständiges Abwägen von Risiko und Ertrag.</p>
+                    <p><strong>Direktes Abwerben (Poaching):</strong> Fehlt das Geld auf dem Markt? Wenn du einen Spieler der gegnerischen KI unbedingt haben willst, kannst du ihn <strong>direkt aus dem feindlichen Kader herauskaufen</strong>. Das kostet dich das 3-fache des Marktwertes (mit Manager-Skill nur das 2-fache) – aber in entscheidenden Saisonphasen ist es das wert!</p>
                 </div>
             </details>
         </div>
