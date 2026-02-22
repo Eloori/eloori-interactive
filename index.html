@@ -260,7 +260,82 @@
         font-size: 0.95rem;
         line-height: 1.5;
     }
-
+/* --- TAKTIK HANDBUCH --- */
+    .handbook-section {
+        margin-top: 80px;
+        text-align: center;
+    }
+    .handbook-section h3 {
+        font-size: 2rem;
+        color: var(--accent-cyan);
+        margin-bottom: 15px;
+    }
+    .warning-box {
+        background-color: rgba(255, 85, 85, 0.1);
+        border: 2px solid #ff5555;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: left;
+        max-width: 800px;
+        margin: 0 auto 30px auto;
+    }
+    .warning-box h4 {
+        color: #ff5555;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+    .warning-box ul {
+        margin-left: 20px;
+        color: #e2e8f0;
+        line-height: 1.5;
+    }
+    .classes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        text-align: left;
+        margin-top: 20px;
+    }
+    .class-group {
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        padding: 20px;
+        border-top: 3px solid var(--accent-gold);
+        border: 1px solid #2d3748;
+    }
+    .class-group h4 {
+        color: var(--accent-gold);
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #2d3748;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .class-item {
+        margin-bottom: 20px;
+    }
+    .class-item:last-child {
+        margin-bottom: 0;
+    }
+    .class-item h5 {
+        color: white;
+        font-size: 1.1rem;
+        margin-bottom: 3px;
+    }
+    .req-stat {
+        color: var(--accent-cyan);
+        font-size: 0.85rem;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .class-item p {
+        color: #a0aec0;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
     /* --- NEU: EVENTS SECTION --- */
     .events-section {
         margin-top: 80px;
@@ -604,7 +679,97 @@
                 </div>
             </div>
         </div>
+<div class="handbook-section">
+            <h3>Taktik-Handbuch: Die 12 RPG-Klassen</h3>
+            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto 30px auto;">Deine Spieler entwickeln sich basierend auf ihren primären Attributen in eine von 12 Klassen. Baue dein Team weise auf, denn fehlende Synergien werden auf dem Platz gnadenlos bestraft.</p>
 
+            <div class="warning-box">
+                <h4>⚠️ Die wichtigsten Regeln (Pflicht-Rollen)</h4>
+                <p style="color: #a0aec0; margin-bottom: 10px;">Dein Team braucht eine funktionierende Achse, sonst brechen die Basiswerte im Spiel dramatisch ein:</p>
+                <ul>
+                    <li><strong>Keine Torgefahr:</strong> Ohne einen 'Knipser' oder 'Dribbler' im Sturm bricht deine Offensive um <strong>-30%</strong> ein.</li>
+                    <li><strong>Keine Spielkontrolle:</strong> Ohne einen 'Spielmacher' (Mittelfeld) oder 'Unterstützer' (Sturm) kommen keine Pässe an: <strong>-20% Offensive</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="classes-grid">
+                <div class="class-group" style="border-top-color: #ff5555;">
+                    <h4 style="color: #ff5555;">⚽ Sturm</h4>
+                    <div class="class-item">
+                        <h5>Knipser</h5>
+                        <span class="req-stat">Braucht: Abschluss</span>
+                        <p>Der klassische Torjäger. Bringt satte <strong>+15% Sturm-Stärke</strong>.</p>
+                    </div>
+                    <div class="class-item">
+                        <h5>Dribbler</h5>
+                        <span class="req-stat">Braucht: Dribbling</span>
+                        <p>Zieht die Abwehr auf sich. <strong>+10% Sturm</strong> und <strong>+5% Mittelfeld</strong>.</p>
+                    </div>
+                    <div class="class-item">
+                        <h5>Unterstützer</h5>
+                        <span class="req-stat">Braucht: Passen</span>
+                        <p>Macht die Nebenleute besser (<strong>+5% Sturm</strong>) und verhindert den fatalen Pass-Malus für das Team.</p>
+                    </div>
+                </div>
+
+                <div class="class-group" style="border-top-color: #55ff55;">
+                    <h4 style="color: #55ff55;">🎯 Mittelfeld</h4>
+                    <div class="class-item">
+                        <h5>Spielmacher</h5>
+                        <span class="req-stat">Braucht: Passen</span>
+                        <p>Das Hirn der Mannschaft. Gibt <strong>+15% Mittelfeld-Stärke</strong> und verhindert den Pass-Malus.</p>
+                    </div>
+                    <div class="class-item">
+                        <h5>Abräumer</h5>
+                        <span class="req-stat">Braucht: Zweikampf</span>
+                        <p>Fängt Angriffe früh ab und entlastet die Abwehr (<strong>+15% Abwehr-Stärke</strong>).</p>
+                    </div>
+                    <div class="class-item">
+                        <h5>Box-to-Box</h5>
+                        <span class="req-stat">Braucht: Schuss</span>
+                        <p>Der unermüdliche Motor. Gibt <strong>+10% Mittelfeld</strong> und schaltet sich vorne ein (<strong>+5% Sturm</strong>).</p>
+                    </div>
+                </div>
+
+                <div class="class-group" style="border-top-color: #00e5ff;">
+                    <h4 style="color: #00e5ff;">🧱 Abwehr</h4>
+                    <div class="class-item">
+                        <h5>Fels in der Brandung</h5>
+                        <span class="req-stat">Braucht: Zweikampf</span>
+                        <p>Die klassische Kante hinten drin. Bringt massive <strong>+15% Abwehr-Stärke</strong>.</p>
+                    </div>
+                    <div class="class-item">
+                        <h5>Kopfballungeheuer</h5>
+                        <span class="req-stat">Braucht: Kopfball</span>
+                        <p>Extrem gefährlich bei eigenen Eckbällen und Flanken. Gibt <strong>+10% Sturm-Stärke</strong>.</p>
+                    </div>
+                    <div class="class-item">
+                        <h5>Moderner Verteidiger</h5>
+                        <span class="req-stat">Braucht: Tempo</span>
+                        <p>Leitet mit seinem Tempo schnelle Konter aus der Abwehr heraus ein (<strong>+10% Mittelfeld</strong>).</p>
+                    </div>
+                </div>
+
+                <div class="class-group" style="border-top-color: #ffd700;">
+                    <h4 style="color: #ffd700;">🧤 Torwart</h4>
+                    <div class="class-item">
+                        <h5>Linienkeeper</h5>
+                        <span class="req-stat">Braucht: Reflexe</span>
+                        <p>Der reine Shot-Stopper auf der Linie. Gibt <strong>+15% Torwart-Stärke</strong>.</p>
+                    </div>
+                    <div class="class-item">
+                        <h5>Strafraum-Boss</h5>
+                        <span class="req-stat">Braucht: Physis</span>
+                        <p>Dominiert den 16-Meter-Raum bei Flanken (<strong>+10% Abwehr</strong>, <strong>+5% Torwart</strong>).</p>
+                    </div>
+                    <div class="class-item">
+                        <h5>Libero-Keeper</h5>
+                        <span class="req-stat">Braucht: Aufbau</span>
+                        <p>Agiert quasi als 11. Feldspieler im Spielaufbau. Bringt <strong>+10% Mittelfeld-Stärke</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="events-section">
             <h3>Dynamische Events & Dilemmas</h3>
             <p style="color: #a0aec0; max-width: 750px; margin: 0 auto;">Keine Saison verläuft nach Plan. Über 50 dynamische Story-Events unterbrechen den Alltag und zwingen dich zu harten Entscheidungen. Die Events reagieren intelligent auf deinen gewählten Archetypen und die Traits deiner Spieler!</p>
