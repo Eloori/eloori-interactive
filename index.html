@@ -314,10 +314,21 @@
         gap: 10px;
     }
     .class-item {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.02); /* Ganz leichter, dunkler Hintergrund */
+        border: 1px solid transparent;
+        transition: all 0.3s ease; /* Macht die Animation weich */
     }
     .class-item:last-child {
         margin-bottom: 0;
+    }
+    .class-item:hover {
+        transform: translateY(-4px); /* Hebt die Box leicht an */
+        background-color: rgba(255, 255, 255, 0.08); /* Helleres Aufleuchten */
+        border-color: #2d3748; /* Sichtbarer Rahmen taucht auf */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Sanfter Schatten für Tiefe */
     }
     .class-item h5 {
         color: white;
