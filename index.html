@@ -111,6 +111,28 @@
         transform: scale(1);
         filter: drop-shadow(0 0 25px rgba(0, 229, 255, 0.3));
     }
+    .steam-btn {
+        background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%);
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        border: 2px solid #66c0f4;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-right: 15px; /* Abstand zum anderen Button */
+    }
+    
+    .steam-btn:hover {
+        background: linear-gradient(135deg, #2a475e 0%, #66c0f4 100%);
+        box-shadow: 0 0 15px rgba(102, 192, 244, 0.6);
+        color: white;
+    }
 }
 
     .cta-btn:hover { background-color: #fff; box-shadow: 0 0 15px var(--accent-gold); }
@@ -569,14 +591,15 @@
     </nav>
 
     <section class="hero">
-        <img src="logo.png" alt="Eloori Interactive Logo" class="hero-logo" style="width: 320px; height: auto; margin-bottom: 40px; filter: drop-shadow(0 0 25px rgba(0,229,255,0.3));">
-        
-        <h1>Master the Pitch. <br>Defy the Odds.</h1>
-        <p>Eloori Interactive ist ein Schweizer Indie-Studio auf einer Mission: Wir vereinen tiefgreifende Sport-Strategie mit Rollenspiel-Mechaniken und der unerbittlichen Herausforderung moderner Roguelites.</p>
-        
-        <div style="margin-top: 40px;">
-            <a href="#game" class="cta-btn">Unsere Projekte</a>
-        </div>
+        <div style="margin-top: 40px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+    <a href="https://store.steampowered.com/app/4556000/Tactilite/" target="_blank" class="steam-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.198 2.198 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11l-3.083 2.45v.055zm8.013-1.006a1.18 1.18 0 1 0-.909-2.008 1.18 1.18 0 0 0 .91 2.008m-1.464-4.888a2.031 2.031 0 1 0 2.87-2.87 2.032 2.032 0 0 0-2.87 2.87"/>
+        </svg>
+        Auf Steam Wishlisten
+    </a>
+    <a href="#game" class="cta-btn">Mehr erfahren</a>
+</div>
     </section>
 
     <section id="game" class="game-section" style="border-top: 1px solid #1a1d24;">
