@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eloori Interactive | Links</title>
+    <style>
+        :root {
+            --accent-cyan: #00e5ff;
+            --accent-gold: #ffd700;
+            --card-bg: #1a1d24;
+            --text-main: #e2e8f0;
+        }
+
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 500;
+            src: local(''), url('rajdhani-v17-latin-500.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 700;
+            src: local(''), url('rajdhani-v17-latin-700.woff2') format('woff2');
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #0d0f12;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+            background: radial-gradient(circle at top center, #1a1d24 0%, #0d0f12 100%);
+        }
+
+        .link-tree-container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.4));
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: white;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        h1 span { color: var(--accent-cyan); }
+
+        p.tagline {
+            color: #a0aec0;
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+        }
+
+        /* Standard Button Style */
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 16px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        /* 1. Steam Button (Hervorgehoben) */
+        .steam-btn {
+            background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%);
+            border: 2px solid var(--accent-gold);
+            color: white;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+        }
+        .steam-btn:hover {
+            background: linear-gradient(135deg, #2a475e 0%, #66c0f4 100%);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+            transform: translateY(-3px);
+        }
+
+        /* 2. Website Button */
+        .website-btn {
+            background-color: var(--card-bg);
+            border: 1px solid var(--accent-cyan);
+            color: white;
+        }
+        .website-btn:hover {
+            background-color: var(--accent-cyan);
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+        }
+
+        /* 3. Social Media Buttons */
+        .social-btn {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid #2d3748;
+            color: #e2e8f0;
+        }
+        .social-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: #a0aec0;
+            transform: translateY(-3px);
+        }
+
+        /* 4. Legal / Credits (Klein und dezent ganz unten) */
+        .legal-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .legal-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* SVG Icons sizing */
+        .link-btn svg { width: 24px; height: 24px; fill: currentColor; }
+    </style>
+</head>
+<body>
+
+    <div class="link-tree-container">
+        <img src="logo.png" alt="Eloori Interactive Logo" class="profile-img">
+        
+        <h1>ELOORI <span>INTERACTIVE</span></h1>
+        <p class="tagline">Master the Pitch. Defy the Odds.</p>
+
+        <a href="https://store.steampowered.com/app/4556000/Tactilite/" target="_blank" class="link-btn steam-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.198 2.198 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11l-3.083 2.45v.055zm8.013-1.006a1.18 1.18 0 1 0-.909-2.008 1.18 1.18 0 0 0 .91 2.008m-1.464-4.888a2.031 2.031 0 1 0 2.87-2.87 2.032 2.032 0 0 0-2.87 2.87"/>
+            </svg>
+            Auf Steam Wishlisten
+        </a>
+
+        <a href="index.html" class="link-btn website-btn">
+            🌐 Trailer & Website
+        </a>
+
+        <a href="https://www.instagram.com/eloori_interactive/" target="_blank" class="link-btn social-btn">
+            📸 Instagram
+        </a>
+
+        <a href="https://www.linkedin.com/company/eloori-interactive/" target="_blank" class="link-btn social-btn">
+            💼 LinkedIn
+        </a>
+
+        <div class="legal-links">
+            <a href="credits.html">Credits & Lizenzen</a>
+            <span>|</span>
+            <a href="legal.html">Impressum & Datenschutz</a>
+        </div>
+    </div>
+
+</body>
+</html>
