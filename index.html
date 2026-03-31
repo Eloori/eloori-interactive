@@ -16,6 +16,19 @@
     <meta name="twitter:image" content="https://eloori-interactive.com/social-preview.jpg">
     <link rel="icon" type="image/png" href="favLogo.jpeg">
     <link rel="canonical" href="https://eloori-interactive.com/" />
+    <script>
+        // Verhindert eine Endlosschleife: Leitet nur beim ersten Aufruf um, 
+        // damit internationale User manuell auf "DE" klicken können, wenn sie wollen.
+        if (!sessionStorage.getItem('langRedirected')) {
+            sessionStorage.setItem('langRedirected', 'true');
+            
+            // Wenn die Browsersprache NICHT mit "de" (für Deutsch) beginnt, gehe zu Englisch
+            if (!navigator.language.toLowerCase().startsWith('de')) {
+                window.location.replace('index-en.html');
+            }
+        }
+    </script>
+    
     <style>
     /* CSS Variablen für deine Startseite */
     :root {
@@ -79,11 +92,6 @@
         top: 0;
         z-index: 1000;
     }
-        <div class="lang-switch">
-            <a href="index.html" style="color: var(--accent-cyan); font-weight: bold; text-decoration: none;">DE</a>
-            <span style="color: #2d3748; margin: 0 10px; font-weight: bold;">|</span>
-            <a href="index-en.html" style="color: #a0aec0; font-weight: bold; text-decoration: none;">EN</a>
-        </div>
 
     .logo { font-size: 24px; font-weight: 800; letter-spacing: 2px; color: white; text-decoration: none;}
     .logo span { color: var(--accent-cyan); }
@@ -595,11 +603,17 @@
 
     <nav>
         <a href="#" class="logo">ELOORI <span>INTERACTIVE</span></a>
+        
+        <div class="lang-switch">
+            <a href="index.html" style="color: var(--accent-cyan); font-weight: bold; text-decoration: none;">DE</a>
+            <span style="color: #2d3748; margin: 0 10px; font-weight: bold;">|</span>
+            <a href="index-en.html" style="color: #a0aec0; font-weight: bold; text-decoration: none;">EN</a>
+        </div>
     </nav>
 
     <section class="hero">
         <img src="logo.png" alt="Eloori Interactive Logo" class="hero-logo" style="width: 320px; height: auto; margin-bottom: 40px; filter: drop-shadow(0 0 25px rgba(0,229,255,0.3));">
-        
+       
         <h1>Master the Pitch. <br>Defy the Odds.</h1>
         <p>Eloori Interactive ist ein Schweizer Indie-Studio auf einer Mission: Wir vereinen tiefgreifende Sport-Strategie mit Rollenspiel-Mechaniken und der unerbittlichen Herausforderung moderner Roguelites.</p>
         
