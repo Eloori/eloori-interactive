@@ -82,13 +82,12 @@
     .hero { text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #1a1d24 0%, #0d0f12 100%); }
     
     .hero-logo { 
-        width: 320px; 
-        height: auto; 
-        margin-bottom: 40px; 
-        transition: transform 0.3s ease; 
-        cursor: pointer;
-        /* FIX: Filter entfernt, damit das transparente Logo sauber aussieht */
-        filter: none; 
+        width: 450px; /* Hier die Grösse erhöhen (z.B. von 320px auf 450px) */
+    max-width: 100%; /* Verhindert, dass das Logo auf Handys abgeschnitten wird */
+    height: auto; 
+    margin-bottom: 40px; 
+    transition: transform 0.3s ease; 
+    cursor: pointer;
     }
 
     .hero-logo:hover { transform: scale(1.05); }
