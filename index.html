@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eloori Interactive | Indie Game Studio</title>
-    <meta name="description" content="Eloori Interactive ist ein Schweizer Indie Game Studio. Entdecke 'Tactilite' – den ersten Manager mit Roguelite-Mechaniken und RPG-Elementen.">
+    <title>Eloori Interactive | Interactive Experiences & Strategic Design</title>
+    <meta name="description" content="Eloori Interactive ist ein Schweizer Studio für interaktive Systeme und strategisches Design. Wir verbinden komplexe Mechaniken mit funktionalen Lösungen.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Eloori Interactive | Tactilite">
-    <meta property="og:description" content="Baue dein Team, wähle deinen Archetyp und überlebe die Ascension. Das erste Manager-Spiel mit echten Roguelite-Mechaniken. Made in Switzerland.">
-    <meta property="og:image" content="https://eloori-interactive.com/social-preview.jpg"> <meta property="og:url" content="https://eloori-interactive.com/">
+    <meta property="og:title" content="Eloori Interactive | Strategic Systems">
+    <meta property="og:description" content="Innovation durch Interaktion. Entdecke unsere Projekte an der Schnittstelle von Strategie, Simulation und Game Design.">
+    <meta property="og:image" content="https://eloori-interactive.com/social-preview.jpg"> 
+    <meta property="og:url" content="https://eloori-interactive.com/">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Eloori Interactive | Tactilite">
-    <meta name="twitter:description" content="Baue dein Team, wähle deinen Archetyp und überlebe die Ascension.">
+    <meta name="twitter:title" content="Eloori Interactive">
+    <meta name="twitter:description" content="Interactive Systems. Strategic Impact. Made in Switzerland.">
     <meta name="twitter:image" content="https://eloori-interactive.com/social-preview.jpg">
+    
     <link rel="icon" type="image/png" href="favLogo.jpeg">
     <link rel="canonical" href="https://eloori-interactive.com/" />
+
     <script>
-        // Verhindert eine Endlosschleife: Leitet nur beim ersten Aufruf um, 
-        // damit internationale User manuell auf "DE" klicken können, wenn sie wollen.
         if (!sessionStorage.getItem('langRedirected')) {
             sessionStorage.setItem('langRedirected', 'true');
-            
-            // Wenn die Browsersprache NICHT mit "de" (für Deutsch) beginnt, gehe zu Englisch
             if (!navigator.language.toLowerCase().startsWith('de')) {
                 window.location.replace('index-en.html');
             }
@@ -30,7 +29,6 @@
     </script>
     
     <style>
-    /* CSS Variablen für deine Startseite */
     :root {
         --accent-cyan: #00e5ff;
         --accent-gold: #ffd700;
@@ -38,32 +36,22 @@
         --text-main: #e2e8f0;
     }
 
-    /* Lokale Einbindung der Schriftart Rajdhani (v17) */
     @font-face {
         font-family: 'Rajdhani';
         font-style: normal;
         font-weight: 500;
-        src: local(''),
-             url('rajdhani-v17-latin-500.woff2') format('woff2');
+        src: local(''), url('rajdhani-v17-latin-500.woff2') format('woff2');
     }
 
     @font-face {
         font-family: 'Rajdhani';
         font-style: normal;
         font-weight: 700;
-        src: local(''),
-             url('rajdhani-v17-latin-700.woff2') format('woff2');
+        src: local(''), url('rajdhani-v17-latin-700.woff2') format('woff2');
     }
-        html {
-    scroll-behavior: smooth;
-}
 
-    /* Basic Reset & Body für die Startseite */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    html { scroll-behavior: smooth; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
         font-family: 'Rajdhani', sans-serif;
@@ -71,16 +59,7 @@
         color: var(--text-main);
     }
 
-    /* STARTSEITEN DESIGN */
-    .hero-logo { 
-        width: 700px; 
-        height: auto; 
-        transition: transform 0.3s ease, filter 0.3s ease; 
-        cursor: pointer; 
-    }
-
-    .hero-logo:hover { animation: logo-pulse 2s infinite ease-in-out; }
-
+    /* NAVIGATION */
     nav {
         padding: 20px 50px;
         display: flex;
@@ -96,9 +75,28 @@
     .logo { font-size: 24px; font-weight: 800; letter-spacing: 2px; color: white; text-decoration: none;}
     .logo span { color: var(--accent-cyan); }
 
+    .lang-switch a { color: #a0aec0; text-decoration: none; font-weight: bold; }
+    .lang-switch a:hover { color: var(--accent-cyan); }
+
+    /* HERO */
     .hero { text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #1a1d24 0%, #0d0f12 100%); }
+    
+    .hero-logo { 
+        width: 320px; 
+        height: auto; 
+        margin-bottom: 40px; 
+        transition: transform 0.3s ease; 
+        cursor: pointer;
+        /* FIX: Filter entfernt, damit das transparente Logo sauber aussieht */
+        filter: none; 
+    }
+
+    .hero-logo:hover { transform: scale(1.05); }
+
     .hero h1 { font-size: 4.5rem; margin-bottom: 15px; line-height: 1.1; font-weight: 700; }
-    .hero p { font-size: 1.4rem; color: #a0aec0; max-width: 750px; margin: 0 auto 50px auto; font-weight: 500; }
+    .hero p { font-size: 1.4rem; color: #a0aec0; max-width: 850px; margin: 0 auto 50px auto; font-weight: 500; line-height: 1.5; }
+
+    .cta-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 40px; }
 
     .cta-btn {
         background-color: var(--accent-gold);
@@ -111,21 +109,7 @@
         transition: all 0.3s ease;
         text-transform: uppercase;
     }
-
-    @keyframes logo-pulse {
-        0% {
-            transform: scale(1);
-            filter: drop-shadow(0 0 25px rgba(0, 229, 255, 0.3));
-        }
-        50% {
-            transform: scale(1.05); /* Das ist das "Aufpumpen" für den Herzschlag */
-            filter: drop-shadow(0 0 40px rgba(0, 229, 255, 0.8)); /* Verstärkt das Leuchten (Cyan), ähnlich wie beim Video */
-        }
-        100% {
-            transform: scale(1);
-            filter: drop-shadow(0 0 25px rgba(0, 229, 255, 0.3));
-        }
-    } /* HIER IST DIE KLAMMER NUN KORREKT ZU */
+    .cta-btn:hover { background-color: #fff; box-shadow: 0 0 15px var(--accent-gold); }
 
     .steam-btn {
         background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%);
@@ -141,828 +125,226 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        margin-right: 15px; /* Abstand zum anderen Button */
-    }
-    
-    .steam-btn:hover {
-        background: linear-gradient(135deg, #2a475e 0%, #66c0f4 100%);
-        box-shadow: 0 0 15px rgba(102, 192, 244, 0.6);
-        color: white;
     }
 
-    .cta-btn:hover { background-color: #fff; box-shadow: 0 0 15px var(--accent-gold); }
-
+    /* SECTIONS */
     .game-section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; text-align: center; scroll-margin-top: 100px; }
     .game-section h2 { font-size: 2.5rem; margin-bottom: 10px; color: var(--accent-gold); }
 
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 40px; }
     .feature-box {
         background-color: var(--card-bg); padding: 30px; border-radius: 10px;
         border-top: 3px solid var(--accent-cyan);
-        transition: transform 0.3s ease, opacity 0.5s ease, filter 0.5s ease;
+        transition: transform 0.3s ease, opacity 0.5s ease;
     }
     .feature-box:hover { transform: translateY(-5px); }
     .feature-box h3 { font-size: 1.2rem; margin-bottom: 15px; color: white; }
     .feature-box p { color: #a0aec0; font-size: 0.95rem; line-height: 1.4; }
 
-    /* VIDEO EFFEKTE */
-    .video-focus-wrapper {
-        position: relative;
-        transition: background-color 0.5s ease;
-        padding: 10px;
-        border-radius: 15px;
-        margin: 40px 0;
-    }
-
+    /* VIDEO */
+    .video-focus-wrapper { position: relative; padding: 10px; border-radius: 15px; margin: 40px 0; }
     .video-container {
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-        height: 0;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-        border: 2px solid #2d3748;
-        transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-        z-index: 1;
+        position: relative; width: 100%; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); border: 2px solid #2d3748; transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
+    .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .video-container:hover { transform: scale(1.02); border-color: var(--accent-cyan); box-shadow: 0 0 40px rgba(0, 229, 255, 0.4); }
 
-    .video-container iframe {
-        position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-    }
+    /* --- ARCHETYPEN & TRAITS --- */
+    .archetype-section { margin-top: 80px; text-align: left; }
+    .archetype-section h3 { font-size: 2rem; color: var(--accent-cyan); margin-bottom: 20px; text-align: center; }
+    .archetype-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
+    .archetype-card { background-color: var(--card-bg); border-radius: 10px; overflow: hidden; border: 1px solid #2d3748; transition: transform 0.3s ease; }
+    .archetype-card:hover { transform: translateY(-5px); border-color: var(--accent-gold); }
+    .archetype-img { width: 100%; height: 180px; background-color: #0d0f12; object-fit: cover; border-bottom: 2px solid #2d3748; }
+    .archetype-content { padding: 20px; }
+    .archetype-content h4 { font-size: 1.3rem; color: white; margin-bottom: 10px; }
+    .archetype-content p { color: #a0aec0; font-size: 0.95rem; line-height: 1.4; }
 
-    .video-container:hover {
-        transform: scale(1.02);
-        border-color: var(--accent-cyan);
-        box-shadow: 0 0 40px rgba(0, 229, 255, 0.4);
-        z-index: 10;
-    }
+    .traits-section { margin-top: 80px; text-align: center; }
+    .traits-section h3 { font-size: 2rem; color: var(--accent-gold); margin-bottom: 15px; }
+    .traits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; text-align: left; }
+    .trait-card { background-color: #121419; border-radius: 10px; padding: 25px; border: 1px solid #2d3748; border-left: 4px solid var(--accent-gold); transition: transform 0.3s ease; }
+    .trait-card:hover { transform: translateY(-3px); border-color: var(--accent-cyan); }
+    .trait-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+    .trait-icon { width: 45px; height: 45px; background-color: #2d3748; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+    .trait-card h4 { color: white; font-size: 1.2rem; }
+    .trait-card p { color: #a0aec0; font-size: 0.95rem; line-height: 1.5; }
 
-    /* Dimmt die Features, wenn man über das Video fährt */
-    .game-section:has(.video-container:hover) .feature-box {
-        opacity: 0.3;
-        filter: blur(2px);
-    }
+    /* --- CLASSES & EVENTS --- */
+    .handbook-section { margin-top: 80px; text-align: center; }
+    .handbook-section h3 { font-size: 2rem; color: var(--accent-cyan); margin-bottom: 15px; }
+    .warning-box { background-color: rgba(255, 85, 85, 0.1); border: 2px solid #ff5555; border-radius: 10px; padding: 20px; text-align: left; max-width: 800px; margin: 0 auto 30px auto; }
+    .warning-box h4 { color: #ff5555; margin-bottom: 10px; font-size: 1.2rem; }
+    .warning-box ul { margin-left: 20px; color: #e2e8f0; line-height: 1.5; }
 
-    /* --- MECHANIKEN & ARCHETYPEN --- */
-    .archetype-section {
-        margin-top: 80px;
-        text-align: left;
-    }
-    .archetype-section h3 {
-        font-size: 2rem;
-        color: var(--accent-cyan);
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .archetype-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        margin-top: 30px;
-    }
-    .archetype-card {
-        background-color: var(--card-bg);
-        border-radius: 10px;
-        overflow: hidden;
-        border: 1px solid #2d3748;
-        transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-    .archetype-card:hover {
-        transform: translateY(-5px);
-        border-color: var(--accent-gold);
-    }
-    .archetype-img {
-        width: 100%;
-        height: 180px;
-        background-color: #0d0f12; 
-        object-fit: cover;
-        border-bottom: 2px solid #2d3748;
-    }
-    .archetype-content {
-        padding: 20px;
-    }
-    .archetype-content h4 {
-        font-size: 1.3rem;
-        color: white;
-        margin-bottom: 10px;
-    }
-    .archetype-content p {
-        color: #a0aec0;
-        font-size: 0.95rem;
-        line-height: 1.4;
-    }
+    .classes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; text-align: left; margin-top: 20px; }
+    .class-group { background-color: var(--card-bg); border-radius: 10px; padding: 20px; border-top: 3px solid var(--accent-gold); border: 1px solid #2d3748; }
+    .class-group h4 { color: var(--accent-gold); font-size: 1.3rem; margin-bottom: 15px; border-bottom: 1px solid #2d3748; padding-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+    .class-item { margin-bottom: 15px; padding: 15px; border-radius: 8px; background-color: rgba(255, 255, 255, 0.02); transition: all 0.3s ease; }
+    .class-item:hover { transform: translateY(-4px); background-color: rgba(255, 255, 255, 0.08); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); }
+    .req-stat { color: var(--accent-cyan); font-size: 0.85rem; font-weight: bold; display: block; margin-bottom: 5px; }
 
-    /* --- TRAITS SECTION --- */
-    .traits-section {
-        margin-top: 80px;
-        text-align: center;
-    }
-    .traits-section h3 {
-        font-size: 2rem;
-        color: var(--accent-gold); 
-        margin-bottom: 15px;
-    }
-    .traits-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-        margin-top: 40px;
-        text-align: left;
-    }
-    .trait-card {
-        background-color: #121419; 
-        border-radius: 10px;
-        padding: 25px;
-        border: 1px solid #2d3748;
-        border-left: 4px solid var(--accent-gold);
-        transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-    .trait-card:hover {
-        transform: translateY(-3px);
-        border-color: var(--accent-cyan);
-    }
-    .trait-header {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 15px;
-    }
-    .trait-icon {
-        width: 45px;
-        height: 45px;
-        background-color: #2d3748;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-    }
-    .trait-icon img {
-        width: 25px;
-        height: 25px;
-        filter: invert(1); 
-    }
-    .trait-card h4 {
-        color: white;
-        font-size: 1.2rem;
-    }
-    .trait-card p {
-        color: #a0aec0;
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-/* --- TAKTIK HANDBUCH --- */
-    .handbook-section {
-        margin-top: 80px;
-        text-align: center;
-    }
-    .handbook-section h3 {
-        font-size: 2rem;
-        color: var(--accent-cyan);
-        margin-bottom: 15px;
-    }
-    .warning-box {
-        background-color: rgba(255, 85, 85, 0.1);
-        border: 2px solid #ff5555;
-        border-radius: 10px;
-        padding: 20px;
-        text-align: left;
-        max-width: 800px;
-        margin: 0 auto 30px auto;
-    }
-    .warning-box h4 {
-        color: #ff5555;
-        margin-bottom: 10px;
-        font-size: 1.2rem;
-    }
-    .warning-box ul {
-        margin-left: 20px;
-        color: #e2e8f0;
-        line-height: 1.5;
-    }
-    .classes-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
-        text-align: left;
-        margin-top: 20px;
-    }
-    .class-group {
-        background-color: var(--card-bg);
-        border-radius: 10px;
-        padding: 20px;
-        border-top: 3px solid var(--accent-gold);
-        border: 1px solid #2d3748;
-    }
-    .class-group h4 {
-        color: var(--accent-gold);
-        font-size: 1.3rem;
-        margin-bottom: 15px;
-        border-bottom: 1px solid #2d3748;
-        padding-bottom: 10px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    .class-item {
-        margin-bottom: 15px;
-        padding: 15px;
-        border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.02); /* Ganz leichter, dunkler Hintergrund */
-        border: 1px solid transparent;
-        transition: all 0.3s ease; /* Macht die Animation weich */
-    }
-    .class-item:last-child {
-        margin-bottom: 0;
-    }
-    .class-item:hover {
-        transform: translateY(-4px); /* Hebt die Box leicht an */
-        background-color: rgba(255, 255, 255, 0.08); /* Helleres Aufleuchten */
-        border-color: #2d3748; /* Sichtbarer Rahmen taucht auf */
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Sanfter Schatten für Tiefe */
-    }
-    .class-item h5 {
-        color: white;
-        font-size: 1.1rem;
-        margin-bottom: 3px;
-    }
-    .req-stat {
-        color: var(--accent-cyan);
-        font-size: 0.85rem;
-        font-weight: bold;
-        display: block;
-        margin-bottom: 5px;
-    }
-    .class-item p {
-        color: #a0aec0;
-        font-size: 0.9rem;
-        line-height: 1.4;
-    }
-    /* --- NEU: EVENTS SECTION --- */
-    .events-section {
-        margin-top: 80px;
-        text-align: center;
-    }
-    .events-section h3 {
-        font-size: 2rem;
-        color: var(--accent-cyan); 
-        margin-bottom: 15px;
-    }
-    .events-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        margin-top: 40px;
-        text-align: left;
-    }
-    .event-card {
-        background-color: var(--card-bg);
-        border-radius: 10px;
-        padding: 25px;
-        border: 1px solid #2d3748;
-        transition: transform 0.3s ease, border-color 0.3s ease;
-        display: flex;
-        flex-direction: column;
-    }
-    .event-card:hover {
-        transform: translateY(-5px);
-        border-color: var(--accent-cyan);
-    }
-    .event-card h4 {
-        color: white;
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    .event-card p {
-        color: #a0aec0;
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin-bottom: 20px;
-        flex-grow: 1; /* Schiebt die Buttons nach unten */
-    }
-    .event-options {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .event-btn {
-        background-color: #2d3748;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        font-size: 0.85rem;
-        text-align: left;
-        border-left: 4px solid var(--accent-cyan);
-        font-weight: bold;
-    }
-    .event-btn.risk {
-        border-left-color: #ff5555;
-    }
-    .event-btn.safe {
-        border-left-color: #a0aec0;
-        color: #a0aec0;
-    }
+    .events-section { margin-top: 80px; text-align: center; }
+    .events-section h3 { font-size: 2rem; color: var(--accent-cyan); margin-bottom: 15px; }
+    .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; text-align: left; }
+    .event-card { background-color: var(--card-bg); border-radius: 10px; padding: 25px; border: 1px solid #2d3748; transition: transform 0.3s ease; display: flex; flex-direction: column; }
+    .event-card:hover { transform: translateY(-5px); border-color: var(--accent-cyan); }
+    .event-options { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+    .event-btn { background-color: #2d3748; color: white; padding: 10px 15px; border-radius: 5px; font-size: 0.85rem; border-left: 4px solid var(--accent-cyan); font-weight: bold; }
+    .event-btn.risk { border-left-color: #ff5555; }
 
-    /* Ascension Box */
-    .ascension-box {
-        background: linear-gradient(135deg, #1a1d24 0%, #3a0d0d 100%);
-        border: 2px solid #ff5555;
-        border-radius: 10px;
-        padding: 40px;
-        margin-top: 80px;
-        text-align: center;
-    }
-    .ascension-box h3 {
-        color: #ff5555;
-        font-size: 2rem;
-        margin-bottom: 15px;
-    }
-    .ascension-box p {
-        color: #e2e8f0;
-        font-size: 1.1rem;
-        max-width: 800px;
-        margin: 0 auto 20px auto;
-    }
-    .ascension-levels {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 20px;
-    }
-    .ascension-badge {
-        background-color: rgba(0,0,0,0.5);
-        color: var(--accent-gold);
-        padding: 10px 15px;
-        border-radius: 5px;
-        font-weight: bold;
-        border: 1px solid var(--accent-gold);
-    }
+    .ascension-box { background: linear-gradient(135deg, #1a1d24 0%, #3a0d0d 100%); border: 2px solid #ff5555; border-radius: 10px; padding: 40px; margin-top: 80px; text-align: center; }
+    .ascension-badge { background-color: rgba(0,0,0,0.5); color: var(--accent-gold); padding: 10px 15px; border-radius: 5px; font-weight: bold; border: 1px solid var(--accent-gold); margin: 5px; display: inline-block; }
 
-    /* Akkordeon für Deep-Dive Infos */
-    .deep-dive-section {
-        margin-top: 60px;
-        text-align: left;
-    }
-    details {
-        background-color: var(--card-bg);
-        border-radius: 8px;
-        margin-bottom: 15px;
-        border: 1px solid #2d3748;
-        overflow: hidden;
-    }
-    summary {
-        padding: 20px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: var(--accent-cyan);
-        cursor: pointer;
-        list-style: none; 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: background-color 0.3s ease;
-    }
-    summary::-webkit-details-marker {
-        display: none; 
-    }
-    summary:after {
-        content: '+'; 
-        font-size: 1.5rem;
-        color: var(--text-main);
-    }
-    details[open] summary:after {
-        content: '-';
-    }
-    details[open] summary {
-        background-color: #2d3748;
-    }
-    .details-content {
-        padding: 20px;
-        color: #a0aec0;
-        line-height: 1.6;
-        border-top: 1px solid #2d3748;
-    }
-    .details-content strong {
-        color: white;
-    }
+    .deep-dive-section { margin-top: 60px; text-align: left; }
+    details { background-color: var(--card-bg); border-radius: 8px; margin-bottom: 15px; border: 1px solid #2d3748; overflow: hidden; }
+    summary { padding: 20px; font-size: 1.2rem; font-weight: bold; color: var(--accent-cyan); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    summary:after { content: '+'; font-size: 1.5rem; color: var(--text-main); }
+    details[open] summary:after { content: '-'; }
+    .details-content { padding: 20px; color: #a0aec0; line-height: 1.6; border-top: 1px solid #2d3748; }
 
-    footer {
-        text-align: center;
-        padding: 60px 20px;
-        background-color: #0a0c0e;
-        border-top: 1px solid #2d3748;
-        margin-top: 50px;
-        color: #718096;
-    }
-
-    .social-links {
-        margin-bottom: 25px;
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-    }
-
-    .social-links a {
-        color: var(--text-main);
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.1rem;
-        transition: color 0.3s ease;
-    }
-
+    footer { text-align: center; padding: 60px 20px; background-color: #0a0c0e; border-top: 1px solid #2d3748; margin-top: 50px; color: #718096; }
+    .social-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 30px; }
+    .social-links a { color: var(--text-main); text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
     .social-links a:hover { color: var(--accent-cyan); }
-
-    .contact-email {
-        display: block;
-        margin-bottom: 20px;
-        color: var(--accent-gold);
-        text-decoration: none;
-        font-size: 1.1rem;
-    }
-
-    .contact-email:hover { text-decoration: underline; }
-
-    .legal-links { margin-top: 20px; font-size: 0.8rem; }
-    .legal-links a { color: #4a5568; text-decoration: none; margin: 0 10px; }
-    .legal-links a:hover { color: #a0aec0; }
+    .contact-email { display: block; margin-bottom: 20px; color: var(--accent-gold); text-decoration: none; font-size: 1.1rem; }
+    .legal-links a { color: #4a5568; text-decoration: none; margin: 0 10px; font-size: 0.8rem; }
 
     @media (max-width: 768px) {
         .hero h1 { font-size: 2.5rem; }
-        .features { grid-template-columns: 1fr; }
         nav { padding: 15px 20px; }
     }
-          
-</style>
-     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Tactilite",
-      "description": "Das erste Manager-Spiel mit echten Roguelite-Mechaniken und RPG-Elementen. Baue dein Team, wähle deinen Archetyp und überlebe die Ascension.",
-      "url": "https://eloori-interactive.com/",
-      "image": "https://eloori-interactive.com/social-preview.jpg",
-      "genre": ["Manager", "Roguelite", "RPG", "Sports Strategy"],
-      "author": {
-        "@type": "Organization",
-        "name": "Eloori Interactive",
-        "url": "https://eloori-interactive.com/"
-      },
-      "gamePlatform": ["PC", "Windows"],
-      "applicationCategory": "Game",
-      "inLanguage": "de",
-    "sameAs": [
-    "https://store.steampowered.com/app/4556000/Tactilite/",
-    "https://www.instagram.com/eloori_interactive/",
-    "https://www.linkedin.com/company/eloori-interactive/"
-  ]
-}
-</script>
+    </style>
 </head>
 <body>
 
     <nav>
         <a href="#" class="logo">ELOORI <span>INTERACTIVE</span></a>
-        
         <div class="lang-switch">
-            <a href="index.html" style="color: var(--accent-cyan); font-weight: bold; text-decoration: none;">DE</a>
+            <a href="index.html" style="color: var(--accent-cyan);">DE</a>
             <span style="color: #2d3748; margin: 0 10px; font-weight: bold;">|</span>
-            <a href="index-en.html" style="color: #a0aec0; font-weight: bold; text-decoration: none;">EN</a>
+            <a href="index-en.html">EN</a>
         </div>
     </nav>
 
     <section class="hero">
-        <img src="logo.png" alt="Eloori Interactive Logo" class="hero-logo" style="width: 320px; height: auto; margin-bottom: 40px; filter: drop-shadow(0 0 25px rgba(0,229,255,0.3));">
+        <!-- FIX: Kein Inline-Filter mehr, Logo bleibt scharf -->
+        <img src="logo.png" alt="Eloori Interactive Logo" class="hero-logo">
        
-        <h1>Master the Pitch. <br>Defy the Odds.</h1>
-        <p>Eloori Interactive ist ein Schweizer Indie-Studio auf einer Mission: Wir vereinen tiefgreifende Sport-Strategie mit Rollenspiel-Mechaniken und der unerbittlichen Herausforderung moderner Roguelites.</p>
+        <h1>Interactive Systems. <br>Strategic Impact.</h1>
+        <p>Eloori Interactive ist ein Schweizer Studio für interaktive Erlebnisse und strategisches Design. Wir nutzen die Kraft von Spielmechaniken, um komplexe Systeme verständlich zu machen – von fesselnden Games bis hin zu innovativen Unternehmenslösungen.</p>
         
-        <div style="margin-top: 40px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+        <div class="cta-container">
             <a href="https://store.steampowered.com/app/4556000/Tactilite/" target="_blank" class="steam-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
                   <path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.198 2.198 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11l-3.083 2.45v.055zm8.013-1.006a1.18 1.18 0 1 0-.909-2.008 1.18 1.18 0 0 0 .91 2.008m-1.464-4.888a2.031 2.031 0 1 0 2.87-2.87 2.032 2.032 0 0 0-2.87 2.87"/>
                 </svg>
-                Auf Steam Wishlisten
+                Current Project: Tactilite
             </a>
-            <a href="#game" class="cta-btn">Mehr erfahren</a>
+            <a href="#game" class="cta-btn">Über uns</a>
         </div>
     </section>
 
     <section id="game" class="game-section" style="border-top: 1px solid #1a1d24;">
-        <h2>Tactilite</h2>
-        <p>Keine starren Excel-Tabellen, kein Erbarmen. Wähle deinen Archetypen, trainiere dein Team mit RPG-Skillpunkten, trotze der Ascension und werde zur Legende – oder zum nächsten Entlassungs-Opfer.</p>
+        <h2>Unser Flaggschiff: Tactilite</h2>
+        <p>In unserem ersten Projekt zeigen wir, wie tiefgreifende Strategie und moderne Roguelite-Mechaniken verschmelzen. Keine starren Tabellen, sondern echte Entscheidungen mit Konsequenzen.</p>
         
         <div class="video-focus-wrapper">
             <div class="video-container">
-                <iframe 
-                    src="https://www.youtube-nocookie.com/embed/j6lNeVtWgxY?rel=0&modestbranding=1" 
-                    title="Eloori Interactive Game Trailer" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+                <iframe src="https://www.youtube-nocookie.com/embed/j6lNeVtWgxY?rel=0&modestbranding=1" title="Eloori Interactive Trailer" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="features">
             <div class="feature-box">
-                <h3>🎭 Manager Archetypen</h3>
-                <p>Spiele als Underdog, Youth-Guru oder Tycoon. Jeder Run verändert die Regeln des Transfermarkts und der Team-Entwicklung komplett.</p>
+                <h3>🎭 Komplexe Systeme</h3>
+                <p>Wir entwerfen Systeme mit Tiefgang, in denen jede Mechanik ineinandergreift – egal ob im Spiel oder in der Simulation.</p>
             </div>
             <div class="feature-box">
-                <h3>⚔️ RPG-System & Synergien</h3>
-                <p>Spieler sammeln Erfahrung und Level-Ups. Verteile Skillpunkte auf Sub-Werte, schalte 12 einzigartige Spielerklassen frei und meistere taktische Synergien.</p>
+                <h3>⚔️ Dynamisches Design</h3>
+                <p>Unvorhersehbare Verläufe und hohe Wiederspielbarkeit durch intelligente Generierungs-Algorithmen.</p>
             </div>
             <div class="feature-box">
-                <h3>📈 The Ascension</h3>
-                <p>10 Stufen des Wahnsinns. Besiege übermächtige 90+ Teams, kämpfe gegen explodierende Gehälter und überlebe die Liga.</p>
+                <h3>📈 Datengetrieben</h3>
+                <p>Strategie basiert auf Fakten. Wir machen Daten durch Interaktion sichtbar und beherrschbar.</p>
             </div>
             <div class="feature-box">
-                <h3>⚽ Live-Match Engine</h3>
-                <p>Intelligente Sektor-Duelle, Last-Minute Drama-Tore und ein knallhartes Würfel-Minispiel für schmutzige Transfer-Deals direkt vor der Nase deiner Rivalen.</p>
+                <h3>⚽ Interactive Entertainment</h3>
+                <p>Wir brechen Genres auf und schaffen neue Erfahrungen an der Grenze von Management und Rollenspiel.</p>
             </div>
         </div>
 
+        <!-- ARCHETYPEN -->
         <div class="archetype-section">
             <h3>Wähle deinen Manager-Archetyp</h3>
-            <p style="text-align: center; color: #a0aec0; margin-bottom: 30px;">Schalte neue Spielstile frei. Jeder Archetyp verändert die Regeln des Transfermarkts und der Team-Dynamik drastisch.</p>
-            
             <div class="archetype-grid">
                 <div class="archetype-card">
-                    <img src="archetype-standard2.png" alt="Standard Manager" class="archetype-img" loading="lazy">
+                    <img src="archetype-standard2.png" alt="Standard" class="archetype-img">
                     <div class="archetype-content">
                         <h4>Der Standard</h4>
-                        <p>Der klassische Weg. Keine verrückten Boni, keine extremen Nachteile. Perfekt, um die Liga kennenzulernen, bevor der Wahnsinn beginnt.</p>
+                        <p>Der klassische Weg ohne extreme Boni oder Nachteile. Perfekt für den Einstieg.</p>
                     </div>
                 </div>
                 <div class="archetype-card">
-                    <img src="archetype-underdog2.png" alt="Underdog Manager" class="archetype-img" loading="lazy">
+                    <img src="archetype-underdog2.png" alt="Underdog" class="archetype-img">
                     <div class="archetype-content">
                         <h4>Der Underdog</h4>
-                        <p>David gegen Goliath! Dein Team erhält +10 Stärke-Punkte gegen übermächtige Gegner. Bist du jedoch der Favorit, zerbrechen deine Spieler unter dem Druck (-5 Stärke).</p>
+                        <p>David gegen Goliath. Boni gegen starke Teams, aber enormer Druck als Favorit.</p>
                     </div>
                 </div>
                 <div class="archetype-card">
-                    <img src="archetype-tycoon2.png" alt="Tycoon Manager" class="archetype-img" loading="lazy">
+                    <img src="archetype-tycoon2.png" alt="Tycoon" class="archetype-img">
                     <div class="archetype-content">
                         <h4>Der Tycoon</h4>
-                        <p>Geld spielt keine Rolle. Du startest reich, aber der Transfermarkt hasst dich: Alle Spieler kosten ein Vielfaches (bis zu 300%) ihres Marktwertes.</p>
-                    </div>
-                </div>
-                <div class="archetype-card">
-                    <img src="archetype-youth2.png" alt="Youth Guru Manager" class="archetype-img" loading="lazy">
-                    <div class="archetype-content">
-                        <h4>Jugend Visionär</h4>
-                        <p>U23-Spieler wachsen doppelt so schnell und haben ein massiv höheres Potenzial. Der Haken? Alte Stars (Ü25) weigern sich, für dich zu spielen.</p>
-                    </div>
-                </div>
-                <div class="archetype-card">
-                    <img src="archetype-grinder2.png" alt="Grinder Manager" class="archetype-img" loading="lazy">
-                    <div class="archetype-content">
-                        <h4>Der Schleifer</h4>
-                        <p>Deine Spieler sind Maschinen und verlieren während der Spiele keine Fitness. Allerdings ist das Verletzungsrisiko im Training dreimal so hoch!</p>
-                    </div>
-                </div>
-                <div class="archetype-card">
-                    <img src="archetype-hardcore2.png" alt="Hardcore Manager" class="archetype-img" loading="lazy">
-                    <div class="archetype-content">
-                        <h4>Hardcore</h4>
-                        <p>Nur für die absoluten Legenden, die bewiesen haben, dass sie 25 Pokale gewinnen können. Der ultimative Test deiner Fähigkeiten.</p>
+                        <p>Geld spielt keine Rolle, aber der Markt hasst dich. Alles ist massiv teurer.</p>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- TRAITS -->
         <div class="traits-section">
-            <h3>Neue Spielertypen (Traits)</h3>
-            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto;">Nicht jeder Spieler ist gleich. Ein Bruchteil aller Talente wird mit einzigartigen Charakterzügen generiert, die den Transfermarkt und deine Finanzen komplett auf den Kopf stellen.</p>
-
+            <h3>Einzigartige Charakterzüge</h3>
             <div class="traits-grid">
                 <div class="trait-card">
-                    <div class="trait-header">
-                        <div class="trait-icon">👑</div>
-                        <h4>Die Diva</h4>
-                    </div>
-                    <p>Spielt überragend in Top-Spielen und baut starke Form auf. Verliert aber massiv an Moral und Form, wenn sie auf der Bank sitzt.</p>
+                    <div class="trait-header"><div class="trait-icon">👑</div><h4>Die Diva</h4></div>
+                    <p>Genial auf dem Platz, aber Gift für die Kabine, wenn sie auf der Bank sitzt.</p>
                 </div>
                 <div class="trait-card">
-                    <div class="trait-header">
-                        <div class="trait-icon">🛡️</div>
-                        <h4>Treue Seele</h4>
-                    </div>
-                    <p>Ein echter Vereinsmensch. Spielt aus purer Leidenschaft für 20% weniger Gehalt und verlässt den Club niemals freiwillig wegen Geldproblemen.</p>
+                    <div class="trait-header"><div class="trait-icon">🛡️</div><h4>Treue Seele</h4></div>
+                    <p>Spielt für weniger Gehalt und verlässt den Club niemals freiwillig.</p>
                 </div>
                 <div class="trait-card">
-                    <div class="trait-header">
-                        <div class="trait-icon">💰</div>
-                        <h4>Der Söldner</h4>
-                    </div>
-                    <p>Ein absoluter Elite-Spieler für die Startelf, aber er spielt nur fürs Geld. Verlangt das <strong>Doppelte an Gehalt</strong>, kostet 50% mehr Ablöse und treibt dich schnell in den Ruin.</p>
-                </div>
-                <div class="trait-card">
-                    <div class="trait-header">
-                        <div class="trait-icon">🔋</div>
-                        <h4>Das Arbeitstier</h4>
-                    </div>
-                    <p>Ein echtes Fitness-Monster. Verliert nach Spielen kaum Ausdauer und erholt sich extrem schnell. Dafür fehlt ihm das Talent für echte Form-Hochs.</p>
-                </div>
-                <div class="trait-card">
-                    <div class="trait-header">
-                        <div class="trait-icon">🩹</div>
-                        <h4>Glasknochen</h4>
-                    </div>
-                    <p>Massiv erhöhtes Verletzungsrisiko und fehlt oft für mehrere Wochen. Dafür ist er auf dem Transfermarkt oft ein echtes Schnäppchen.</p>
+                    <div class="trait-header"><div class="trait-icon">💰</div><h4>Der Söldner</h4></div>
+                    <p>Elite-Leistung, verlangt aber das Doppelte an Gehalt. Ein finanzielles Risiko.</p>
                 </div>
             </div>
         </div>
-<div class="handbook-section">
-            <h3>Taktik-Handbuch: Die 12 RPG-Klassen</h3>
-            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto 30px auto;">Deine Spieler entwickeln sich basierend auf ihren primären Attributen in eine von 12 Klassen. Baue dein Team weise auf, denn fehlende Synergien werden auf dem Platz gnadenlos bestraft.</p>
 
-            <div class="warning-box">
-                <h4>⚠️ Die wichtigsten Regeln (Pflicht-Rollen)</h4>
-                <p style="color: #a0aec0; margin-bottom: 10px;">Dein Team braucht eine funktionierende Achse, sonst brechen die Basiswerte im Spiel dramatisch ein:</p>
-                <ul>
-                    <li><strong>Keine Torgefahr:</strong> Ohne einen 'Knipser' oder 'Dribbler' im Sturm bricht deine Offensive um <strong>-30%</strong> ein.</li>
-                    <li><strong>Keine Spielkontrolle:</strong> Ohne einen 'Spielmacher' (Mittelfeld) oder 'Unterstützer' (Sturm) kommen keine Pässe an: <strong>-20% Offensive</strong>.</li>
-                </ul>
-            </div>
-
-            <div class="classes-grid">
-                <div class="class-group" style="border-top-color: #ff5555;">
-                    <h4 style="color: #ff5555;">⚽ Sturm</h4>
-                    <div class="class-item">
-                        <h5>Knipser</h5>
-                        <span class="req-stat">Braucht: Abschluss</span>
-                        <p>Der klassische Torjäger. Bringt satte <strong>+15% Sturm-Stärke</strong>.</p>
-                    </div>
-                    <div class="class-item">
-                        <h5>Dribbler</h5>
-                        <span class="req-stat">Braucht: Dribbling</span>
-                        <p>Zieht die Abwehr auf sich. <strong>+10% Sturm</strong> und <strong>+5% Mittelfeld</strong>.</p>
-                    </div>
-                    <div class="class-item">
-                        <h5>Unterstützer</h5>
-                        <span class="req-stat">Braucht: Passen</span>
-                        <p>Macht die Nebenleute besser (<strong>+5% Sturm</strong>) und verhindert den fatalen Pass-Malus für das Team.</p>
-                    </div>
+        <!-- DEEP DIVE -->
+        <div class="deep-dive-section">
+            <details>
+                <summary>Wie entsteht die Spielwelt?</summary>
+                <div class="details-content">
+                    <p>Unsere Engine generiert dynamische Ligen und authentische, aber rechtssichere Club-Namen für ein völlig eigenes Universum.</p>
                 </div>
-
-                <div class="class-group" style="border-top-color: #55ff55;">
-                    <h4 style="color: #55ff55;">🎯 Mittelfeld</h4>
-                    <div class="class-item">
-                        <h5>Spielmacher</h5>
-                        <span class="req-stat">Braucht: Passen</span>
-                        <p>Das Hirn der Mannschaft. Gibt <strong>+15% Mittelfeld-Stärke</strong> und verhindert den Pass-Malus.</p>
-                    </div>
-                    <div class="class-item">
-                        <h5>Abräumer</h5>
-                        <span class="req-stat">Braucht: Zweikampf</span>
-                        <p>Fängt Angriffe früh ab und entlastet die Abwehr (<strong>+15% Abwehr-Stärke</strong>).</p>
-                    </div>
-                    <div class="class-item">
-                        <h5>Box-to-Box</h5>
-                        <span class="req-stat">Braucht: Schuss</span>
-                        <p>Der unermüdliche Motor. Gibt <strong>+10% Mittelfeld</strong> und schaltet sich vorne ein (<strong>+5% Sturm</strong>).</p>
-                    </div>
+            </details>
+            <details>
+                <summary>RPG-Werte & Klassen</summary>
+                <div class="details-content">
+                    <p>Spieler sammeln XP und schalten eine von 12 Klassen frei, die Team-Synergien auf dem Feld massiv beeinflussen.</p>
                 </div>
-
-                <div class="class-group" style="border-top-color: #00e5ff;">
-                    <h4 style="color: #00e5ff;">🧱 Abwehr</h4>
-                    <div class="class-item">
-                        <h5>Fels in der Brandung</h5>
-                        <span class="req-stat">Braucht: Zweikampf</span>
-                        <p>Die klassische Kante hinten drin. Bringt massive <strong>+15% Abwehr-Stärke</strong>.</p>
-                    </div>
-                    <div class="class-item">
-                        <h5>Kopfballungeheuer</h5>
-                        <span class="req-stat">Braucht: Kopfball</span>
-                        <p>Extrem gefährlich bei eigenen Eckbällen und Flanken. Gibt <strong>+10% Sturm-Stärke</strong>.</p>
-                    </div>
-                    <div class="class-item">
-                        <h5>Moderner Verteidiger</h5>
-                        <span class="req-stat">Braucht: Tempo</span>
-                        <p>Leitet mit seinem Tempo schnelle Konter aus der Abwehr heraus ein (<strong>+10% Mittelfeld</strong>).</p>
-                    </div>
-                </div>
-
-                <div class="class-group" style="border-top-color: #ffd700;">
-                    <h4 style="color: #ffd700;">🧤 Torwart</h4>
-                    <div class="class-item">
-                        <h5>Linienkeeper</h5>
-                        <span class="req-stat">Braucht: Reflexe</span>
-                        <p>Der reine Shot-Stopper auf der Linie. Gibt <strong>+15% Torwart-Stärke</strong>.</p>
-                    </div>
-                    <div class="class-item">
-                        <h5>Strafraum-Boss</h5>
-                        <span class="req-stat">Braucht: Physis</span>
-                        <p>Dominiert den 16-Meter-Raum bei Flanken (<strong>+10% Abwehr</strong>, <strong>+5% Torwart</strong>).</p>
-                    </div>
-                    <div class="class-item">
-                        <h5>Libero-Keeper</h5>
-                        <span class="req-stat">Braucht: Aufbau</span>
-                        <p>Agiert quasi als 11. Feldspieler im Spielaufbau. Bringt <strong>+10% Mittelfeld-Stärke</strong>.</p>
-                    </div>
-                </div>
-            </div>
+            </details>
         </div>
-        <div class="events-section">
-            <h3>Dynamische Events & Dilemmas</h3>
-            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto;">Keine Saison verläuft nach Plan. Über 50 dynamische Story-Events unterbrechen den Alltag und zwingen dich zu harten Entscheidungen. Die Events reagieren intelligent auf deinen gewählten Archetypen und die Traits deiner Spieler!</p>
 
-            <div class="events-grid">
-                <div class="event-card">
-                    <h4>⚠️ Fragwürdiger Sponsor</h4>
-                    <p>"Ein Briefumschlag mit 100.000 € liegt auf dem Tisch. Der Absender fordert im Gegenzug, dass du das nächste Spiel streng defensiv spielst."</p>
-                    <div class="event-options">
-                        <div class="event-btn risk">Option A: Geld einstecken (Gefahr erwischt zu werden)</div>
-                        <div class="event-btn safe">Option B: Brief zerreissen (Sicher)</div>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <h4>👑 Diva in Rage</h4>
-                    <p>Dein Star-Stürmer (Trait: Diva) ist unzufrieden mit seinem Spind in der Kabine und macht miese Stimmung. Das ganze Team leidet darunter.</p>
-                    <div class="event-options">
-                        <div class="event-btn">Option A: Sonderwünsche erfüllen (-30.000 €)</div>
-                        <div class="event-btn risk">Option B: Zurechtweisen (Form sinkt massiv)</div>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <h4>🏋️ Das Lazarett platzt (Nur als "Schleifer")</h4>
-                    <p>Dein brutales Training fordert Tribut. Die medizinische Abteilung fordert dringend teure Spezialgeräte zur Prävention von Verletzungen.</p>
-                    <div class="event-options">
-                        <div class="event-btn">Option A: Geräte kaufen (-120.000 €)</div>
-                        <div class="event-btn risk">Option B: "Wir sind keine Weicheier!" (Verletzungen)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="ascension-box">
-            <h3>🔥 The Ascension: 10 Stufen zur Hölle</h3>
-            <p>Hast du die Liga und den Pokal gewonnen? Herzlichen Glückwunsch. Jetzt beginnt das echte Spiel. Mit jeder Ascension-Stufe wird die Welt erbarmungsloser.</p>
+            <h3>🔥 The Ascension</h3>
+            <p>10 Stufen des Wahnsinns für echte Strategen.</p>
             <div class="ascension-levels">
                 <span class="ascension-badge">Lvl 2: Gehälter +50%</span>
-                <span class="ascension-badge">Lvl 3: Doppelte Verletzungsdauer</span>
-                <span class="ascension-badge">Lvl 4-9: Gegner werden immer stärker</span>
-                <span class="ascension-badge" style="color: #ff5555; border-color: #ff5555;">Lvl 10: ALIEN MODUS (Gegner 90+ Stärke)</span>
+                <span class="ascension-badge">Lvl 10: ALIEN MODUS</span>
             </div>
-        </div>
-
-        <div class="deep-dive-section">
-            <h3 style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 20px; text-align: center;">Hinter den Kulissen: Wie das Spiel tickt</h3>
-            
-            <details>
-                <summary>Wie entsteht die Spielwelt? (Generierung)</summary>
-                <div class="details-content">
-                    <p>Deine Karriere beginnt ganz unten. Die Spielwelt besteht aus drei dynamischen Ligen mit einem hart ausbalancierten Schwierigkeitsgrad:</p>
-                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                        <li><strong>Liga 3 (Stärke ~40):</strong> Der Schweizer Amateur- und Profifussball. Du beginnst mit 500k € und einem Team voller Talente, die nach oben wollen.</li>
-                        <li><strong>Liga 2 (Stärke ~50):</strong> Der harte deutsche Profifussball. Der Übergang ist machbar, verlangt aber clevere Transfers.</li>
-                        <li><strong>Liga 1 (Stärke ~65):</strong> Die internationalen Metropolen. Hier spielen die wahren Meister und die KI wird dir nichts schenken.</li>
-                    </ul>
-                    <p><strong>Anti-Markenrecht-Generator:</strong> Die Engine generiert dynamische Namen aus echten Weltstädten (z.B. Mailand, London) und Vereins-Präfixen. Ein Filter verhindert, dass geschützte Namen echter Weltklasse-Clubs entstehen – du spielst in einem völlig eigenen, aber authentischen Universum!</p>
-                </div>
-            </details>
-
-            <details>
-                <summary>Level-Ups, RPG-Werte & 12 Spieler-Klassen</summary>
-                <div class="details-content">
-                    <p>Jeder Spieler ist mehr als nur eine bloße "Stärke-Zahl". Durch erfolgreiche Spiele sammeln sie <strong>Erfahrungspunkte (XP)</strong> und steigen im Level auf.</p>
-                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                        <li><strong>Skillpunkte verteilen:</strong> Bei jedem Level-Up erhältst du 5 Skillpunkte. Du entscheidest, ob dein Stürmer im Abschluss (Schuss), im Passen oder im Dribbling besser wird!</li>
-                        <li><strong>12 Dynamische Klassen:</strong> Basierend darauf, welcher RPG-Stat bei einem Spieler dominiert, ändert sich seine Klasse. Ein Verteidiger mit hohem Kopfball-Wert wird zum "Kopfballungeheuer". Ein Stürmer mit Fokus auf Passen wird zum "Unterstützer".</li>
-                        <li><strong>Das Potenzial-Limit:</strong> Du kannst einen Spieler nicht ewig leveln. Jeder Spieler hat eine feste Potenzial-Grenze, die beim Scouting aufgedeckt wird. Danach ist Schluss!</li>
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Die Match-Engine, Synergien & Der Drama-Faktor</summary>
-                <div class="details-content">
-                    <p>Matches werden in Echtzeit simuliert und erfordern strategisches Mitdenken bei der Aufstellung:</p>
-                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                        <li><strong>Taktische Synergien (Pflicht!):</strong> Ein Sturm aus reinen 'Knipsern' schießt kaum Tore (-30% Strafe), wenn im Mittelfeld die 'Spielmacher' oder 'Unterstützer' für die Pässe fehlen. Du musst die richtigen RPG-Klassen kombinieren, um Boni von bis zu +15% auf Mannschaftsteile zu kassieren.</li>
-                        <li><strong>Sektor-Duelle:</strong> Dein Sturm kämpft gegen die gegnerische Verteidigung, dein Mittelfeld ringt um den Ballbesitz. Spielst du Defensiv, wird deine Abwehr zum Bollwerk, aber vorne geht kaum noch etwas.</li>
-                        <li><strong>Der Drama-Faktor (Anti-Draw):</strong> Nichts ist langweiliger als fünf 0:0 in Folge. Unsere Engine erkennt, wenn zwei defensive Top-Teams aufeinanderprallen. In 40% der drohenden Unentschieden gibt es in der 90. Minute noch einen "Lucky Punch", der das Spiel durch einen Konter entscheidet!</li>
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Transfermarkt, Relative Seltenheit & Abwerben (Poaching)</summary>
-                <div class="details-content">
-                    <p>Der Transfermarkt wächst mit dir. Spieler-Seltenheiten (wie <em>Weltklasse</em> oder <em>Legende</em>) werden nicht fest definiert, sondern skalieren <strong>relativ zum Durchschnitt deines Teams!</strong> Ein 65er Spieler ist in Liga 3 ein absoluter Legenden-Fund, in Liga 1 absoluter Standard.</p>
-                    <p><strong>Die Söldner-Gefahr:</strong> Die besten 5 Spieler auf dem Markt haben eine 30% Chance, "Söldner" zu sein. Sie heben dein Team auf das nächste Level, ruinieren aber dein Gehaltsbudget. Ein ständiges Abwägen von Risiko und Ertrag.</p>
-                    <p><strong>Direktes Abwerben (Poaching):</strong> Fehlt das Geld auf dem Markt? Wenn du einen Spieler der gegnerischen KI unbedingt haben willst, kannst du ihn <strong>direkt aus dem feindlichen Kader herauskaufen</strong>. Das kostet dich das 3-fache des Marktwertes (mit Manager-Skill nur das 2-fache) – aber in entscheidenden Saisonphasen ist es das wert!</p>
-                </div>
-            </details>
         </div>
     </section>
 
@@ -971,15 +353,11 @@
             <a href="https://www.instagram.com/eloori_interactive/" target="_blank">Instagram</a>
             <a href="https://www.linkedin.com/company/eloori-interactive/" target="_blank">LinkedIn</a>
         </div>
-
         <a href="mailto:contact@eloori-interactive.com" class="contact-email">contact@eloori-interactive.com</a>
-
         <p>&copy; 2026 Eloori Interactive. Made in Switzerland.</p>
-
         <div class="legal-links">
-            <a href="legal.html">Impressum & Website-Datenschutz</a>
-            <a href="game_privacy.html">Datenschutz (Spiel/Steam)</a>
-            <a href="credits.html">Credits & Lizenzen</a>
+            <a href="legal.html">Impressum</a>
+            <a href="game_privacy.html">Datenschutz</a>
         </div>
     </footer>
 
