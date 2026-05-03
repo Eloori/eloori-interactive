@@ -388,7 +388,7 @@
         <!-- HANDBOOK / CLASSES -->
         <div class="handbook-section">
             <h3>Taktik-Handbuch: Die 12 RPG-Klassen</h3>
-            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto 30px auto;">Deine Spieler entwickeln sich basierend auf ihren primären Attributen in eine von 12 Klassen. Baue dein Team weise auf, denn fehlende Synergien werden auf dem Platz gnadenlos bestraft.</p>
+            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto 30px auto;">Jeder Spieler besitzt einen einzigartigen, zufallsgenerierten <strong>Skill-Tree</strong>. Investierst du Punkte in bestimmte Pfade, definierst du die Klasse des Spielers und schaltest mächtige passive Effekte frei. Baue dein Team weise auf, denn fehlende Synergien werden gnadenlos bestraft.</p>
 
             <div class="warning-box">
                 <h4>⚠️ Die wichtigsten Regeln (Pflicht-Rollen)</h4>
@@ -537,15 +537,37 @@
             <h3 style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 20px; text-align: center;">Hinter den Kulissen: Wie das Spiel tickt</h3>
             
             <details>
-                <summary>Wie entsteht die Spielwelt? (Generierung)</summary>
+                <summary>Skill-Trees, Passives & 12 Spieler-Klassen</summary>
                 <div class="details-content">
-                    <p>Deine Karriere beginnt ganz unten. Die Spielwelt besteht aus drei dynamischen Ligen mit einem hart ausbalancierten Schwierigkeitsgrad:</p>
+                    <p>Das Level-Up-System wurde komplett überarbeitet. Jeder Spieler hat nun einen eigenen <strong>Skill-Tree</strong> mit 3 Pfaden, der seine Klasse definiert:</p>
                     <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                        <li><strong>Liga 3 (Stärke ~40):</strong> Der Schweizer Amateur- und Profifussball. Du beginnst mit 500k € und einem Team voller Talente, die nach oben wollen.</li>
-                        <li><strong>Liga 2 (Stärke ~50):</strong> Der harte deutsche Profifussball. Der Übergang ist machbar, verlangt aber clevere Transfers.</li>
-                        <li><strong>Liga 1 (Stärke ~65):</strong> Die internationalen Metropolen. Hier spielen die wahren Meister und die KI wird dir nichts schenken.</li>
+                        <li><strong>Zufallsgenerierte Trees:</strong> Jeder Baum startet mit einem zentralen Node (+5 Stärke). Von dort führen drei Äste nach außen (jeweils +3 Stärke). Die Richtung mit den meisten Punkten bestimmt die Spieler-Klasse (z.B. "Knipser" oder "Spielmacher").</li>
+                        <li><strong>Passive Effekte:</strong> Auf dem Weg zur Spezialisierung schaltest du mächtige Boni frei. Von der "Eisernen Lunge" (weniger Fitness-Verlust) über "Wunderheilung" (kürzere Verletzungen) bis zum "Anführer" (Form-Boost für das Team).</li>
+                        <li><strong>Smart Auto-Level & Cap:</strong> Nutze "Fast Distribute", um die KI den Spieler automatisch in seiner primären Rolle leveln zu lassen. Sobald das individuelle Potenzial eines Spielers erreicht ist, wird der restliche Tree mit einem Schloss versiegelt.</li>
                     </ul>
-                    <p><strong>Anti-Markenrecht-Generator:</strong> Die Engine generiert dynamische Namen aus echten Weltstädten (z.B. Mailand, London) und Vereins-Präfixen. Ein Filter verhindert, dass geschützte Namen echter Weltklasse-Clubs entstehen – du spielst in einem völlig eigenen, aber authentischen Universum!</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Teamchemie: Das Bond-System</summary>
+                <div class="details-content">
+                    <p>Treue zahlt sich aus. Spieler, die lange zusammen auf dem Platz stehen, entwickeln eine starke Teamchemie, die als <strong>Bonds</strong> sichtbar wird:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+                        <li><strong>Vier Stufen der Treue:</strong> Nach 18 gemeinsamen Spielen wird ein Spieler "Silber", nach 54 Spielen "Gold" und absolute Vereinslegenden werden nach 10 Saisons "Rot".</li>
+                        <li><strong>Form-Boosts & Leuchtendes UI:</strong> Je höher der Bond, desto stärker der Form-Bonus (erhöht das Form-Cap auf bis zu 20 für "Rote" Bonds). Im Menü werden diese Spieler mit edlen, leuchtenden Akzenten hervorgehoben.</li>
+                        <li><strong>Transfermarkt-Dynamik:</strong> Neue Spieler starten bei "Bronze" (0 Bonus). Nur der Archetyp "Jugend Visionär" hat die Chance, Talente zu finden, die sofort mit einem Silber-Bond zum Team stossen.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>Smartes Event-Tutorial</summary>
+                <div class="details-content">
+                    <p>Wir hassen langweilige, starre Tutorials. Deshalb nutzt das Spiel ein intelligentes, kontextbasiertes System:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+                        <li><strong>Lernen beim Spielen:</strong> Das Spiel erklärt dir Mechaniken exakt in dem Moment, in dem sie relevant werden. Gewinnst du deinen ersten grossen Titel, erklärt dir dein Co-Trainer, was du mit den neuen Manager-Punkten tun kannst.</li>
+                        <li><strong>Dynamische Trigger:</strong> Auch tiefgreifende Mechaniken wie das Bond-System oder Hardcore-Modifier ploppen erst auf, wenn du sie durch dein Gameplay zum ersten Mal aktivierst.</li>
+                    </ul>
                 </div>
             </details>
 
