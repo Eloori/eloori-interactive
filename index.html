@@ -82,8 +82,8 @@
     .hero { text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #1a1d24 0%, #0d0f12 100%); }
     
     .hero-logo { 
-        width: 400px; /* Hier die Grösse erhöhen (z.B. von 320px auf 450px) */
-    max-width: 100%; /* Verhindert, dass das Logo auf Handys abgeschnitten wird */
+        width: 400px; 
+    max-width: 100%; 
     height: auto; 
     margin-bottom: 80px; 
     transition: transform 0.3s ease; 
@@ -141,7 +141,18 @@
     .feature-box p { color: #a0aec0; font-size: 0.95rem; line-height: 1.4; }
 
     /* VIDEO */
-    .video-focus-wrapper { position: relative; padding: 10px; border-radius: 15px; margin: 40px 0; }
+    .dual-video-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin: 40px 0;
+    }
+    @media (max-width: 768px) {
+        .dual-video-wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+    
     .video-container {
         position: relative; width: 100%; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); border: 2px solid #2d3748; transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -265,32 +276,34 @@
         <h2>Unser Flaggschiff: Tactilite</h2>
         <p>In unserem ersten Projekt zeigen wir, wie tiefgreifende Strategie und moderne Roguelite-Mechaniken verschmelzen. Keine starren Tabellen, sondern echte Entscheidungen mit Konsequenzen.</p>
         
-        <div class="video-focus-wrapper">
+        <div class="dual-video-wrapper">
             <div class="video-container">
                 <iframe src="https://www.youtube-nocookie.com/embed/YpTchPiGL3g?rel=0&modestbranding=1" title="Eloori Interactive Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/ph8f_0Uv6M8?rel=0&modestbranding=1" title="Tactilite Massive Content Updates" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="features">
             <div class="feature-box">
-                <h3>🎭 Komplexe Systeme</h3>
-                <p>Wir entwerfen Systeme mit Tiefgang, in denen jede Mechanik ineinandergreift – egal ob im Spiel oder in der Simulation.</p>
+                <h3>🧠 Strategy Hub & Live Matches</h3>
+                <p>Übernimm die Kontrolle. Interveniere in interaktiven Live-Matches, passe deine Taktik fließend an den Spielstand an und analysiere deine Teamstruktur in Echtzeit mit detaillierten xG- und Form-Daten.</p>
             </div>
             <div class="feature-box">
-                <h3>⚔️ Dynamisches Design</h3>
-                <p>Unvorhersehbare Verläufe und hohe Wiederspielbarkeit durch intelligente Generierungs-Algorithmen.</p>
+                <h3>🎭 Echtes Football-RPG</h3>
+                <p>Verabschiede dich von simplen Attributen. Jeder Spieler besitzt einen eigenen Skill-Tree. Schalte passive Fähigkeiten wie "Eiserne Lunge" oder "Anführer" frei und forme individuelle RPG-Klassen.</p>
             </div>
             <div class="feature-box">
-                <h3>📈 Datengetrieben</h3>
-                <p>Strategie basiert auf Fakten. Wir machen Daten durch Interaktion sichtbar und beherrschbar.</p>
+                <h3>🤝 Dynamischer Transfermarkt</h3>
+                <p>Geld allein reicht nicht mehr. Überzeuge Stars mit riskanten Vertrags-Versprechen (wie Stammplatz-Garantien oder Titel-Zusagen) und wirf die Würfel, um den Deal deines Lebens zu machen.</p>
             </div>
             <div class="feature-box">
-                <h3>⚽ Interactive Entertainment</h3>
-                <p>Wir brechen Genres auf und schaffen neue Erfahrungen an der Grenze von Management und Rollenspiel.</p>
+                <h3>🔥 Modulare Herausforderung</h3>
+                <p>Bestimme dein eigenes Leid. Mit dem neuen Modifier-System skalierst du finanzielle Hürden, Verletzungsrisiken oder stellst dich der ultimativen "Kick-Out Challenge" des Vorstands.</p>
             </div>
         </div>
 
-        <!-- ARCHETYPEN -->
         <div class="archetype-section">
             <h3>Wähle deinen Manager-Archetyp</h3>
             <p style="text-align: center; color: #a0aec0; margin-bottom: 30px;">Schalte neue Spielstile frei. Jeder Archetyp verändert die Regeln des Transfermarkts und der Team-Dynamik drastisch.</p>
@@ -341,7 +354,6 @@
             </div>
         </div>
 
-        <!-- TRAITS -->
         <div class="traits-section">
             <h3>Neue Spielertypen (Traits)</h3>
             <p style="color: #a0aec0; max-width: 750px; margin: 0 auto;">Nicht jeder Spieler ist gleich. Ein Bruchteil aller Talente wird mit einzigartigen Charakterzügen generiert, die den Transfermarkt und deine Finanzen komplett auf den Kopf stellen.</p>
@@ -385,7 +397,6 @@
             </div>
         </div>
 
-        <!-- HANDBOOK / CLASSES -->
         <div class="handbook-section">
             <h3>Taktik-Handbuch: Die 12 RPG-Klassen</h3>
             <p style="color: #a0aec0; max-width: 750px; margin: 0 auto 30px auto;">Jeder Spieler besitzt einen einzigartigen, zufallsgenerierten <strong>Skill-Tree</strong>. Investierst du Punkte in bestimmte Pfade, definierst du die Klasse des Spielers und schaltest mächtige passive Effekte frei. Baue dein Team weise auf, denn fehlende Synergien werden gnadenlos bestraft.</p>
@@ -478,7 +489,6 @@
             </div>
         </div>
 
-        <!-- EVENTS -->
         <div class="events-section">
             <h3>Dynamische Events & Dilemmas</h3>
             <p style="color: #a0aec0; max-width: 750px; margin: 0 auto;">Keine Saison verläuft nach Plan. Über 50 dynamische Story-Events unterbrechen den Alltag und zwingen dich zu harten Entscheidungen. Die Events reagieren intelligent auf deinen gewählten Archetypen und die Traits deiner Spieler!</p>
@@ -514,25 +524,24 @@
         </div>
 
         <div class="ascension-box">
-            <h3>🔥 Hardcore Modifier: Deine eigene Herausforderung</h3>
-            <p>Hast du die Liga und den Pokal gewonnen? Herzlichen Glückwunsch. Jetzt beginnt das echte Spiel. Schalte vier neue Modifier frei und drehe den Schwierigkeitsgrad genau so hoch, wie du es ertragen kannst.</p>
+            <h3>🔥 Modulares Modifier-System & Kick-Out Challenge</h3>
+            <p>Vergiss lineare Schwierigkeitsgrade. Sobald du bewiesen hast, dass du gewinnen kannst, nimmst du dein Schicksal selbst in die Hand. Passe deine Herausforderung mit vier modularen Parametern an und sammle Punkte für die ultimativen "God Manager"-Achievements.</p>
             <div class="ascension-levels" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
                 <span class="ascension-badge" style="width: 100%; max-width: 600px; text-align: left;">
-                    <strong>💰 Financial Difficulty (Lvl 1-5):</strong> Weniger Einnahmen, explodierende Transferpreise und höhere Gehälter.
+                    <strong>💰 Financial Difficulty (Lvl 1-5):</strong> Radikal weniger Einnahmen, explodierende Transferpreise und Gehälter, die dein Budget auffressen.
                 </span>
                 <span class="ascension-badge" style="width: 100%; max-width: 600px; text-align: left;">
-                    <strong>🧠 XP Reduction (Lvl 1-5):</strong> Härterer Fortschritt. -5 XP pro Stufe (bis zu -25 XP auf Level 5).
+                    <strong>🧠 XP Reduction (Lvl 1-5):</strong> Härterer Fortschritt. Deine Spieler lernen signifikant langsamer (bis zu -25% XP auf Level 5).
                 </span>
                 <span class="ascension-badge" style="width: 100%; max-width: 600px; text-align: left;">
-                    <strong>🚑 Injury Risk (Lvl 1-5):</strong> Exponentielles Verletzungsrisiko (2^Level) – bis zu 32% höhere Wahrscheinlichkeit auf Level 5.
+                    <strong>🚑 Injury Risk (Lvl 1-5):</strong> Exponentielles Verletzungsrisiko. Ohne breiten Kader wirst du die Saison nicht überstehen.
                 </span>
-                <span class="ascension-badge" style="width: 100%; max-width: 600px; text-align: left; color: #ff5555; border-color: #ff5555;">
-                    <strong>⚔️ Kick-Out Challenge (Lvl 1):</strong> Erfülle knallharte Vorstands-Herausforderungen, oder du wirst sofort gefeuert!
+                <span class="ascension-badge" style="width: 100%; max-width: 600px; text-align: left; color: #ff5555; border-color: #ff5555; background-color: rgba(255, 85, 85, 0.1);">
+                    <strong>⚔️ The Kick-Out Challenge:</strong> Der ultimative Hardcore-Modus. Das Board gibt dir jede Saison ein dynamisches Ziel (z.B. "Gewinne den Pokal"). Versagst du oder gehst bankrott, wirst du sofort gefeuert. Game Over!
                 </span>
             </div>
         </div>
 
-        <!-- DEEP DIVE -->
         <div class="deep-dive-section">
             <h3 style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 20px; text-align: center;">Hinter den Kulissen: Wie das Spiel tickt</h3>
             
@@ -573,13 +582,13 @@
             </details>
 
            <details>
-                <summary>Skill-Trees, Passives & 12 Spieler-Klassen</summary>
+                <summary>RPG Skill-Trees & Die 12 Klassen</summary>
                 <div class="details-content">
-                    <p>Das Level-Up-System wurde komplett überarbeitet. Jeder Spieler hat nun einen eigenen <strong>Skill-Tree</strong> mit 3 Pfaden, der seine Klasse definiert:</p>
+                    <p>Das Level-Up-System macht Tactilite zu einem echten RPG. Jeder Spieler hat einen einzigartigen <strong>Skill-Tree</strong>, der an einem zentralen Node startet.</p>
                     <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                        <li><strong>Zufallsgenerierte Trees:</strong> Jeder Baum startet mit einem zentralen Node (+5 Stärke). Von dort führen drei Äste nach außen (jeweils +3 Stärke). Die Richtung mit den meisten Punkten bestimmt die Spieler-Klasse (z.B. "Knipser" oder "Spielmacher").</li>
-                        <li><strong>Passive Effekte:</strong> Auf dem Weg zur Spezialisierung schaltest du mächtige Boni frei. Von der "Eisernen Lunge" (weniger Fitness-Verlust) über "Wunderheilung" (kürzere Verletzungen) bis zum "Anführer" (Form-Boost für das Team).</li>
-                        <li><strong>Smart Auto-Level & Cap:</strong> Nutze "Fast Distribute", um die KI den Spieler automatisch in seiner primären Rolle leveln zu lassen. Sobald das individuelle Potenzial eines Spielers erreicht ist, wird der restliche Tree mit einem Schloss versiegelt.</li>
+                        <li><strong>Klassen-Definition:</strong> Die Richtung, in die du die meisten Punkte investierst, bestimmt die Klasse (z.B. wird ein Stürmer zum "Knipser", "Dribbler" oder "Unterstützer").</li>
+                        <li><strong>Passive Fähigkeiten:</strong> Auf deinem Weg schaltest du spielverändernde Passives frei. Die "Eiserne Lunge" reduziert den Fitness-Verlust, "Wunderheilung" verkürzt Verletzungen und ein "Anführer" pusht die Form des gesamten Teams nach einem Sieg.</li>
+                        <li><strong>Smart Auto-Level:</strong> Keine Lust auf Mikromanagement? Nutze "Fast Distribute", und die KI levelt den Spieler intelligent in seiner primären Rolle weiter.</li>
                     </ul>
                 </div>
             </details>
@@ -595,13 +604,28 @@
                     </ul>
                 </div>
             </details>
+            
+            <details>
+                <summary>Strategy Hub & Das Live Match System</summary>
+                <div class="details-content">
+                    <p>Das alte On/Off-System für Simulationen ist Geschichte. Willkommen im <strong>Tactics Center</strong> und im interaktiven Live-Match.</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+                        <li><strong>Live-Match HUD:</strong> Verfolge das Spiel live! Behalte die Energie-Level deiner Elf im Auge, reagiere auf Rote Karten (die zu echten Sperren führen) und wechsle fließend zwischen offensiven und defensiven Mentalitäten.</li>
+                        <li><strong>Datengesteuerter Assistant Manager:</strong> Dein Co-Trainer berechnet in Echtzeit. Formations-Wechsel (z.B. 4-3-3 oder 3-5-2), xG-Werte, Altersstruktur (U23 bis 30+) und Durchschnittsstärken werden dir über dynamische Graphen direkt visualisiert.</li>
+                        <li><strong>Form durch Leistung:</strong> Die Form von Offensivspielern ist nicht mehr zufällig. Stürmer und Mittelfeldspieler ziehen ihre Form direkt aus echten Torbeteiligungen. Triffst du, brennst du!</li>
+                    </ul>
+                </div>
+            </details>
 
             <details>
-                <summary>Transfermarkt, Relative Seltenheit & Abwerben (Poaching)</summary>
+                <summary>Transfermarkt, Verträge & Versprechen</summary>
                 <div class="details-content">
-                    <p>Der Transfermarkt wächst mit dir. Spieler-Seltenheiten (wie <em>Weltklasse</em> oder <em>Legende</em>) werden nicht fest definiert, sondern skalieren <strong>relativ zum Durchschnitt deines Teams!</strong> Ein 65er Spieler ist in Liga 3 ein absoluter Legenden-Fund, in Liga 1 absoluter Standard.</p>
-                    <p><strong>Die Söldner-Gefahr:</strong> Die besten 5 Spieler auf dem Markt haben eine 30% Chance, "Söldner" zu sein. Sie heben dein Team auf das nächste Level, ruinieren aber dein Gehaltsbudget. Ein ständiges Abwägen von Risiko und Ertrag.</p>
-                    <p><strong>Direktes Abwerben (Poaching):</strong> Fehlt das Geld auf dem Markt? Wenn du einen Spieler der gegnerischen KI unbedingt haben willst, kannst du ihn <strong>direkt aus dem feindlichen Kader herauskaufen</strong>. Das kostet dich das 3-fache des Marktwertes (mit Manager-Skill nur das 2-fache) – aber in entscheidenden Saisonphasen ist es das wert!</p>
+                    <p>Spieler wechseln nicht mehr nur für Geld. Der Transfermarkt (jetzt mit 30 Spielern) fordert dein Verhandlungsgeschick. Du musst Stars mit <strong>Vertrags-Versprechen</strong> anlocken, um deine Erfolgschancen beim Würfeln (jetzt mit 2x 8-seitigen Würfeln) zu boosten!</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+                        <li><strong>Die 4 Versprechen:</strong> Biete eine Stammplatz-Garantie, Tor-Boni, ein Aufstiegs-Versprechen oder gar die Garantie auf den Pokalsieg.</li>
+                        <li><strong>Der Preis des Wortbruchs:</strong> Jedes Versprechen triggert eine Verkaufs-Sperre (Selling Lock). Brichst du ein Versprechen am Ende der Saison (z.B. durch einen verpassten Pokalsieg), bluten deine Finanzen durch massive Vertragsstrafen.</li>
+                        <li><strong>Dynamische KI:</strong> Die KI handelt jetzt mit. Kaufst du ihr Spieler ab, generiert sie sofort Ersatz. Am Saisonende analysiert sie ihre Schwachstellen und verstärkt sich gezielt.</li>
+                    </ul>
                 </div>
             </details>
         </div>
