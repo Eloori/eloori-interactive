@@ -17,8 +17,8 @@
     <meta name="twitter:image" content="https://eloori-interactive.com/social-preview.jpg">
     
     <link rel="icon" type="image/png" href="favLogo.jpeg">
-    <link rel="canonical" href="https://eloori-interactive.com/" />
-    
+    <link rel="canonical" href="https://eloori-interactive.com/index-en.html" />
+
     <style>
     :root {
         --accent-cyan: #00e5ff;
@@ -66,18 +66,19 @@
     .logo { font-size: 24px; font-weight: 800; letter-spacing: 2px; color: white; text-decoration: none;}
     .logo span { color: var(--accent-cyan); }
 
-    .lang-switch a { font-weight: bold; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease; }
+    .lang-switch a { color: #a0aec0; text-decoration: none; font-weight: bold; }
     .lang-switch a:hover { color: var(--accent-cyan); }
 
     /* HERO */
     .hero { text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #1a1d24 0%, #0d0f12 100%); }
     
     .hero-logo { 
-        width: 320px; 
-        height: auto; 
-        margin-bottom: 40px; 
-        transition: transform 0.3s ease; 
-        cursor: pointer;
+        width: 400px; 
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 80px; 
+    transition: transform 0.3s ease; 
+    cursor: pointer;
     }
 
     .hero-logo:hover { transform: scale(1.05); }
@@ -115,7 +116,6 @@
         align-items: center;
         gap: 10px;
     }
-    .steam-btn:hover { background: linear-gradient(135deg, #2a475e 0%, #66c0f4 100%); box-shadow: 0 0 15px rgba(102, 192, 244, 0.6); color: white; }
 
     /* SECTIONS */
     .game-section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; text-align: center; scroll-margin-top: 100px; }
@@ -132,7 +132,18 @@
     .feature-box p { color: #a0aec0; font-size: 0.95rem; line-height: 1.4; }
 
     /* VIDEO */
-    .video-focus-wrapper { position: relative; padding: 10px; border-radius: 15px; margin: 40px 0; }
+    .dual-video-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin: 40px 0;
+    }
+    @media (max-width: 768px) {
+        .dual-video-wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+    
     .video-container {
         position: relative; width: 100%; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); border: 2px solid #2d3748; transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -140,7 +151,7 @@
     .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
     .video-container:hover { transform: scale(1.02); border-color: var(--accent-cyan); box-shadow: 0 0 40px rgba(0, 229, 255, 0.4); }
 
-    /* --- ARCHETYPEN & TRAITS --- */
+    /* --- ARCHETYPES & TRAITS --- */
     .archetype-section { margin-top: 80px; text-align: left; }
     .archetype-section h3 { font-size: 2rem; color: var(--accent-cyan); margin-bottom: 20px; text-align: center; }
     .archetype-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
@@ -223,34 +234,13 @@
         nav { padding: 15px 20px; }
     }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Tactilite",
-      "description": "The first manager game with true roguelite mechanics and RPG elements. Build your team, choose your archetype, and survive the Ascension.",
-      "url": "https://eloori-interactive.com/",
-      "image": "https://eloori-interactive.com/social-preview.jpg",
-      "genre":,
-      "author": {
-        "@type": "Organization",
-        "name": "Eloori Interactive",
-        "url": "https://eloori-interactive.com/"
-      },
-      "gamePlatform":,
-      "applicationCategory": "Game",
-      "inLanguage": "en",
-        "sameAs":
-    }
-    </script>
 </head>
 <body>
 
     <nav>
         <a href="#" class="logo">ELOORI <span>INTERACTIVE</span></a>
         <div class="lang-switch">
-            <a href="index.html" style="color: #a0aec0;">DE</a>
+            <a href="index.html">DE</a>
             <span style="color: #2d3748; margin: 0 10px; font-weight: bold;">|</span>
             <a href="index-en.html" style="color: var(--accent-cyan);">EN</a>
         </div>
@@ -260,7 +250,7 @@
         <img src="logo.png" alt="Eloori Interactive Logo" class="hero-logo">
        
         <h1>Interactive Systems. <br>Strategic Impact.</h1>
-        <p>Eloori Interactive is a Swiss studio for interactive experiences and strategic design. We harness the power of game mechanics to make complex systems understandable – from captivating games to innovative corporate solutions.</p>
+        <p>Eloori Interactive is a Swiss studio for interactive experiences and strategic design. We harness the power of game mechanics to make complex systems understandable – from engaging games to innovative business solutions.</p>
         
         <div class="cta-container">
             <a href="https://store.steampowered.com/app/4556000/Tactilite/" target="_blank" class="steam-btn">
@@ -275,36 +265,38 @@
 
     <section id="game" class="game-section" style="border-top: 1px solid #1a1d24;">
         <h2>Our Flagship: Tactilite</h2>
-        <p>In our first project, we demonstrate how deep strategy and modern roguelite mechanics merge. No rigid spreadsheets, but real decisions with consequences.</p>
+        <p>In our first project, we show how deep strategy and modern roguelite mechanics merge. No rigid spreadsheets, but real decisions with consequences.</p>
         
-        <div class="video-focus-wrapper">
+        <div class="dual-video-wrapper">
             <div class="video-container">
-                <iframe src="https://www.youtube-nocookie.com/embed/j6lNeVtWgxY?rel=0&modestbranding=1" title="Eloori Interactive Trailer" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube-nocookie.com/embed/YpTchPiGL3g?rel=0&modestbranding=1" title="Eloori Interactive Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/YOUR_NEW_VIDEO_ID?rel=0&modestbranding=1" title="Tactilite Massive Content Updates" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="features">
             <div class="feature-box">
-                <h3>🎭 Complex Systems</h3>
-                <p>We design in-depth systems where every mechanic interlocks – whether in a game or a simulation.</p>
+                <h3>🧠 Strategy Hub & Live Matches</h3>
+                <p>Take control. Intervene in interactive Live Matches, fluidly adapt your tactics to the score, and analyze your team structure in real-time with detailed xG and form data.</p>
             </div>
             <div class="feature-box">
-                <h3>⚔️ Dynamic Design</h3>
-                <p>Unpredictable outcomes and high replayability through intelligent generation algorithms.</p>
+                <h3>🎭 True Football RPG</h3>
+                <p>Say goodbye to simple attributes. Every player possesses a unique Skill Tree. Unlock passive abilities like "Iron Lungs" or "Leader" and shape individual RPG classes.</p>
             </div>
             <div class="feature-box">
-                <h3>📈 Data-Driven</h3>
-                <p>Strategy is based on facts. We make data visible and manageable through interaction.</p>
+                <h3>🤝 Dynamic Transfer Market</h3>
+                <p>Money alone isn't enough anymore. Convince stars with risky contract promises (like starting XI guarantees or title pledges) and roll the dice to make the deal of a lifetime.</p>
             </div>
             <div class="feature-box">
-                <h3>⚽ Interactive Entertainment</h3>
-                <p>We break down genres and create new experiences at the boundary of management and role-playing.</p>
+                <h3>🔥 Modular Challenge</h3>
+                <p>Choose your own suffering. With the new Modifier System, you can scale financial hurdles, exponential injury risks, or face the ultimate board "Kick-Out Challenge".</p>
             </div>
         </div>
 
-        <!-- ARCHETYPES -->
         <div class="archetype-section">
-            <h3>Choose Your Manager Archetype</h3>
+            <h3>Choose your Manager Archetype</h3>
             <p style="text-align: center; color: #a0aec0; margin-bottom: 30px;">Unlock new playstyles. Each archetype drastically changes the rules of the transfer market and team dynamics.</p>
             
             <div class="archetype-grid">
@@ -312,14 +304,14 @@
                     <img src="archetype-standard2.png" alt="Standard Manager" class="archetype-img" loading="lazy">
                     <div class="archetype-content">
                         <h4>The Standard</h4>
-                        <p>The classic path. No crazy bonuses, no extreme drawbacks. Perfect for learning the league before the madness begins.</p>
+                        <p>The classic path. No crazy bonuses, no extreme disadvantages. Perfect for learning the league before the madness begins.</p>
                     </div>
                 </div>
                 <div class="archetype-card">
                     <img src="archetype-underdog2.png" alt="Underdog Manager" class="archetype-img" loading="lazy">
                     <div class="archetype-content">
                         <h4>The Underdog</h4>
-                        <p>David vs. Goliath! Your team gets +10 strength points against overpowered opponents. However, if you are the favorite, your players crumble under the pressure (-5 strength).</p>
+                        <p>David vs. Goliath! Your team gets +10 strength points against overpowering opponents. However, if you are the favorite, your players crumble under the pressure (-5 strength).</p>
                     </div>
                 </div>
                 <div class="archetype-card">
@@ -340,23 +332,22 @@
                     <img src="archetype-grinder2.png" alt="Grinder Manager" class="archetype-img" loading="lazy">
                     <div class="archetype-content">
                         <h4>The Grinder</h4>
-                        <p>Your players are machines and don't lose fitness during matches. However, the risk of injury in training is three times as high!</p>
+                        <p>Your players are machines and lose no fitness during matches. However, the injury risk in training is three times as high!</p>
                     </div>
                 </div>
                 <div class="archetype-card">
                     <img src="archetype-hardcore2.png" alt="Hardcore Manager" class="archetype-img" loading="lazy">
                     <div class="archetype-content">
                         <h4>Hardcore</h4>
-                        <p>Only for the absolute legends who have proven they can win 25 trophies. The ultimate test of your skills.</p>
+                        <p>Only for absolute legends who have proven they can win 25 trophies. The ultimate test of your skills.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- TRAITS -->
         <div class="traits-section">
             <h3>New Player Types (Traits)</h3>
-            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto;">Not every player is created equal. A fraction of all talents are generated with unique traits that completely turn the transfer market and your finances upside down.</p>
+            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto;">Not every player is the same. A fraction of all talents is generated with unique character traits that completely flip the transfer market and your finances upside down.</p>
 
             <div class="traits-grid">
                 <div class="trait-card">
@@ -364,50 +355,49 @@
                         <div class="trait-icon">👑</div>
                         <h4>The Diva</h4>
                     </div>
-                    <p>Plays outstandingly in top matches and builds strong form. However, loses morale and form massively when benched.</p>
+                    <p>Plays outstandingly in top matches and builds strong form. But loses massive morale and form when sitting on the bench.</p>
                 </div>
                 <div class="trait-card">
                     <div class="trait-header">
                         <div class="trait-icon">🛡️</div>
                         <h4>Loyal Soul</h4>
                     </div>
-                    <p>A true club legend. Plays out of pure passion for 20% less salary and never leaves the club voluntarily due to money issues.</p>
+                    <p>A true club man. Plays out of pure passion for 20% less salary and never leaves the club voluntarily due to money problems.</p>
                 </div>
                 <div class="trait-card">
                     <div class="trait-header">
                         <div class="trait-icon">💰</div>
                         <h4>The Mercenary</h4>
                     </div>
-                    <p>An absolute elite player for the starting eleven, but he only plays for the money. Demands <strong>double the salary</strong>, costs 50% more in transfer fees, and quickly drives you into ruin.</p>
+                    <p>An absolute elite player for the starting XI, but plays only for the money. Demands <strong>double the salary</strong>, costs 50% more in transfer fees, and quickly drives you into ruin.</p>
                 </div>
                 <div class="trait-card">
                     <div class="trait-header">
                         <div class="trait-icon">🔋</div>
                         <h4>The Workhorse</h4>
                     </div>
-                    <p>A true fitness monster. Barely loses stamina after matches and recovers extremely fast. In return, he lacks the talent for true form peaks.</p>
+                    <p>A true fitness monster. Barely loses stamina after games and recovers extremely fast. However, he lacks the talent for true form peaks.</p>
                 </div>
                 <div class="trait-card">
                     <div class="trait-header">
                         <div class="trait-icon">🩹</div>
                         <h4>Glass Bones</h4>
                     </div>
-                    <p>Massively increased risk of injury and often misses several weeks. On the other hand, he is often a real bargain on the transfer market.</p>
+                    <p>Massively increased injury risk and often misses several weeks. But on the transfer market, he's often a real bargain.</p>
                 </div>
             </div>
         </div>
 
-        <!-- HANDBOOK / CLASSES -->
         <div class="handbook-section">
             <h3>Tactics Handbook: The 12 RPG Classes</h3>
-            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto 30px auto;">Each player possesses a unique, randomly generated <strong>Skill Tree</strong>. By investing points into specific paths, you define the player's class and unlock powerful passive effects. Build your team wisely, as missing synergies are punished ruthlessly on the pitch.</p>
+            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto 30px auto;">Every player possesses a unique, randomly generated <strong>Skill Tree</strong>. By investing points into specific paths, you define the player's class and unlock powerful passive effects. Build your team wisely, as missing synergies will be mercilessly punished.</p>
 
             <div class="warning-box">
                 <h4>⚠️ The Most Important Rules (Mandatory Roles)</h4>
-                <p style="color: #a0aec0; margin-bottom: 10px;">Your team needs a functioning axis, otherwise base stats will drop dramatically during the match:</p>
+                <p style="color: #a0aec0; margin-bottom: 10px;">Your team needs a functioning axis, otherwise base stats will drop dramatically in-game:</p>
                 <ul>
-                    <li><strong>No Goal Threat:</strong> Without a 'Poacher' or 'Dribbler' upfront, your offense drops by <strong>-30%</strong>.</li>
-                    <li><strong>No Game Control:</strong> Without a 'Playmaker' (Midfield) or 'Supporter' (Attack), no passes will connect: <strong>-20% Offense</strong>.</li>
+                    <li><strong>No Goal Threat:</strong> Without a 'Poacher' or 'Dribbler' up front, your offense drops by <strong>-30%</strong>.</li>
+                    <li><strong>No Game Control:</strong> Without a 'Playmaker' (Midfield) or 'Supporter' (Attack), passes won't connect: <strong>-20% Offense</strong>.</li>
                 </ul>
             </div>
 
@@ -416,18 +406,18 @@
                     <h4 style="color: #ff5555;">⚽ Attack</h4>
                     <div class="class-item">
                         <h5>Poacher</h5>
-                        <span class="req-stat">Requires: Finishing</span>
-                        <p>The classic goalscorer. Brings a solid <strong>+15% Attack Strength</strong>.</p>
+                        <span class="req-stat">Needs: Finishing</span>
+                        <p>The classic goalscorer. Brings a massive <strong>+15% Attack Strength</strong>.</p>
                     </div>
                     <div class="class-item">
                         <h5>Dribbler</h5>
-                        <span class="req-stat">Requires: Dribbling</span>
+                        <span class="req-stat">Needs: Dribbling</span>
                         <p>Draws the defense towards him. <strong>+10% Attack</strong> and <strong>+5% Midfield</strong>.</p>
                     </div>
                     <div class="class-item">
                         <h5>Supporter</h5>
-                        <span class="req-stat">Requires: Passing</span>
-                        <p>Makes his teammates better (<strong>+5% Attack</strong>) and prevents the fatal passing penalty for the team.</p>
+                        <span class="req-stat">Needs: Passing</span>
+                        <p>Makes his teammates better (<strong>+5% Attack</strong>) and prevents the fatal pass penalty for the team.</p>
                     </div>
                 </div>
 
@@ -435,37 +425,37 @@
                     <h4 style="color: #55ff55;">🎯 Midfield</h4>
                     <div class="class-item">
                         <h5>Playmaker</h5>
-                        <span class="req-stat">Requires: Passing</span>
-                        <p>The brain of the team. Grants <strong>+15% Midfield Strength</strong> and prevents the passing penalty.</p>
+                        <span class="req-stat">Needs: Passing</span>
+                        <p>The brain of the team. Grants <strong>+15% Midfield Strength</strong> and prevents the pass penalty.</p>
                     </div>
                     <div class="class-item">
-                        <h5>Destroyer</h5>
-                        <span class="req-stat">Requires: Tackling</span>
+                        <h5>Ball Winner</h5>
+                        <span class="req-stat">Needs: Tackling</span>
                         <p>Intercepts attacks early and relieves the defense (<strong>+15% Defense Strength</strong>).</p>
                     </div>
                     <div class="class-item">
                         <h5>Box-to-Box</h5>
-                        <span class="req-stat">Requires: Shooting</span>
-                        <p>The tireless engine. Gives <strong>+10% Midfield</strong> and joins the attack (<strong>+5% Attack</strong>).</p>
+                        <span class="req-stat">Needs: Shooting</span>
+                        <p>The tireless engine. Grants <strong>+10% Midfield</strong> and pushes forward (<strong>+5% Attack</strong>).</p>
                     </div>
                 </div>
 
                 <div class="class-group" style="border-top-color: #00e5ff;">
                     <h4 style="color: #00e5ff;">🧱 Defense</h4>
                     <div class="class-item">
-                        <h5>Rock Solid</h5>
-                        <span class="req-stat">Requires: Tackling</span>
-                        <p>The classic brick wall in the back. Brings massive <strong>+15% Defense Strength</strong>.</p>
+                        <h5>Rock in Defense</h5>
+                        <span class="req-stat">Needs: Tackling</span>
+                        <p>The classic wall at the back. Brings a massive <strong>+15% Defense Strength</strong>.</p>
                     </div>
                     <div class="class-item">
-                        <h5>Header Beast</h5>
-                        <span class="req-stat">Requires: Heading</span>
-                        <p>Extremely dangerous on your own corners and crosses. Grants <strong>+10% Attack Strength</strong>.</p>
+                        <h5>Aerial Threat</h5>
+                        <span class="req-stat">Needs: Heading</span>
+                        <p>Extremely dangerous during your own corners and crosses. Grants <strong>+10% Attack Strength</strong>.</p>
                     </div>
                     <div class="class-item">
                         <h5>Modern Defender</h5>
-                        <span class="req-stat">Requires: Pace</span>
-                        <p>Initiates fast counter-attacks from the defense with his speed (<strong>+10% Midfield</strong>).</p>
+                        <span class="req-stat">Needs: Pace</span>
+                        <p>Uses his pace to initiate quick counterattacks from the back (<strong>+10% Midfield</strong>).</p>
                     </div>
                 </div>
 
@@ -473,114 +463,100 @@
                     <h4 style="color: #ffd700;">🧤 Goalkeeper</h4>
                     <div class="class-item">
                         <h5>Line Keeper</h5>
-                        <span class="req-stat">Requires: Reflexes</span>
-                        <p>The pure shot-stopper on the line. Gives <strong>+15% Goalkeeper Strength</strong>.</p>
+                        <span class="req-stat">Needs: Reflexes</span>
+                        <p>The pure shot-stopper on the line. Grants <strong>+15% Goalkeeper Strength</strong>.</p>
                     </div>
                     <div class="class-item">
                         <h5>Box Boss</h5>
-                        <span class="req-stat">Requires: Physical</span>
-                        <p>Dominates the 16-meter box on crosses (<strong>+10% Defense</strong>, <strong>+5% Goalkeeper</strong>).</p>
+                        <span class="req-stat">Needs: Physical</span>
+                        <p>Dominates the 18-yard box during crosses (<strong>+10% Defense</strong>, <strong>+5% Goalkeeper</strong>).</p>
                     </div>
                     <div class="class-item">
                         <h5>Sweeper Keeper</h5>
-                        <span class="req-stat">Requires: Build-up</span>
-                        <p>Acts practically as an 11th outfield player in the build-up. Brings <strong>+10% Midfield Strength</strong>.</p>
+                        <span class="req-stat">Needs: Build-up</span>
+                        <p>Acts almost as an 11th outfield player in the build-up play. Brings <strong>+10% Midfield Strength</strong>.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- EVENTS -->
         <div class="events-section">
             <h3>Dynamic Events & Dilemmas</h3>
-            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto;">No season goes according to plan. Over 50 dynamic story events interrupt your daily routine and force you to make tough decisions. Events react intelligently to your chosen archetype and your players' traits!</p>
+            <p style="color: #a0aec0; max-width: 750px; margin: 0 auto;">No season goes according to plan. Over 50 dynamic story events interrupt the daily routine and force you to make tough decisions. The events react intelligently to your chosen archetype and your players' traits!</p>
 
             <div class="events-grid">
                 <div class="event-card">
-                    <h4>⚠️ Shady Sponsor</h4>
-                    <p>"An envelope with €100,000 is on the table. In return, the sender demands that you play strictly defensive in the next match."</p>
+                    <h4>⚠️ Questionable Sponsor</h4>
+                    <p>"An envelope containing 100,000 € is lying on the table. The sender demands that you play strictly defensively in the next game."</p>
                     <div class="event-options">
-                        <div class="event-btn risk">Option A: Pocket the money (Risk of getting caught)</div>
+                        <div class="event-btn risk">Option A: Take the money (Risk getting caught)</div>
                         <div class="event-btn safe">Option B: Tear up the envelope (Safe)</div>
                     </div>
                 </div>
 
                 <div class="event-card">
                     <h4>👑 Diva in a Rage</h4>
-                    <p>Your star striker (Trait: Diva) is unhappy with his locker in the dressing room and is ruining the mood. The whole team suffers.</p>
+                    <p>Your star striker (Trait: Diva) is unhappy with his locker in the dressing room and is creating a toxic atmosphere. The whole team suffers.</p>
                     <div class="event-options">
-                        <div class="event-btn">Option A: Fulfill special requests (-€30,000)</div>
+                        <div class="event-btn">Option A: Fulfill special wishes (-30,000 €)</div>
                         <div class="event-btn risk">Option B: Reprimand him (Form drops massively)</div>
                     </div>
                 </div>
 
                 <div class="event-card">
-                    <h4>🏋️ The Infirmary is Bursting (Only as "Grinder")</h4>
-                    <p>Your brutal training takes its toll. The medical department urgently requests expensive special equipment to prevent injuries.</p>
+                    <h4>🏋️ Hospital Overflow (Only as "Grinder")</h4>
+                    <p>Your brutal training takes its toll. The medical department urgently demands expensive special equipment to prevent injuries.</p>
                     <div class="event-options">
-                        <div class="event-btn">Option A: Buy equipment (-€120,000)</div>
-                        <div class="event-btn risk">Option B: "We are no wimps!" (Injuries)</div>
+                        <div class="event-btn">Option A: Buy equipment (-120,000 €)</div>
+                        <div class="event-btn risk">Option B: "We aren't wimps!" (Injuries)</div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="ascension-box">
-            <h3>🔥 Hardcore Modifiers: Craft Your Own Challenge</h3>
-            <p>You won the league and the cup? Congratulations. Now the real game begins. Unlock four new modifiers and crank up the difficulty exactly how you like it.</p>
+            <h3>🔥 Modular Modifier System & Kick-Out Challenge</h3>
+            <p>Forget linear difficulty levels. Once you've proven you can win, you take fate into your own hands. Customize your challenge with four modular parameters and earn points for the ultimate "God Manager" achievements.</p>
             <div class="ascension-levels" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
                 <span class="ascension-badge" style="width: 100%; max-width: 600px; text-align: left;">
-                    <strong>💰 Financial Difficulty (Lvl 1-5):</strong> Reduced income, skyrocketing transfer fees, and higher salaries.
+                    <strong>💰 Financial Difficulty (Lvl 1-5):</strong> Radically reduced income, exploding transfer prices, and salaries that eat up your budget.
                 </span>
                 <span class="ascension-badge" style="width: 100%; max-width: 600px; text-align: left;">
-                    <strong>🧠 XP Reduction (Lvl 1-5):</strong> Slower progression. -5 XP per level (up to -25 XP at Level 5).
+                    <strong>🧠 XP Reduction (Lvl 1-5):</strong> Harder progression. Your players learn significantly slower (up to -25% XP at Level 5).
                 </span>
                 <span class="ascension-badge" style="width: 100%; max-width: 600px; text-align: left;">
-                    <strong>🚑 Injury Risk (Lvl 1-5):</strong> Exponential injury risk (2^Level) – up to a 32% higher chance at Level 5.
+                    <strong>🚑 Injury Risk (Lvl 1-5):</strong> Exponential injury risk (2^Level) – up to a 32% higher probability at Level 5.
                 </span>
-                <span class="ascension-badge" style="width: 100%; max-width: 600px; text-align: left; color: #ff5555; border-color: #ff5555;">
-                    <strong>⚔️ Kick-Out Challenge (Lvl 1):</strong> Fulfill harsh board objectives, or you'll be fired immediately!
+                <span class="ascension-badge" style="width: 100%; max-width: 600px; text-align: left; color: #ff5555; border-color: #ff5555; background-color: rgba(255, 85, 85, 0.1);">
+                    <strong>⚔️ The Kick-Out Challenge:</strong> The ultimate hardcore mode. Fulfill brutal board challenges, or you will be fired immediately! Game Over!
                 </span>
             </div>
         </div>
 
-        <!-- DEEP DIVE -->
         <div class="deep-dive-section">
-            <h3 style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 20px; text-align: center;">Behind the Scenes: How the Game Ticks</h3>
+            <h3 style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 20px; text-align: center;">Behind the Scenes: How the game ticks</h3>
             
             <details>
-                <summary>How is the game world created? (Generation)</summary>
+                <summary>How is the world generated?</summary>
                 <div class="details-content">
-                    <p>Your career starts at the very bottom. The game world consists of three dynamic leagues with a fiercely balanced difficulty curve:</p>
+                    <p>Your career starts at the bottom. The game world consists of three dynamic leagues with a tightly balanced difficulty curve:</p>
                     <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                        <li><strong>League 3 (Strength ~40):</strong> Amateur and semi-pro football. You start with €500k and a team full of talents who want to move up.</li>
-                        <li><strong>League 2 (Strength ~50):</strong> Tough professional football. The transition is doable but requires clever transfers.</li>
-                        <li><strong>League 1 (Strength ~65):</strong> The international metropolises. Here the true masters play, and the AI will give you nothing for free.</li>
+                        <li><strong>League 3 (Strength ~40):</strong> Swiss amateur and professional football. You start with 500k € and a team full of talents hungry for success.</li>
+                        <li><strong>League 2 (Strength ~50):</strong> Tough German professional football. The transition is doable but demands clever transfers.</li>
+                        <li><strong>League 1 (Strength ~65):</strong> International metropolises. The true masters play here, and the AI will give you nothing for free.</li>
                     </ul>
-                    <p><strong>Anti-Trademark Generator:</strong> The engine generates dynamic names from real world cities (e.g., Milan, London) and club prefixes. A filter prevents protected names of real world-class clubs from appearing – you play in a completely unique but authentic universe!</p>
-                </div>
-            </details>
-
-           <details>
-                <summary>Skill Trees, Passives & 12 Player Classes</summary>
-                <div class="details-content">
-                    <p>The level-up system has been completely overhauled. Every player now features an individual <strong>Skill Tree</strong> with 3 paths defining their class:</p>
-                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                        <li><strong>Randomized Trees:</strong> Each tree starts with a central node (+5 Strength). From there, three branches extend outward (+3 Strength each). The path with the most points determines the player's class (e.g., 'Poacher' or 'Playmaker').</li>
-                        <li><strong>Passive Effects:</strong> On the path to specialization, you unlock powerful bonuses. From 'Iron Lungs' (less fitness loss) and 'Miracle Healing' (shorter injuries) to 'Leader' (form boost for the team).</li>
-                        <li><strong>Smart Auto-Level & Cap:</strong> Use 'Fast Distribute' to let the AI automatically level the player in their primary role. Once a player reaches their individual potential limit, the rest of the tree locks permanently.</li>
-                    </ul>
+                    <p><strong>Anti-Trademark Generator:</strong> The engine generates dynamic names from real world cities (e.g., Milan, London) and club prefixes. A filter prevents protected names of real world-class clubs from being generated – you play in a completely unique but authentic universe!</p>
                 </div>
             </details>
 
             <details>
                 <summary>Team Chemistry: The Bond System</summary>
                 <div class="details-content">
-                    <p>Loyalty pays off. Players who spend a long time on the pitch together develop strong team chemistry, represented as <strong>Bonds</strong>:</p>
+                    <p>Loyalty pays off. Players who spend a lot of time on the pitch together develop a strong team chemistry, which becomes visible as <strong>Bonds</strong>:</p>
                     <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                        <li><strong>Four Levels of Loyalty:</strong> After 18 matches together, a player reaches 'Silver', after 54 matches 'Gold', and absolute club legends achieve 'Red' status after 10 seasons.</li>
-                        <li><strong>Form Boosts & Glowing UI:</strong> The higher the bond, the stronger the form bonus (increasing the form cap up to 20 for 'Red' bonds). In the menu, these players are highlighted with elegant, glowing accents.</li>
-                        <li><strong>Transfer Market Dynamics:</strong> New players start at 'Bronze' (0 bonus). Only the 'Youth Guru' archetype has a chance to scout talents who instantly start with a Silver bond.</li>
+                        <li><strong>Four Levels of Loyalty:</strong> After 18 shared matches, a player becomes "Silver", after 54 matches "Gold", and absolute club legends become "Red" after 10 seasons.</li>
+                        <li><strong>Form Boosts & Glowing UI:</strong> The higher the bond, the stronger the form bonus (increases the form cap up to 20 for "Red" Bonds). In the menu, these players are highlighted with elegant, glowing accents.</li>
+                        <li><strong>Transfer Market Dynamics:</strong> New players start at "Bronze" (0 Bonus). Only the "Youth Visionary" archetype has the chance to find talents who immediately join the team with a Silver Bond.</li>
                     </ul>
                 </div>
             </details>
@@ -588,10 +564,22 @@
             <details>
                 <summary>Smart Event Tutorial</summary>
                 <div class="details-content">
-                    <p>We hate boring, rigid tutorials. That's why the game uses an intelligent, context-sensitive system:</p>
+                    <p>We hate boring, rigid tutorials. That's why the game uses an intelligent, context-based system:</p>
                     <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                        <li><strong>Learn by Playing:</strong> The game explains mechanics exactly when they become relevant. Win your first major title, and your Assistant Manager will explain what to do with your new Manager Points.</li>
-                        <li><strong>Dynamic Triggers:</strong> Deep mechanics like the Bond System or Hardcore Modifiers only pop up when you activate them through your gameplay for the very first time.</li>
+                        <li><strong>Learn while playing:</strong> The game explains mechanics exactly at the moment they become relevant. Win your first big title, and your assistant manager explains what you can do with the new Manager Points.</li>
+                        <li><strong>Dynamic Triggers:</strong> Even deep mechanics like the Bond System or Hardcore Modifiers only pop up when you activate them through your gameplay for the first time.</li>
+                    </ul>
+                </div>
+            </details>
+
+           <details>
+                <summary>RPG Skill-Trees & The 12 Classes</summary>
+                <div class="details-content">
+                    <p>The level-up system turns Tactilite into a true RPG. Every player has a unique <strong>Skill Tree</strong> that starts at a central node.</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+                        <li><strong>Class Definition:</strong> The direction in which you invest the most points determines the class (e.g., a striker becomes a "Poacher", "Dribbler", or "Supporter").</li>
+                        <li><strong>Passive Abilities:</strong> Along the way, you unlock game-changing passives. "Iron Lungs" reduces fitness loss, "Miracle Healing" shortens injuries, and a "Leader" pushes the entire team's form after a win.</li>
+                        <li><strong>Smart Auto-Level:</strong> Don't want to micromanage? Use "Fast Distribute", and the AI will intelligently level the player further in their primary role.</li>
                     </ul>
                 </div>
             </details>
@@ -601,19 +589,34 @@
                 <div class="details-content">
                     <p>Matches are simulated in real-time and require strategic thinking when setting up your lineup:</p>
                     <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                        <li><strong>Tactical Synergies (Mandatory!):</strong> An attack made entirely of 'Poachers' will hardly score any goals (-30% penalty) if 'Playmakers' or 'Supporters' are missing in midfield to deliver the passes. You must combine the right RPG classes to earn bonuses of up to +15% on team sectors.</li>
-                        <li><strong>Sector Duels:</strong> Your attack fights against the opposing defense, your midfield wrestles for possession. If you play defensively, your defense becomes a bulwark, but hardly anything works upfront.</li>
-                        <li><strong>The Drama Factor (Anti-Draw):</strong> Nothing is more boring than five 0:0s in a row. Our engine detects when two defensive top teams clash. In 40% of threatening draws, there is a "Lucky Punch" in the 90th minute that decides the game through a counter-attack!</li>
+                        <li><strong>Tactical Synergies (Mandatory!):</strong> An attack made entirely of 'Poachers' will barely score (-30% penalty) if the 'Playmakers' or 'Supporters' in midfield are missing to provide the passes. You must combine the right RPG classes to collect bonuses of up to +15%.</li>
+                        <li><strong>Sector Duels:</strong> Your attack fights against the opposing defense, your midfield wrestles for possession. If you play defensively, your defense becomes a bulwark, but hardly anything works up front.</li>
+                        <li><strong>The Drama Factor (Anti-Draw):</strong> Nothing is more boring than five 0:0 draws in a row. Our engine detects when two defensive top teams clash. In 40% of impending draws, there is a "Lucky Punch" in the 90th minute that decides the game through a counterattack!</li>
+                    </ul>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Strategy Hub & The Live Match System</summary>
+                <div class="details-content">
+                    <p>The old On/Off system for simulations is history. Welcome to the <strong>Tactics Center</strong> and interactive Live Matches.</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+                        <li><strong>Live-Match HUD:</strong> Follow the game live! Keep an eye on the energy levels of your XI, react to Red Cards (which lead to real suspensions), and switch fluidly between offensive and defensive mentalities.</li>
+                        <li><strong>Data-Driven Assistant Manager:</strong> Your assistant calculates in real-time. Formation changes (e.g., 4-3-3 or 3-5-2), xG values, age structure (U23 to 30+), and average strengths are visualized directly via dynamic graphs.</li>
+                        <li><strong>Form through Performance:</strong> The form of offensive players is no longer random. Strikers and midfielders draw their form directly from actual goal contributions. If you score, you catch fire!</li>
                     </ul>
                 </div>
             </details>
 
             <details>
-                <summary>Transfer Market, Relative Rarity & Poaching</summary>
+                <summary>Transfer Market, Contracts & Promises</summary>
                 <div class="details-content">
-                    <p>The transfer market grows with you. Player rarities (like <em>World Class</em> or <em>Legend</em>) are not rigidly defined but scale <strong>relative to the average of your team!</strong> A 65-rated player is an absolute legend find in League 3, but absolute standard in League 1.</p>
-                    <p><strong>The Mercenary Threat:</strong> The best 5 players on the market have a 30% chance to be "Mercenaries". They elevate your team to the next level but ruin your salary budget. A constant balancing of risk and reward.</p>
-                    <p><strong>Direct Poaching:</strong> Missing money on the market? If you desperately want a player from the opposing AI, you can <strong>buy him straight out of the enemy squad</strong>. This costs you 3 times the market value (only 2 times with a manager skill) – but in crucial phases of the season, it's worth it!</p>
+                    <p>Players no longer transfer just for money. The transfer market (now with 30 players) demands your negotiation skills. You must lure stars with <strong>Contract Promises</strong> to boost your success chances when rolling the dice (now using 2x 8-sided dice)!</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+                        <li><strong>The 4 Promises:</strong> Offer a starting XI guarantee, goal bonuses, a promotion promise, or even the guarantee to win the cup.</li>
+                        <li><strong>The Price of a Broken Word:</strong> Every promise triggers a Selling Lock. If you break a promise at the end of the season (e.g., by missing the cup victory), your finances will bleed through massive penalty fees.</li>
+                        <li><strong>Dynamic AI:</strong> The AI now acts intelligently. If you buy players from them, they immediately generate replacements. At the end of the season, they analyze their weaknesses and reinforce specific positions.</li>
+                    </ul>
                 </div>
             </details>
         </div>
@@ -627,7 +630,7 @@
         <a href="mailto:contact@eloori-interactive.com" class="contact-email">contact@eloori-interactive.com</a>
         <p>&copy; 2026 Eloori Interactive. Made in Switzerland.</p>
         <div class="legal-links">
-            <a href="legal-en.html">Imprint & Privacy Policy</a>
+            <a href="legal-en.html">Imprint</a>
             <a href="game_privacy-en.html">Privacy Policy</a>
             <a href="credits-en.html">Credits & Licenses</a>
         </div>
