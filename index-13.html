@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tactilite — Fussball-Manager-Roguelite-RPG | Eloori Interactive</title>
+    <meta name="description" content="Tactilite ist ein Fussball-Manager-Roguelite-RPG. Baue einen Verein aus der dritten Liga auf, levle Spieler wie in einem RPG, riskiere bei Transfers und überlebe eine Liga, die zurückschlägt. Jetzt auf Steam.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tactilite — Fussball-Manager-Roguelite-RPG">
+    <meta property="og:description" content="Levle jeden Spieler wie ein RPG. Riskiere bei Transfers. Überlebe die Kick-Out Challenge. Jetzt auf Steam.">
+    <meta property="og:image" content="https://eloori-interactive.com/social-preview.jpg">
+    <meta property="og:url" content="https://eloori-interactive.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tactilite — Eloori Interactive">
+    <meta name="twitter:description" content="Interactive Systems. Strategic Impact. Made in Switzerland.">
+    <meta name="twitter:image" content="https://eloori-interactive.com/social-preview.jpg">
+
+    <link rel="icon" type="image/png" href="favLogo.jpeg">
+    <link rel="canonical" href="https://eloori-interactive.com/" />
+
+    <script>
+        if (!sessionStorage.getItem('langRedirected')) {
+            sessionStorage.setItem('langRedirected', 'true');
+            if (!navigator.language.toLowerCase().startsWith('de')) {
+                window.location.replace('index-en.html');
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/tactilite.css">
+</head>
+<body>
+
+    <!-- ============ NAV ============ -->
+    <nav class="site-nav" data-screen-label="Navigation">
+        <div class="nav-inner">
+            <a href="#top" class="brand">
+                <img src="assets/logo-flame.png" alt="Eloori Interactive">
+                <b>ELOORI <span>INTERACTIVE</span></b>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#overview">Überblick</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#manager">Manager</a>
+                <a href="#systems">Systeme</a>
+                <a href="#updates">Updates</a>
+            </div>
+            <div class="nav-right">
+                <div class="lang-switch">
+                    <a href="index.html" class="active">DE</a><i>|</i><a href="index-en.html">EN</a>
+                </div>
+                <a href="https://store.steampowered.com/app/4556000/Tactilite/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.198 2.198 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11l-3.083 2.45v.055zm8.013-1.006a1.18 1.18 0 1 0-.909-2.008 1.18 1.18 0 0 0 .91 2.008m-1.464-4.888a2.031 2.031 0 1 0 2.87-2.87 2.032 2.032 0 0 0-2.87 2.87"/></svg>
+                    Steam
+                </a>
+                <button class="nav-toggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero" id="top" data-screen-label="Hero">
+        <div class="hero-bg" style="background-image:url('assets/hero-titlescreen.png')"></div>
+        <div class="hero-grain"></div>
+        <div class="hero-content">
+            <a href="#updates" class="update-badge reveal">
+                <span class="dot"></span>
+                Neuestes Update · <b data-latest-version>v1.4</b>
+                <span class="arrow">→</span>
+            </a>
+            <div class="hero-eyebrow reveal" data-d="1">Eloori Interactive · Made in Switzerland</div>
+            <h1 class="hero-title reveal" data-d="1">TACTILITE</h1>
+            <p class="hero-hook reveal" data-d="2">Ein Fussball-Manager-<b>Roguelite-RPG</b>, in dem jeder Spieler aufsteigt, jedes Versprechen ein Risiko ist und die Liga zurückschlägt.</p>
+            <p class="hero-sub reveal" data-d="3">Starte in der dritten Liga, schmiede RPG-Klassen auf dem Platz, würfle um Transfers und überlebe eine Saison, die nie nach Plan verläuft.</p>
+            <div class="hero-cta reveal" data-d="4">
+                <a href="https://store.steampowered.com/app/4556000/Tactilite/" target="_blank" rel="noopener" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.198 2.198 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11l-3.083 2.45v.055zm8.013-1.006a1.18 1.18 0 1 0-.909-2.008 1.18 1.18 0 0 0 .91 2.008m-1.464-4.888a2.031 2.031 0 1 0 2.87-2.87 2.032 2.032 0 0 0-2.87 2.87"/></svg>
+                    Auf Steam kaufen
+                </a>
+                <a href="#overview" class="btn btn-ghost">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m15 0A7 7 0 1 0 1 8a7 7 0 0 0 14 0"/></svg>
+                    Trailer ansehen
+                </a>
+            </div>
+            <div class="hero-meta reveal" data-d="5">
+                <span><span class="tick">✓</span> Jetzt auf Steam</span>
+                <span><span class="tick">✓</span> Singleplayer</span>
+                <span><span class="tick">✓</span> Endlose Wiederspielbarkeit</span>
+            </div>
+        </div>
+        <a href="#stats" class="scroll-cue" aria-label="Nach unten scrollen">
+            <span class="mouse"></span>
+            Scroll
+        </a>
+    </header>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats-band" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat"><div class="num gold"><span data-count="3">3</span></div><div class="lbl">Dynamische Ligen</div></div>
+                <div class="stat"><div class="num gold"><span data-count="6">6</span></div><div class="lbl">Manager-Archetypen</div></div>
+                <div class="stat"><div class="num gold"><span data-count="12">12</span></div><div class="lbl">RPG-Klassen</div></div>
+                <div class="stat"><div class="num gold"><span data-count="50" data-suffix="+">50+</span></div><div class="lbl">Story-Events</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ OVERVIEW / FEATURES ============ -->
+    <section class="section" id="overview" data-screen-label="Überblick">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="kicker">Unser Flaggschiff</div>
+                <h2>Keine Tabellen. Echte Entscheidungen, echte Konsequenzen.</h2>
+                <p>Tactilite verbindet tiefgreifendes Fussball-Management mit moderner Roguelite-Progression. Jeder Run ist anders, jede Entscheidung hat Folgen – und dein Kader ist ein Aufgebot von RPG-Charakteren, die du selbst formst.</p>
+            </div>
+            <div class="grid features">
+                <div class="feature reveal" data-d="1"><div class="ic">🧠</div><h3>Strategy Hub &amp; Live-Matches</h3><p>Übernimm die Kontrolle. Interveniere in interaktiven Live-Matches, passe deine Taktik fliessend an den Spielstand an und analysiere dein Team in Echtzeit mit xG- und Form-Daten.</p></div>
+                <div class="feature reveal" data-d="2"><div class="ic">🎭</div><h3>Echtes Football-RPG</h3><p>Verabschiede dich von simplen Attributen. Jeder Spieler besitzt einen eigenen Skill-Tree. Schalte passive Fähigkeiten wie „Eiserne Lunge" oder „Anführer" frei und forme RPG-Klassen.</p></div>
+                <div class="feature reveal" data-d="3"><div class="ic">🤝</div><h3>Dynamischer Transfermarkt</h3><p>Geld allein reicht nicht. Überzeuge Stars mit riskanten Vertrags-Versprechen – Stammplatz-Garantien, Titel-Zusagen – und wirf die Würfel.</p></div>
+                <div class="feature reveal" data-d="4"><div class="ic">🔥</div><h3>Modulare Herausforderung</h3><p>Bestimme dein eigenes Leid. Skaliere Finanzen, Verletzungsrisiko und XP oder stelle dich der ultimativen „Kick-Out Challenge" des Vorstands.</p></div>
+            </div>
+
+            <!-- TRAILERS -->
+            <div class="section-head reveal" style="margin-top:74px;margin-bottom:34px;">
+                <div class="kicker cyan">In Bewegung</div>
+                <h2>Trailer &amp; Updates</h2>
+            </div>
+            <div class="video-grid">
+                <div class="video reveal"><iframe src="https://www.youtube-nocookie.com/embed/YpTchPiGL3g?rel=0&amp;modestbranding=1" title="Tactilite Trailer" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video reveal" data-d="1"><iframe src="https://www.youtube-nocookie.com/embed/hE3w47UVitE?rel=0&amp;modestbranding=1" title="Tactilite Massive Content Update" frameborder="0" allowfullscreen></iframe></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SCREENSHOTS ============ -->
+    <section class="section" id="screenshots" data-screen-label="Screenshots" style="background:linear-gradient(180deg,transparent,rgba(19,24,38,.35),transparent);">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="kicker">Im Spiel</div>
+                <h2>Screenshots</h2>
+                <p>Vom Strategy Hub über Live-Match-HUDs bis zum RPG-Skill-Tree – klicke auf ein Bild für die Vollansicht.</p>
+            </div>
+            <div class="reveal">
+                <div class="gallery-main" id="galMain">
+                    <img src="assets/shots/shot-01.png" alt="Tactilite Screenshot">
+                    <div class="counter"><b>1</b> / <span class="tot">10</span></div>
+                    <div class="cap">
+                        <b>Hauptmenü</b>
+                        <span class="expand">Zum Vergrössern klicken <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707"/></svg></span>
+                    </div>
+                </div>
+                <div class="gallery-strip" id="galStrip"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MANAGER ============ -->
+    <section class="section" id="manager" data-screen-label="Manager">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="kicker">Dein Run, deine Regeln</div>
+                <h2>Wähle deinen Manager-Archetyp</h2>
+                <p>Schalte neue Spielstile frei. Jeder Archetyp verändert die Regeln des Transfermarkts und der Team-Dynamik drastisch.</p>
+            </div>
+            <div class="grid arch-grid">
+                <div class="arch-card reveal" data-d="1"><img src="archetype-standard2.png" alt="Standard Manager" class="arch-img" loading="lazy"><div class="arch-body"><h4>Der Standard</h4><p>Der klassische Weg. Keine verrückten Boni, keine extremen Nachteile. Perfekt, um die Liga kennenzulernen, bevor der Wahnsinn beginnt.</p></div></div>
+                <div class="arch-card reveal" data-d="2"><img src="archetype-underdog2.png" alt="Underdog Manager" class="arch-img" loading="lazy"><div class="arch-body"><h4>Der Underdog</h4><p>David gegen Goliath! +10 Stärke gegen übermächtige Gegner. Bist du der Favorit, zerbrechen deine Spieler unter dem Druck (−5 Stärke).</p></div></div>
+                <div class="arch-card reveal" data-d="3"><img src="archetype-tycoon2.png" alt="Tycoon Manager" class="arch-img" loading="lazy"><div class="arch-body"><h4>Der Tycoon</h4><p>Geld spielt keine Rolle – du startest reich. Aber der Markt hasst dich: Alle Spieler kosten ein Vielfaches (bis zu 300%) ihres Wertes.</p></div></div>
+                <div class="arch-card reveal" data-d="1"><img src="archetype-youth2.png" alt="Youth Guru Manager" class="arch-img" loading="lazy"><div class="arch-body"><h4>Jugend Visionär</h4><p>U23-Spieler wachsen doppelt so schnell und haben viel höheres Potenzial. Der Haken? Alte Stars (Ü25) weigern sich, für dich zu spielen.</p></div></div>
+                <div class="arch-card reveal" data-d="2"><img src="archetype-grinder2.png" alt="Grinder Manager" class="arch-img" loading="lazy"><div class="arch-body"><h4>Der Schleifer</h4><p>Deine Spieler sind Maschinen und verlieren während der Spiele keine Fitness. Allerdings ist das Verletzungsrisiko im Training dreimal so hoch.</p></div></div>
+                <div class="arch-card reveal" data-d="3"><img src="archetype-hardcore2.png" alt="Hardcore Manager" class="arch-img" loading="lazy"><div class="arch-body"><h4>Hardcore</h4><p>Nur für die absoluten Legenden, die bewiesen haben, dass sie 25 Pokale gewinnen können. Der ultimative Test deiner Fähigkeiten.</p></div></div>
+            </div>
+
+            <!-- TRAITS -->
+            <div class="section-head reveal" style="margin-top:80px;">
+                <div class="kicker cyan">Persönlichkeiten</div>
+                <h2>Neue Spielertypen (Traits)</h2>
+                <p>Nicht jeder Spieler ist gleich. Ein Bruchteil aller Talente wird mit einzigartigen Charakterzügen generiert, die den Transfermarkt und deine Finanzen komplett auf den Kopf stellen.</p>
+            </div>
+            <div class="grid trait-grid">
+                <div class="trait reveal" data-d="1"><div class="th"><div class="ic">👑</div><h4>Die Diva</h4></div><p>Spielt überragend in Top-Spielen und baut starke Form auf. Verliert aber massiv Moral und Form, wenn sie auf der Bank sitzt.</p></div>
+                <div class="trait reveal" data-d="2"><div class="th"><div class="ic">🛡️</div><h4>Treue Seele</h4></div><p>Ein echter Vereinsmensch. Spielt aus Leidenschaft für 20% weniger Gehalt und verlässt den Club nie wegen Geldproblemen.</p></div>
+                <div class="trait reveal" data-d="3"><div class="th"><div class="ic">💰</div><h4>Der Söldner</h4></div><p>Ein Elite-Spieler, der nur fürs Geld spielt. Verlangt das <strong>doppelte Gehalt</strong>, kostet 50% mehr Ablöse und treibt dich in den Ruin.</p></div>
+                <div class="trait reveal" data-d="1"><div class="th"><div class="ic">🔋</div><h4>Das Arbeitstier</h4></div><p>Ein Fitness-Monster – verliert kaum Ausdauer und erholt sich extrem schnell. Dafür fehlt ihm das Talent für echte Form-Hochs.</p></div>
+                <div class="trait reveal" data-d="2"><div class="th"><div class="ic">🩹</div><h4>Glasknochen</h4></div><p>Massiv erhöhtes Verletzungsrisiko, oft wochenlang ausfällt. Dafür auf dem Transfermarkt oft ein echtes Schnäppchen.</p></div>
+            </div>
+
+            <!-- CLASSES -->
+            <div class="section-head reveal" style="margin-top:80px;">
+                <div class="kicker">Taktik-Handbuch</div>
+                <h2>Die 12 RPG-Klassen</h2>
+                <p>Jeder Spieler besitzt einen einzigartigen, zufallsgenerierten <strong style="color:#fff">Skill-Tree</strong>. Investierst du Punkte, definierst du die Klasse und schaltest mächtige Passives frei – fehlende Synergien werden gnadenlos bestraft.</p>
+            </div>
+            <div class="warn reveal">
+                <h4>⚠️ Die wichtigsten Regeln (Pflicht-Rollen)</h4>
+                <p>Dein Team braucht eine funktionierende Achse, sonst brechen die Basiswerte im Spiel ein:</p>
+                <ul>
+                    <li><strong>Keine Torgefahr:</strong> Ohne einen ‚Knipser' oder ‚Dribbler' im Sturm bricht deine Offensive um <strong>−30%</strong> ein.</li>
+                    <li><strong>Keine Spielkontrolle:</strong> Ohne ‚Spielmacher' oder ‚Unterstützer' kommen keine Pässe an: <strong>−20% Offensive</strong>.</li>
+                </ul>
+            </div>
+            <div class="grid class-grid">
+                <div class="class-col reveal" data-d="1"><h4 style="color:var(--red)">⚽ Sturm</h4>
+                    <div class="class-item"><h5>Knipser</h5><span class="req">Braucht: Abschluss</span><p>Der klassische Torjäger. Bringt satte <strong>+15% Sturm-Stärke</strong>.</p></div>
+                    <div class="class-item"><h5>Dribbler</h5><span class="req">Braucht: Dribbling</span><p>Zieht die Abwehr auf sich. <strong>+10% Sturm</strong> und <strong>+5% Mittelfeld</strong>.</p></div>
+                    <div class="class-item"><h5>Unterstützer</h5><span class="req">Braucht: Passen</span><p>Macht die Nebenleute besser (<strong>+5% Sturm</strong>) und verhindert den Pass-Malus.</p></div>
+                </div>
+                <div class="class-col reveal" data-d="2"><h4 style="color:var(--green)">🎯 Mittelfeld</h4>
+                    <div class="class-item"><h5>Spielmacher</h5><span class="req">Braucht: Passen</span><p>Das Hirn der Mannschaft. <strong>+15% Mittelfeld</strong> und verhindert den Pass-Malus.</p></div>
+                    <div class="class-item"><h5>Abräumer</h5><span class="req">Braucht: Zweikampf</span><p>Fängt Angriffe früh ab und entlastet die Abwehr (<strong>+15% Abwehr</strong>).</p></div>
+                    <div class="class-item"><h5>Box-to-Box</h5><span class="req">Braucht: Schuss</span><p>Der unermüdliche Motor. <strong>+10% Mittelfeld</strong>, schaltet sich vorne ein (<strong>+5% Sturm</strong>).</p></div>
+                </div>
+                <div class="class-col reveal" data-d="3"><h4 style="color:var(--cyan)">🧱 Abwehr</h4>
+                    <div class="class-item"><h5>Fels in der Brandung</h5><span class="req">Braucht: Zweikampf</span><p>Die klassische Kante hinten drin. <strong>+15% Abwehr-Stärke</strong>.</p></div>
+                    <div class="class-item"><h5>Kopfballungeheuer</h5><span class="req">Braucht: Kopfball</span><p>Gefährlich bei eigenen Ecken und Flanken. <strong>+10% Sturm-Stärke</strong>.</p></div>
+                    <div class="class-item"><h5>Moderner Verteidiger</h5><span class="req">Braucht: Tempo</span><p>Leitet mit Tempo schnelle Konter aus der Abwehr ein (<strong>+10% Mittelfeld</strong>).</p></div>
+                </div>
+                <div class="class-col reveal" data-d="4"><h4 style="color:var(--gold)">🧤 Torwart</h4>
+                    <div class="class-item"><h5>Linienkeeper</h5><span class="req">Braucht: Reflexe</span><p>Der reine Shot-Stopper auf der Linie. <strong>+15% Torwart-Stärke</strong>.</p></div>
+                    <div class="class-item"><h5>Strafraum-Boss</h5><span class="req">Braucht: Physis</span><p>Dominiert den 16er bei Flanken (<strong>+10% Abwehr</strong>, <strong>+5% Torwart</strong>).</p></div>
+                    <div class="class-item"><h5>Libero-Keeper</h5><span class="req">Braucht: Aufbau</span><p>Agiert als 11. Feldspieler im Aufbau. <strong>+10% Mittelfeld-Stärke</strong>.</p></div>
+                </div>
+            </div>
+
+            <!-- EVENTS -->
+            <div class="section-head reveal" style="margin-top:80px;">
+                <div class="kicker cyan">Keine Saison nach Plan</div>
+                <h2>Dynamische Events &amp; Dilemmas</h2>
+                <p>Über 50 dynamische Story-Events unterbrechen den Alltag und zwingen dich zu harten Entscheidungen – sie reagieren intelligent auf deinen Archetyp und die Traits deiner Spieler.</p>
+            </div>
+            <div class="grid event-grid">
+                <div class="event reveal" data-d="1"><h4>⚠️ Fragwürdiger Sponsor</h4><p>„Ein Umschlag mit 100.000 € liegt auf dem Tisch. Der Absender fordert, dass du das nächste Spiel streng defensiv spielst."</p><div class="opts"><div class="opt risk">A: Geld einstecken (Gefahr erwischt zu werden)</div><div class="opt safe">B: Brief zerreissen (Sicher)</div></div></div>
+                <div class="event reveal" data-d="2"><h4>👑 Diva in Rage</h4><p>Dein Star-Stürmer (Trait: Diva) ist unzufrieden mit seinem Spind und macht miese Stimmung. Das ganze Team leidet.</p><div class="opts"><div class="opt">A: Sonderwünsche erfüllen (−30.000 €)</div><div class="opt risk">B: Zurechtweisen (Form sinkt massiv)</div></div></div>
+                <div class="event reveal" data-d="3"><h4>🏋️ Das Lazarett platzt <span style="color:var(--muted-2);font-size:.8rem">(nur als Schleifer)</span></h4><p>Dein brutales Training fordert Tribut. Die medizinische Abteilung fordert dringend teure Spezialgeräte.</p><div class="opts"><div class="opt">A: Geräte kaufen (−120.000 €)</div><div class="opt risk">B: „Wir sind keine Weicheier!" (Verletzungen)</div></div></div>
+            </div>
+
+            <!-- MODIFIER -->
+            <div class="ascension reveal" style="margin-top:80px;">
+                <h3>🔥 Modulares Modifier-System &amp; Kick-Out Challenge</h3>
+                <p>Vergiss lineare Schwierigkeitsgrade. Sobald du bewiesen hast, dass du gewinnen kannst, nimmst du dein Schicksal selbst in die Hand – passe vier modulare Parameter an und sammle Punkte für die ultimativen „God Manager"-Achievements.</p>
+                <div class="mods">
+                    <div class="mod"><strong>💰 Financial Difficulty (Lvl 1–5):</strong> radikal weniger Einnahmen, explodierende Transferpreise und Gehälter, die dein Budget auffressen.</div>
+                    <div class="mod"><strong>🧠 XP Reduction (Lvl 1–5):</strong> härterer Fortschritt – Spieler lernen bis zu 25% langsamer auf Level 5.</div>
+                    <div class="mod"><strong>🚑 Injury Risk (Lvl 1–5):</strong> exponentielles Verletzungsrisiko (2^Level) – bis zu 32% höhere Wahrscheinlichkeit auf Level 5.</div>
+                    <div class="mod danger"><strong>⚔️ The Kick-Out Challenge:</strong> der ultimative Hardcore-Modus. Erfülle brutale Vorstands-Ziele oder du wirst sofort gefeuert. Game Over.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SYSTEME / DEEP DIVE ============ -->
+    <section class="section deep" id="systems" data-screen-label="Systeme" style="background:linear-gradient(180deg,transparent,rgba(19,24,38,.35),transparent);">
+        <div class="container" style="max-width:880px;">
+            <div class="section-head reveal">
+                <div class="kicker">Hinter den Kulissen</div>
+                <h2>Wie das Spiel tickt</h2>
+                <p>Die tiefen Systeme unter der Haube – öffne ein Panel, um einzutauchen.</p>
+            </div>
+            <div class="reveal">
+                <details><summary>Wie entsteht die Spielwelt?<span class="pm">+</span></summary><div class="dd-content">
+                    <p>Deine Karriere beginnt ganz unten. Die Spielwelt besteht aus drei dynamischen Ligen mit hart ausbalanciertem Schwierigkeitsgrad:</p>
+                    <ul><li><strong>Liga 3 (Stärke ~40):</strong> Schweizer Amateur- und Profifussball. Du beginnst mit 500k € und einem Team voller Talente.</li>
+                    <li><strong>Liga 2 (Stärke ~50):</strong> harter deutscher Profifussball. Machbar, verlangt aber clevere Transfers.</li>
+                    <li><strong>Liga 1 (Stärke ~65):</strong> internationale Metropolen. Hier spielen die wahren Meister und die KI schenkt dir nichts.</li></ul>
+                    <p><strong>Anti-Markenrecht-Generator:</strong> Die Engine generiert Namen aus echten Weltstädten (Mailand, London) und Vereins-Präfixen, mit Filter gegen geschützte Namen – ein völlig eigenes, aber authentisches Universum.</p>
+                </div></details>
+                <details><summary>Teamchemie: Das Bond-System<span class="pm">+</span></summary><div class="dd-content">
+                    <p>Treue zahlt sich aus. Spieler, die lange zusammen spielen, entwickeln Chemie, sichtbar als <strong>Bonds</strong>:</p>
+                    <ul><li><strong>Vier Stufen der Treue:</strong> „Silber" nach 18 Spielen, „Gold" nach 54, und Vereinslegenden werden nach 10 Saisons „Rot".</li>
+                    <li><strong>Form-Boosts &amp; leuchtendes UI:</strong> höhere Bonds erhöhen das Form-Cap (bis 20 für „Rote") und werden mit edlen Akzenten hervorgehoben.</li>
+                    <li><strong>Transfermarkt-Dynamik:</strong> Neue Spieler starten bei „Bronze". Nur der Jugend-Visionär findet Talente mit Silber-Bond.</li></ul>
+                </div></details>
+                <details><summary>Smartes Event-Tutorial<span class="pm">+</span></summary><div class="dd-content">
+                    <p>Wir hassen starre Tutorials. Das Spiel nutzt ein intelligentes, kontextbasiertes System:</p>
+                    <ul><li><strong>Lernen beim Spielen:</strong> Mechaniken werden genau dann erklärt, wenn sie relevant werden. Gewinnst du deinen ersten Titel, erklärt dein Co-Trainer die Manager-Punkte.</li>
+                    <li><strong>Dynamische Trigger:</strong> tiefe Mechaniken wie das Bond-System ploppen erst auf, wenn du sie durch dein Gameplay aktivierst.</li></ul>
+                </div></details>
+                <details><summary>RPG Skill-Trees &amp; die 12 Klassen<span class="pm">+</span></summary><div class="dd-content">
+                    <p>Das Level-Up-System macht Tactilite zu einem echten RPG. Jeder Spieler hat einen einzigartigen <strong>Skill-Tree</strong>, der an einem zentralen Node startet.</p>
+                    <ul><li><strong>Klassen-Definition:</strong> die Richtung, in die du die meisten Punkte investierst, bestimmt die Klasse (ein Stürmer wird „Knipser", „Dribbler" oder „Unterstützer").</li>
+                    <li><strong>Passive Fähigkeiten:</strong> die „Eiserne Lunge" reduziert Fitness-Verlust, „Wunderheilung" verkürzt Verletzungen, ein „Anführer" pusht die Team-Form nach einem Sieg.</li>
+                    <li><strong>Smart Auto-Level:</strong> nutze „Fast Distribute" und die KI levelt den Spieler intelligent in seiner Rolle.</li></ul>
+                </div></details>
+                <details><summary>Die Match-Engine, Synergien &amp; der Drama-Faktor<span class="pm">+</span></summary><div class="dd-content">
+                    <p>Matches werden in Echtzeit simuliert und erfordern strategisches Mitdenken bei der Aufstellung:</p>
+                    <ul><li><strong>Taktische Synergien (Pflicht!):</strong> ein Sturm aus reinen ‚Knipsern' schiesst kaum Tore (−30%), wenn ‚Spielmacher' oder ‚Unterstützer' fehlen. Kombiniere Klassen für Boni bis +15%.</li>
+                    <li><strong>Sektor-Duelle:</strong> dein Sturm kämpft gegen die Abwehr, dein Mittelfeld ringt um Ballbesitz. Defensiv wird deine Abwehr zum Bollwerk, aber vorne geht wenig.</li>
+                    <li><strong>Der Drama-Faktor (Anti-Draw):</strong> in 40% der drohenden Unentschieden gibt es in der 90. Minute noch einen „Lucky Punch" per Konter.</li></ul>
+                </div></details>
+                <details><summary>Strategy Hub &amp; das Live-Match-System<span class="pm">+</span></summary><div class="dd-content">
+                    <p>Das alte On/Off-System ist Geschichte. Willkommen im <strong>Tactics Center</strong> und im interaktiven Live-Match.</p>
+                    <ul><li><strong>Live-Match-HUD:</strong> verfolge das Spiel live, behalte die Energie deiner Elf im Auge, reagiere auf Rote Karten (echte Sperren) und wechsle fliessend die Mentalität.</li>
+                    <li><strong>Datengesteuerter Assistant:</strong> Formations-Wechsel (4-3-3, 3-5-2), xG-Werte, Altersstruktur und Durchschnittsstärken über dynamische Graphen visualisiert.</li>
+                    <li><strong>Form durch Leistung:</strong> Stürmer und Mittelfeldspieler ziehen ihre Form aus echten Torbeteiligungen. Triffst du, brennst du.</li></ul>
+                </div></details>
+                <details><summary>Transfermarkt, Verträge &amp; Versprechen<span class="pm">+</span></summary><div class="dd-content">
+                    <p>Spieler wechseln nicht mehr nur für Geld. Der Transfermarkt (jetzt mit 30 Spielern) fordert dein Verhandlungsgeschick. Locke Stars mit <strong>Vertrags-Versprechen</strong>, um deine Würfel-Chancen zu boosten (jetzt 2× 8-seitige Würfel).</p>
+                    <ul><li><strong>Die 4 Versprechen:</strong> Stammplatz-Garantie, Tor-Boni, Aufstiegs-Versprechen oder die Garantie auf den Pokalsieg.</li>
+                    <li><strong>Der Preis des Wortbruchs:</strong> jedes Versprechen triggert eine Verkaufs-Sperre. Brichst du es, bluten deine Finanzen durch Vertragsstrafen.</li>
+                    <li><strong>Dynamische KI:</strong> kaufst du ihr Spieler ab, generiert sie sofort Ersatz; am Saisonende verstärkt sie gezielt ihre Schwächen.</li></ul>
+                </div></details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ UPDATES ============ -->
+    <section class="section" id="updates" data-screen-label="Updates">
+        <div class="container" style="max-width:880px;">
+            <div class="section-head reveal" style="margin-bottom:30px;">
+                <div class="kicker cyan">Patch Notes</div>
+                <h2>Neueste Updates</h2>
+                <p>Tactilite wird laufend weiterentwickelt. Das ist neu – die vollständige Historie findest du im Steam-News-Hub.</p>
+            </div>
+            <div class="updates-head reveal">
+                <span class="live"><span class="dot"></span>Wird aktiv auf Steam aktualisiert</span>
+                <a href="https://store.steampowered.com/news/app/4556000" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Alle Patch Notes auf Steam →</a>
+            </div>
+            <div class="feed" id="feed"></div>
+            <div class="updates-foot reveal">
+                <a href="https://store.steampowered.com/app/4556000/Tactilite/" target="_blank" rel="noopener" class="btn btn-primary">Auf die Wunschliste &amp; spielen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer" data-screen-label="Footer">
+        <div class="foot-brand">
+            <img src="assets/logo-flame.png" alt="Eloori Interactive">
+            <b>ELOORI <span>INTERACTIVE</span></b>
+        </div>
+        <div class="socials">
+            <a href="https://www.instagram.com/eloori_interactive/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.linkedin.com/company/eloori-interactive/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://store.steampowered.com/app/4556000/Tactilite/" target="_blank" rel="noopener">Steam</a>
+        </div>
+        <a href="/cdn-cgi/l/email-protection#e1828e8f95808295a1848d8e8e9388cc888f958493808295889784cf828e8c" class="foot-mail"><span class="__cf_email__" data-cfemail="791a16170d181a0d391c1516160b105410170d1c0b181a0d100f1c571a1614">[email&#160;protected]</span></a>
+        <p class="copy">&copy; 2026 Eloori Interactive. Made in Switzerland.</p>
+        <div class="legal">
+            <a href="legal.html">Impressum</a>
+            <a href="game_privacy.html">Datenschutz</a>
+            <a href="credits.html">Credits &amp; Lizenzen</a>
+        </div>
+    </footer>
+
+    <!-- ============ LIGHTBOX ============ -->
+    <div class="lightbox" id="lightbox">
+        <button class="lb-btn lb-close" aria-label="Schliessen">✕</button>
+        <button class="lb-btn lb-prev" aria-label="Zurück">‹</button>
+        <img alt="" data-lb-img>
+        <button class="lb-btn lb-next" aria-label="Weiter">›</button>
+        <div class="lb-cap"></div>
+    </div>
+
+    <!-- ============ DATEN (hier bearbeiten) ============ -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    /* Screenshots — ersetze assets/shots/shot-02..10.png durch deine echten Captures. */
+    window.TACTILITE_SHOTS = [
+        { src: "assets/shots/shot-01.png", title: "Hauptmenü" },
+        { src: "assets/shots/shot-02.png", title: "Manager-Archetyp-Auswahl" },
+        { src: "assets/shots/shot-03.png", title: "Manager-Skill-Tree" },
+        { src: "assets/shots/shot-04.png", title: "Tactics Center & Assistant" },
+        { src: "assets/shots/shot-05.png", title: "RPG-Spieler-Skill-Tree" },
+        { src: "assets/shots/shot-06.png", title: "Transfermarkt & Vertrags-Versprechen" },
+        { src: "assets/shots/shot-07.png", title: "Live-Match" },
+        { src: "assets/shots/shot-08.png", title: "Dynamisches Event" },
+        { src: "assets/shots/shot-09.png", title: "Football World News" },
+        { src: "assets/shots/shot-10.png", title: "Spieler-Karriere-Archiv" }
+    ];
+
+    /* Patch Notes — neuestes ZUERST. Der oberste Eintrag füllt das Hero-Badge automatisch.
+       tag-Typen: new · feature · balance · fix */
+    window.TACTILITE_UPDATES = [
+        {
+            version: "v1.4", date: "Juni 2026", title: "Massives Content-Update",
+            tags: [{label:"Neu", type:"new"}, {label:"Feature", type:"feature"}],
+            points: [
+                "Neuer <strong>Strategy Hub</strong> mit interaktiven Live-Matches und Echtzeit-xG- &amp; Form-Graphen.",
+                "Sechs <strong>Manager-Archetypen</strong>, die die Regeln jedes Runs neu schreiben.",
+                "Transfermarkt auf 30 Spieler erweitert, Verhandlung mit 2× 8-seitigen Würfeln."
+            ]
+        },
+        {
+            version: "v1.3", date: "April 2026", title: "RPG-Skill-Trees & 12 Klassen",
+            tags: [{label:"Feature", type:"feature"}, {label:"Balance", type:"balance"}],
+            points: [
+                "Jeder Spieler hat nun einen einzigartigen <strong>Skill-Tree</strong> mit einer von 12 RPG-Klassen.",
+                "Neue passive Fähigkeiten: Eiserne Lunge, Wunderheilung, Anführer und mehr.",
+                "Taktische Synergien und die −30% / −20% Pflichtrollen-Mali neu ausbalanciert."
+            ]
+        },
+        {
+            version: "v1.2", date: "Februar 2026", title: "Bonds & Spieler-Traits",
+            tags: [{label:"Feature", type:"feature"}],
+            points: [
+                "Das <strong>Bond-System</strong> eingeführt (Bronze → Silber → Gold → Rot).",
+                "Seltene Traits hinzugefügt: Diva, Treue Seele, Söldner, Arbeitstier, Glasknochen.",
+                "Über 50 dynamische Story-Events reagieren nun auf Archetypen und Traits."
+            ]
+        },
+        {
+            version: "v1.1", date: "Dezember 2025", title: "Modifier-System & Kick-Out Challenge",
+            tags: [{label:"Feature", type:"feature"}, {label:"Balance", type:"balance"}],
+            points: [
+                "Modulare Schwierigkeit: Finanz-, XP- und Verletzungs-Regler (Lvl 1–5).",
+                "Den Hardcore-Modus <strong>Kick-Out Challenge</strong> hinzugefügt.",
+                "Zahlreiche Balance-Anpassungen an der Late-Game-Ökonomie."
+            ]
+        },
+        {
+            version: "v1.0", date: "Oktober 2025", title: "Tactilite — Release",
+            tags: [{label:"Released", type:"new"}],
+            points: [
+                "Tactilite auf Steam veröffentlicht.",
+                "Drei dynamische Ligen, Echtzeit-Match-Engine und das Drama-Faktor Anti-Draw-System."
+            ]
+        }
+    ];
+
+    window.TACTILITE_I18N = { of: "von" };
+    </script>
+    <script src="assets/tactilite.js"></script>
+</body>
+</html>
