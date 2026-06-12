@@ -202,8 +202,8 @@ img { display: block; max-width: 100%; }
 .hero-bg::after {
   content: ""; position: absolute; inset: 0;
   background:
-    radial-gradient(120% 80% at 50% 22%, rgba(9,11,17,.08), rgba(9,11,17,.45) 60%, var(--bg) 100%),
-    linear-gradient(180deg, rgba(9,11,17,.3) 0%, rgba(9,11,17,.05) 34%, rgba(9,11,17,.8) 86%, var(--bg) 100%);
+    radial-gradient(120% 80% at 50% 22%, rgba(9,11,17,.08), rgba(9,11,17,.3) 60%, var(--bg) 100%),
+    linear-gradient(180deg, rgba(9,11,17,.3) 0%, rgba(9,11,17,.05) 34%, rgba(9,11,17,.7) 86%, var(--bg) 100%);
 }
 .hero-grain { position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: radial-gradient(circle at 50% 120%, rgba(232,193,74,.14), transparent 55%); }
