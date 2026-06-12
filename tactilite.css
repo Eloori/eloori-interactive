@@ -202,8 +202,8 @@ img { display: block; max-width: 100%; }
 .hero-bg::after {
   content: ""; position: absolute; inset: 0;
   background:
-    radial-gradient(120% 80% at 50% 22%, rgba(9,11,17,.08), rgba(9,11,17,.3) 60%, var(--bg) 100%),
-    linear-gradient(180deg, rgba(9,11,17,.3) 0%, rgba(9,11,17,.05) 34%, rgba(9,11,17,.7) 86%, var(--bg) 100%);
+    radial-gradient(120% 80% at 50% 22%, rgba(9,11,17,.18), rgba(9,11,17,.62) 60%, var(--bg) 100%),
+    linear-gradient(180deg, rgba(9,11,17,.45) 0%, rgba(9,11,17,.12) 34%, rgba(9,11,17,.8) 86%, var(--bg) 100%);
 }
 .hero-grain { position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: radial-gradient(circle at 50% 120%, rgba(232,193,74,.14), transparent 55%); }
@@ -246,7 +246,7 @@ img { display: block; max-width: 100%; }
   line-height: .92; margin-bottom: 22px; position: relative;
   background: linear-gradient(178deg, #fff4d2 4%, var(--gold-bright) 40%, var(--gold) 66%, var(--gold-deep) 100%);
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 6px 30px rgba(232,193,74,.45));
+  filter: drop-shadow(0 6px 30px rgba(232,193,74,.28));
 }
 .hero-hook {
   font-family: 'Rajdhani'; font-weight: 600;
@@ -633,16 +633,63 @@ img { display: block; max-width: 100%; }
   .video-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
+  /* HERO — smaller text + a stronger dark veil so even bright
+     screenshots (e.g. Football World) keep the title readable */
+  .hero { padding: 92px 18px 70px; }
+  .hero-bg { background-position: center 26%; }
+  .hero-bg::after {
+    background:
+      radial-gradient(150% 72% at 50% 16%, rgba(9,11,17,.40), rgba(9,11,17,.70) 58%, var(--bg) 100%),
+      linear-gradient(180deg, rgba(9,11,17,.60) 0%, rgba(9,11,17,.44) 38%, rgba(9,11,17,.9) 86%, var(--bg) 100%);
+  }
+  .hero-title { font-size: clamp(2.6rem, 13.5vw, 4.4rem); letter-spacing: 1px; margin-bottom: 16px; }
+  .hero-eyebrow { font-size: .74rem; letter-spacing: 2.5px; gap: 9px; }
+  .hero-eyebrow::before, .hero-eyebrow::after { width: 20px; }
+  .hero-hook { font-size: 1.16rem; }
+  .hero-sub { font-size: 1rem; margin-bottom: 28px; }
+  .update-badge { font-size: .75rem; margin-bottom: 20px; }
+
+  /* STATS */
   .stats-grid { grid-template-columns: 1fr 1fr; }
-  .stat:nth-child(3)::before, .stat:nth-child(odd)::before { display: none; }
-  .stats-grid .stat:nth-child(2)::before { display: block; }
-  .stats-grid .stat:nth-child(4)::before { display: block; }
-  .hero-meta { gap: 8px 16px; }
+  .stat::before { display: none !important; }
+  .stat { padding: 24px 14px; }
+
+  /* SECTIONS — tighter on phone */
+  .section { padding: 54px 0; }
+  .section-head { margin-bottom: 36px; }
+  .section-head h2 { font-size: clamp(1.8rem, 7.5vw, 2.4rem); }
+  .section-head p { font-size: 1rem; }
+
+  .hero-meta { gap: 8px 16px; font-size: .82rem; }
   .lb-prev { left: 1vw; } .lb-next { right: 1vw; }
   .lb-btn { width: 46px; height: 46px; }
+
+  /* GALLERY */
+  .gallery-main .cap b { font-size: 1.05rem; }
+  .gallery-main .cap .expand { display: none; }
+  .thumb { flex-basis: 118px; }
+
+  .ascension { padding: 26px 20px; }
 }
+
 @media (max-width: 520px) {
+  /* NAV — compact so brand + Steam + menu fit one row */
+  .nav-inner { padding: 12px 15px; }
   .nav-right .lang-switch { display: none; }
-  .btn { padding: 13px 20px; font-size: .92rem; }
-  .feature, .arch-body, .event, .class-col { }
+  .brand b { font-size: 1rem; letter-spacing: 1.5px; }
+  .brand img { width: 28px; height: 28px; }
+
+  /* BUTTONS — stack full width for easy tapping */
+  .container { padding: 0 16px; }
+  .btn { padding: 13px 20px; font-size: .9rem; }
+  .hero-cta { flex-direction: column; width: 100%; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+
+  /* CARDS */
+  .feature, .arch-body, .event, .class-col, .trait { padding: 22px 20px; }
+
+  /* UPDATES timeline — pull in the rail */
+  .update { padding-left: 50px; }
+  .feed::before { left: 17px; }
+  .update .node { left: 7px; }
 }
